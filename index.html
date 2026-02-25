@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internship Mission Control - Anthony Casseus</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#00e5a0">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap');
         
@@ -667,7 +669,78 @@
             </div>
         </div>
         
-        <!-- PAGE 6: Rules -->
+        <!-- PAGE 6: Networking -->
+        <div id="networking" class="page-section">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">🤝 Networking Outreach</span>
+                    <button class="action-btn" onclick="addContact()">+ Add Contact</button>
+                </div>
+                <div class="card-body">
+                    <div class="table-container">
+                        <table id="network-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Recruiter</th>
+                                    <th>Company</th>
+                                    <th>Email</th>
+                                    <th>Status</th>
+                                    <th>Follow-up</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="network-tbody">
+                                <tr data-network-id="1">
+                                    <td>1</td>
+                                    <td>Jonathan Taylor</td>
+                                    <td>Scale AI</td>
+                                    <td>jonathan@scale.com</td>
+                                    <td><span class="badge badge-ready">Not Sent</span></td>
+                                    <td>-</td>
+                                    <td>
+                                        <button class="action-btn apply" onclick="sendEmail(1)">Send Email</button>
+                                        <button class="action-btn delete" onclick="deleteContact(1)">✕</button>
+                                    </td>
+                                </tr>
+                                <tr data-network-id="2">
+                                    <td>2</td>
+                                    <td>Taylor Pierotti</td>
+                                    <td>GuidePoint</td>
+                                    <td>taylor@guidepointsecurity.com</td>
+                                    <td><span class="badge badge-ready">Not Sent</span></td>
+                                    <td>-</td>
+                                    <td>
+                                        <button class="action-btn apply" onclick="sendEmail(2)">Send Email</button>
+                                        <button class="action-btn delete" onclick="deleteContact(2)">✕</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PAGE 7: Map -->
+        <div id="map" class="page-section">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">🗺️ Job Locations</span>
+                </div>
+                <div class="card-body">
+                    <div id="map-container" style="height: 500px; border-radius: 6px; background: var(--surface2); display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; color: var(--muted);">
+                            <div style="font-size: 48px; margin-bottom: 15px;">🗺️</div>
+                            <div>Map View Coming Soon</div>
+                            <div style="font-size: 12px; margin-top: 10px;">Will show job locations with pins</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PAGE 8: Rules -->
         <div id="rules" class="page-section">
             <div class="card">
                 <div class="card-header">
@@ -952,6 +1025,80 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
         function viewFile(filename) {
             alert(`File: ${filename}\n\nLocation: materials/${filename}`);
         }
+        
+        // Add contact
+        function addContact() {
+            const name = prompt('Recruiter name:');
+            const company = prompt('Company:');
+            const email = prompt('Email:');
+            if (name && company && email) {
+                const tbody = document.getElementById('network-tbody');
+                const id = tbody.children.length + 1;
+                const row = document.createElement('tr');
+                row.setAttribute('data-network-id', id);
+                row.innerHTML = `
+                    <td>${id}</td>
+                    <td>${name}</td>
+                    <td>${company}</td>
+                    <td>${email}</td>
+                    <td><span class="badge badge-ready">Not Sent</span></td>
+                    <td>-</td>
+                    <td>
+                        <button class="action-btn apply" onclick="sendEmail(${id})">Send Email</button>
+                        <button class="action-btn delete" onclick="deleteContact(${id})">✕</button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+                addLiveActivity(`Added recruiter contact: ${name} at ${company}`);
+            }
+        }
+        
+        // Delete contact
+        function deleteContact(id) {
+            const row = document.querySelector(`[data-network-id="${id}"]`);
+            if (row && confirm('Delete this contact?')) {
+                row.remove();
+                addLiveActivity('Deleted recruiter contact');
+            }
+        }
+        
+        // Send email (placeholder)
+        function sendEmail(id) {
+            const row = document.querySelector(`[data-network-id="${id}"]`);
+            if (row) {
+                const email = row.querySelector('td:nth-child(4)').textContent;
+                const company = row.querySelector('td:nth-child(3)').textContent;
+                alert(`Open your email client and send to: ${email}\n\nCover letter location: materials/cover_letters/${company}_CoverLetter.txt`);
+                row.querySelector('.badge').textContent = 'Sent';
+                row.querySelector('.badge').className = 'badge badge-submitted';
+                addLiveActivity(`Marked email as sent to ${company}`);
+            }
+        }
+        
+        // Reminders / Notifications
+        function checkDeadlines() {
+            const rows = document.querySelectorAll('#pending-tbody tr');
+            rows.forEach(row => {
+                const company = row.querySelector('td:nth-child(2)').textContent;
+                // Check if urgent (you can add deadline data to rows)
+                if (row.querySelector('.badge-urgent')) {
+                    if (Notification.permission === 'granted') {
+                        new Notification('URGENT: Application due soon', {
+                            body: `${company} - Apply now!`,
+                            icon: '/icon-192.png'
+                        });
+                    }
+                }
+            });
+        }
+        
+        // Request notification permission
+        if ('Notification' in window) {
+            Notification.requestPermission();
+        }
+        
+        // Check deadlines every minute
+        setInterval(checkDeadlines, 60000);
         
         // Initialize
         loadRules();

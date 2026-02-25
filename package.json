@@ -1,0 +1,8 @@
+{
+  "name": "internship-mission-control",
+  "version": "1.0.0",
+  "description": "Internship Application Dashboard for Anthony Casseus",
+  "scripts": {
+    "deploy": "vercel --yes"
+  }
+}

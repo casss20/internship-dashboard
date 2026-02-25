@@ -22,11 +22,7 @@
             --sans: 'DM Sans', sans-serif;
         }
         
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body {
             background: var(--bg);
@@ -82,12 +78,6 @@
             background: rgba(0, 229, 160, 0.1);
         }
         
-        .pill.warn {
-            border-color: var(--warn);
-            color: var(--warn);
-            background: rgba(245, 166, 35, 0.1);
-        }
-        
         /* Navigation */
         .nav {
             background: var(--surface2);
@@ -111,10 +101,7 @@
             white-space: nowrap;
         }
         
-        .nav-item:hover {
-            color: var(--text);
-        }
-        
+        .nav-item:hover { color: var(--text); }
         .nav-item.active {
             color: var(--accent);
             border-bottom-color: var(--accent);
@@ -127,7 +114,10 @@
             margin: 0 auto;
         }
         
-        /* Grid Layout */
+        .page-section { display: none; }
+        .page-section.active { display: block; }
+        
+        /* Cards */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -159,8 +149,202 @@
             color: var(--accent);
         }
         
-        .card-body {
+        .card-body { padding: 16px; }
+        
+        /* Live Feed */
+        .live-feed {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
             padding: 16px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .live-item {
+            display: flex;
+            gap: 12px;
+            padding: 10px;
+            border-bottom: 1px solid var(--border);
+            font-size: 13px;
+        }
+        
+        .live-item:last-child { border-bottom: none; }
+        
+        .live-time {
+            font-family: var(--mono);
+            font-size: 10px;
+            color: var(--muted);
+            min-width: 60px;
+        }
+        
+        .live-text { color: var(--text); }
+        .live-text .highlight { color: var(--accent); }
+        .live-text .working { color: var(--accent2); }
+        .live-text .completed { color: var(--accent); }
+        .live-text .alert { color: var(--danger); }
+        
+        /* Tables */
+        .table-container { overflow-x: auto; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        
+        th {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            background: var(--surface2);
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+        
+        tr:hover td { background: var(--surface2); }
+        
+        /* Action Buttons */
+        .action-btn {
+            font-family: var(--mono);
+            font-size: 10px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            background: var(--surface2);
+            color: var(--text);
+            cursor: pointer;
+            margin-right: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .action-btn:hover { background: var(--border); }
+        
+        .action-btn.apply {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        .action-btn.apply:hover { background: rgba(0, 229, 160, 0.1); }
+        
+        .action-btn.delete {
+            border-color: var(--danger);
+            color: var(--danger);
+        }
+        
+        .action-btn.delete:hover { background: rgba(255, 69, 96, 0.1); }
+        
+        .action-btn.check {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        .action-btn.check:hover { background: rgba(0, 229, 160, 0.2); }
+        
+        .action-btn.resume {
+            border-color: var(--accent2);
+            color: var(--accent2);
+        }
+        
+        .action-btn.resume:hover { background: rgba(0, 119, 255, 0.1); }
+        
+        /* Badges */
+        .badge {
+            font-family: var(--mono);
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        
+        .badge-urgent {
+            background: rgba(255, 69, 96, 0.2);
+            color: var(--danger);
+            border: 1px solid var(--danger);
+        }
+        
+        .badge-ready {
+            background: rgba(245, 166, 35, 0.2);
+            color: var(--warn);
+            border: 1px solid var(--warn);
+        }
+        
+        .badge-submitted {
+            background: rgba(0, 229, 160, 0.2);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+        
+        .badge-completed {
+            background: rgba(0, 119, 255, 0.2);
+            color: var(--accent2);
+            border: 1px solid var(--accent2);
+        }
+        
+        /* Editable textarea */
+        .editable-area {
+            width: 100%;
+            min-height: 400px;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 16px;
+            color: var(--text);
+            font-family: var(--mono);
+            font-size: 12px;
+            line-height: 1.8;
+            resize: vertical;
+        }
+        
+        .save-btn {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: var(--accent);
+            color: var(--bg);
+            border: none;
+            border-radius: 4px;
+            font-family: var(--mono);
+            font-size: 11px;
+            cursor: pointer;
+        }
+        
+        .save-btn:hover { opacity: 0.9; }
+        
+        /* Task items */
+        .task-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: var(--surface2);
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        
+        .task-checkbox {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .task-text {
+            flex: 1;
+        }
+        
+        .task-delete {
+            color: var(--danger);
+            cursor: pointer;
+            font-size: 16px;
         }
         
         /* Stats */
@@ -193,194 +377,13 @@
             margin-top: 4px;
         }
         
-        /* Activity Feed */
-        .activity-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            max-height: 300px;
-            overflow-y: auto;
-        }
-        
-        .activity-item {
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-            padding: 10px;
-            background: var(--surface2);
-            border-radius: 6px;
-            font-size: 13px;
-        }
-        
-        .activity-time {
-            font-family: var(--mono);
-            font-size: 10px;
-            color: var(--muted);
-            min-width: 50px;
-        }
-        
-        .activity-text {
-            color: var(--text);
-        }
-        
-        .activity-text .highlight {
-            color: var(--accent);
-        }
-        
-        /* Tables */
-        .table-container {
-            overflow-x: auto;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-        
-        th {
-            font-family: var(--mono);
-            font-size: 10px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--muted);
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-            background: var(--surface2);
-        }
-        
-        td {
-            padding: 12px;
-            border-bottom: 1px solid var(--border);
-            color: var(--text);
-        }
-        
-        tr:hover td {
-            background: var(--surface2);
-        }
-        
-        /* Action Buttons */
-        .action-btn {
-            font-family: var(--mono);
-            font-size: 10px;
-            padding: 4px 10px;
-            border-radius: 4px;
-            border: 1px solid var(--border);
-            background: var(--surface2);
-            color: var(--text);
-            cursor: pointer;
-            margin-right: 5px;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .action-btn:hover {
-            background: var(--border);
-        }
-        
-        .action-btn.apply {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-        
-        .action-btn.apply:hover {
-            background: rgba(0, 229, 160, 0.1);
-        }
-        
-        .action-btn.delete {
-            border-color: var(--danger);
-            color: var(--danger);
-        }
-        
-        .action-btn.delete:hover {
-            background: rgba(255, 69, 96, 0.1);
-        }
-        
-        .badge {
-            font-family: var(--mono);
-            font-size: 10px;
-            padding: 2px 8px;
-            border-radius: 4px;
-            display: inline-block;
-        }
-        
-        .badge-urgent {
-            background: rgba(255, 69, 96, 0.2);
-            color: var(--danger);
-            border: 1px solid var(--danger);
-        }
-        
-        .badge-ready {
-            background: rgba(245, 166, 35, 0.2);
-            color: var(--warn);
-            border: 1px solid var(--warn);
-        }
-        
-        .badge-submitted {
-            background: rgba(0, 229, 160, 0.2);
-            color: var(--accent);
-            border: 1px solid var(--accent);
-        }
-        
-        /* Progress Bar */
-        .progress-bar {
-            height: 6px;
-            background: var(--surface2);
-            border-radius: 3px;
-            overflow: hidden;
-            margin-top: 8px;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: var(--accent);
-            border-radius: 3px;
-            transition: width 0.3s;
-        }
-        
-        /* Agent Status */
-        .agent-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-        
-        .agent-card {
-            background: var(--surface2);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 15px;
-        }
-        
-        .agent-name {
-            font-family: var(--mono);
-            font-size: 11px;
-            color: var(--accent2);
-            margin-bottom: 8px;
-        }
-        
-        .agent-status {
-            font-size: 13px;
-            color: var(--text);
-            margin-bottom: 8px;
-        }
-        
-        .agent-task {
-            font-size: 12px;
-            color: var(--muted);
-        }
-        
         /* Scrollbar */
         ::-webkit-scrollbar {
             width: 6px;
             height: 6px;
         }
         
-        ::-webkit-scrollbar-track {
-            background: var(--bg);
-        }
-        
+        ::-webkit-scrollbar-track { background: var(--bg); }
         ::-webkit-scrollbar-thumb {
             background: var(--border);
             border-radius: 3px;
@@ -388,26 +391,9 @@
         
         /* Responsive */
         @media (max-width: 768px) {
-            .header {
-                padding: 15px 20px;
-            }
-            
-            .main {
-                padding: 20px;
-            }
-            
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* Page Sections */
-        .page-section {
-            display: none;
-        }
-        
-        .page-section.active {
-            display: block;
+            .header { padding: 15px 20px; }
+            .main { padding: 20px; }
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -420,25 +406,25 @@
         </div>
         <div class="status-pills">
             <span class="pill active">● AGENT ACTIVE</span>
-            <span class="pill active">● 24/7 RUNNING</span>
-            <span class="pill warn">3 URGENT</span>
+            <span class="pill active">● LIVE FEED</span>
+            <span class="pill" id="pending-count">3 PENDING</span>
         </div>
     </div>
     
     <!-- Navigation -->
     <div class="nav">
         <div class="nav-item active" data-page="dashboard">Command Center</div>
-        <div class="nav-item" data-page="tracker">Applications</div>
-        <div class="nav-item" data-page="materials">Materials</div>
-        <div class="nav-item" data-page="opportunities">Opportunities</div>
-        <div class="nav-item" data-page="calendar">Calendar</div>
+        <div class="nav-item" data-page="livefeed">Live Feed</div>
+        <div class="nav-item" data-page="pending">To Apply (<span id="nav-pending">3</span>)</div>
+        <div class="nav-item" data-page="applied">Applied (<span id="nav-applied">0</span>)</div>
         <div class="nav-item" data-page="tasks">Tasks</div>
-        <div class="nav-item" data-page="agents">Agent Status</div>
-        <div class="nav-item" data-page="email">Email</div>
+        <div class="nav-item" data-page="rules">Rules</div>
+        <div class="nav-item" data-page="materials">Materials</div>
     </div>
     
     <!-- Main Content -->
     <div class="main">
+        
         <!-- PAGE 1: Command Center -->
         <div id="dashboard" class="page-section active">
             <div class="grid">
@@ -450,20 +436,20 @@
                     <div class="card-body">
                         <div class="stat-grid">
                             <div class="stat-item">
-                                <div class="stat-value danger">3</div>
-                                <div class="stat-label">Urgent Applications</div>
+                                <div class="stat-value danger" id="stat-urgent">3</div>
+                                <div class="stat-label">To Apply</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-value">0</div>
-                                <div class="stat-label">Total Submitted</div>
+                                <div class="stat-value" id="stat-applied">0</div>
+                                <div class="stat-label">Applied</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-value">0</div>
+                                <div class="stat-value warn" id="stat-interviews">0</div>
                                 <div class="stat-label">Interviews</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-value warn">10</div>
-                                <div class="stat-label">In Pipeline</div>
+                                <div class="stat-value" id="stat-total">15</div>
+                                <div class="stat-label">Total Tracked</div>
                             </div>
                         </div>
                     </div>
@@ -476,7 +462,7 @@
                     </div>
                     <div class="card-body">
                         <div style="background: rgba(255, 69, 96, 0.1); border: 1px solid var(--danger); border-radius: 6px; padding: 15px; margin-bottom: 15px;">
-                            <div style="font-weight: 600; color: var(--danger); margin-bottom: 8px;">🔴 Submit These Applications NOW</div>
+                            <div style="font-weight: 600; color: var(--danger); margin-bottom: 8px;">🔴 Apply to These NOW</div>
                             <ul style="margin: 0; padding-left: 20px; color: var(--text);">
                                 <li>SupplyHouse - AI Enablement</li>
                                 <li>Mercury - Data Science</li>
@@ -488,259 +474,118 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Agent Activity -->
-                <div class="card">
-                    <div class="card-header">
-                        <span class="card-title">Live Activity Feed</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="activity-list" id="activity-feed">
-                            <div class="activity-item">
-                                <span class="activity-time">Now</span>
-                                <span class="activity-text">Found <span class="highlight">5 new cover letters</span> created (Scale AI, DoorDash, GuidePoint, Crystal Dynamics)</span>
-                            </div>
-                            <div class="activity-item">
-                                <span class="activity-time">Now</span>
-                                <span class="activity-text">Discovered <span class="highlight">10+ new opportunities</span> (YC startups, CrowdStrike, Atlassian)</span>
-                            </div>
-                            <div class="activity-item">
-                                <span class="activity-time">Now</span>
-                                <span class="activity-text">Recruiter research started for <span class="highlight">Scale AI & GuidePoint</span></span>
-                            </div>
-                            <div class="activity-item">
-                                <span class="activity-time">Now</span>
-                                <span class="activity-text"><span class="highlight">Hunter.io API key</span> configured - cold email agent active</span>
-                            </div>
-                            <div class="activity-item">
-                                <span class="activity-time">Earlier</span>
-                                <span class="activity-text">Dashboard <span class="highlight">deployed</span> and operational</span>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            
+            <!-- Live Activity Preview -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Recent Activity</span>
+                    <a href="#" onclick="showPage('livefeed')" style="font-size: 11px; color: var(--accent);">View Full Feed →</a>
                 </div>
-                
-                <!-- Pipeline Health -->
-                <div class="card">
-                    <div class="card-header">
-                        <span class="card-title">Pipeline Health</span>
-                    </div>
-                    <div class="card-body">
-                        <div style="margin-bottom: 15px;">
-                            <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 5px;">
-                                <span>Materials Complete</span>
-                                <span style="color: var(--accent);">100%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 100%;"></div>
-                            </div>
+                <div class="card-body">
+                    <div id="recent-activity">
+                        <div class="live-item">
+                            <span class="live-time">Now</span>
+                            <span class="live-text"><span class="completed">Dashboard v2.0 deployed</span> with new features</span>
                         </div>
-                        <div style="margin-bottom: 15px;">
-                            <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 5px;">
-                                <span>Urgent Applications</span>
-                                <span style="color: var(--danger);">0%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 0%; background: var(--danger);"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 5px;">
-                                <span>Search Coverage</span>
-                                <span style="color: var(--warn);">Starting...</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 10%; background: var(--warn);"></div>
-                            </div>
+                        <div class="live-item">
+                            <span class="live-time">Now</span>
+                            <span class="live-text">Created <span class="highlight">7 cover letters</span> for top companies</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- PAGE 2: Application Tracker -->
-        <div id="tracker" class="page-section">
+        <!-- PAGE 2: Live Feed -->
+        <div id="livefeed" class="page-section">
             <div class="card">
                 <div class="card-header">
-                    <span class="card-title">All Applications</span>
+                    <span class="card-title">🔴 Live Feed - What Kimi Claw Is Doing Right Now</span>
+                    <span style="font-size: 11px; color: var(--muted);">Auto-refreshes every 30 seconds</span>
+                </div>
+                <div class="card-body">
+                    <div class="live-feed" id="full-live-feed">
+                        <div class="live-item">
+                            <span class="live-time">Now</span>
+                            <span class="live-text"><span class="completed">✓ Dashboard v2.0 deployed</span> with delete buttons, apply links, and live feed</span>
+                        </div>
+                        <div class="live-item">
+                            <span class="live-time">Now</span>
+                            <span class="live-text"><span class="working">→ Working on:</span> Creating Rules page for fundamental instructions</span>
+                        </div>
+                        <div class="live-item">
+                            <span class="live-time">Earlier</span>
+                            <span class="live-text">Created <span class="highlight">7 tailored cover letters</span> (SupplyHouse, Mercury, Edged, Scale AI, DoorDash, GuidePoint, Crystal Dynamics)</span>
+                        </div>
+                        <div class="live-item">
+                            <span class="live-time">Earlier</span>
+                            <span class="live-text">Found <span class="highlight">15 internship opportunities</span> including YC startups, CrowdStrike, Atlassian</span>
+                        </div>
+                        <div class="live-item">
+                            <span class="live-time">Earlier</span>
+                            <span class="live-text">Configured <span class="highlight">Hunter.io API</span> for cold email research</span>
+                        </div>
+                        <div class="live-item">
+                            <span class="live-time">Earlier</span>
+                            <span class="live-text"><span class="completed">✓ Materials created:</span> Professional_Info.json, Resume Template, Standard_Answers.txt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PAGE 3: To Apply -->
+        <div id="pending" class="page-section">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">To Apply (<span id="pending-count-header">3</span>)</span>
                 </div>
                 <div class="card-body">
                     <div class="table-container">
-                        <table>
+                        <table id="pending-table">
                             <thead>
                                 <tr>
+                                    <th>#</th>
                                     <th>Company</th>
                                     <th>Role</th>
                                     <th>Location</th>
-                                    <th>Status</th>
-                                    <th>Priority</th>
+                                    <th>Resume</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="pending-tbody">
                                 <tr data-id="1">
+                                    <td>1</td>
                                     <td><strong>SupplyHouse</strong></td>
                                     <td>AI Enablement</td>
                                     <td>Remote</td>
-                                    <td><span class="badge badge-ready">Ready to Submit</span></td>
-                                    <td style="color: var(--danger);">🔴 Urgent</td>
+                                    <td><button class="action-btn resume" onclick="viewResume('SupplyHouse')">View Resume</button></td>
                                     <td>
                                         <a href="https://www.supplyhouse.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                        <button class="action-btn check" onclick="markApplied(1)">✓ Applied</button>
                                     </td>
                                 </tr>
                                 <tr data-id="2">
+                                    <td>2</td>
                                     <td><strong>Mercury</strong></td>
                                     <td>Data Science</td>
                                     <td>Remote (US)</td>
-                                    <td><span class="badge badge-ready">Ready to Submit</span></td>
-                                    <td style="color: var(--danger);">🔴 Urgent</td>
+                                    <td><button class="action-btn resume" onclick="viewResume('Mercury')">View Resume</button></td>
                                     <td>
                                         <a href="https://mercury.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                        <button class="action-btn check" onclick="markApplied(2)">✓ Applied</button>
                                     </td>
                                 </tr>
                                 <tr data-id="3">
+                                    <td>3</td>
                                     <td><strong>Edged</strong></td>
                                     <td>2026 Summer Intern</td>
                                     <td>Remote (US)</td>
-                                    <td><span class="badge badge-ready">Ready to Submit</span></td>
-                                    <td style="color: var(--danger);">🔴 Urgent</td>
+                                    <td><button class="action-btn resume" onclick="viewResume('Edged')">View Resume</button></td>
                                     <td>
                                         <a href="#" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="4">
-                                    <td><strong>Scale AI</strong></td>
-                                    <td>ML Research Intern</td>
-                                    <td>SF/Remote</td>
-                                    <td><span class="badge badge-ready">Ready to Submit</span></td>
-                                    <td style="color: var(--accent);">🟢 High</td>
-                                    <td>
-                                        <a href="https://scale.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="5">
-                                    <td><strong>DoorDash</strong></td>
-                                    <td>Machine Learning Intern</td>
-                                    <td>SF/NY/Seattle</td>
-                                    <td><span class="badge badge-ready">Ready to Submit</span></td>
-                                    <td style="color: var(--accent);">🟢 High</td>
-                                    <td>
-                                        <a href="https://careers.doordash.com" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="6">
-                                    <td><strong>GuidePoint</strong></td>
-                                    <td>GPSU Cybersecurity</td>
-                                    <td>Remote (US)</td>
-                                    <td><span class="badge badge-ready">Ready to Submit</span></td>
-                                    <td style="color: var(--accent);">🟢 High</td>
-                                    <td>
-                                        <a href="https://www.guidepointsecurity.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="7">
-                                    <td><strong>Crystal Dynamics</strong></td>
-                                    <td>Cyber Security</td>
-                                    <td>Hybrid</td>
-                                    <td><span class="badge badge-ready">Ready to Submit</span></td>
-                                    <td style="color: var(--accent);">🟢 High</td>
-                                    <td>
-                                        <a href="https://crystaldynamics.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="8">
-                                    <td><strong>CrowdStrike</strong></td>
-                                    <td>IT Service Desk Launch Intern</td>
-                                    <td>Austin, TX</td>
-                                    <td><span class="badge">Not Started</span></td>
-                                    <td style="color: var(--accent);">🟢 High</td>
-                                    <td>
-                                        <a href="https://www.crowdstrike.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="9">
-                                    <td><strong>Atlassian</strong></td>
-                                    <td>Security Engineer Intern</td>
-                                    <td>Seattle/Remote</td>
-                                    <td><span class="badge">Not Started</span></td>
-                                    <td style="color: var(--accent);">🟢 High</td>
-                                    <td>
-                                        <a href="https://www.atlassian.com/company/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="10">
-                                    <td><strong>CISA</strong></td>
-                                    <td>Cyber/IT Interns</td>
-                                    <td>Various</td>
-                                    <td><span class="badge">Not Started</span></td>
-                                    <td style="color: var(--warn);">🟡 Medium</td>
-                                    <td>
-                                        <a href="https://www.cisa.gov/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="11">
-                                    <td><strong>Dex (YC)</strong></td>
-                                    <td>AI/ML Engineer Intern</td>
-                                    <td>San Francisco</td>
-                                    <td><span class="badge">Not Started</span></td>
-                                    <td style="color: var(--accent);">🟢 High</td>
-                                    <td>
-                                        <a href="https://www.ycombinator.com/companies/joindex" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="12">
-                                    <td><strong>Mesh (YC)</strong></td>
-                                    <td>AI Engineer Intern</td>
-                                    <td>San Francisco</td>
-                                    <td><span class="badge">Not Started</span></td>
-                                    <td style="color: var(--accent);">🟢 High</td>
-                                    <td>
-                                        <a href="https://www.ycombinator.com/companies/mesh-2" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="13">
-                                    <td><strong>14 AI (YC)</strong></td>
-                                    <td>Full-Stack Engineering Intern</td>
-                                    <td>Remote</td>
-                                    <td><span class="badge">Not Started</span></td>
-                                    <td style="color: var(--accent);">🟢 High</td>
-                                    <td>
-                                        <a href="https://www.ycombinator.com/companies/14-ai" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="14">
-                                    <td><strong>Bloom (YC)</strong></td>
-                                    <td>AI/Full-Stack Intern</td>
-                                    <td>Zurich</td>
-                                    <td><span class="badge">Not Started</span></td>
-                                    <td style="color: var(--warn);">🟡 Medium</td>
-                                    <td>
-                                        <a href="https://www.ycombinator.com/companies/bloom-4" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="15">
-                                    <td><strong>Cohere</strong></td>
-                                    <td>Software Engineering</td>
-                                    <td>Remote</td>
-                                    <td><span class="badge">Not Started</span></td>
-                                    <td style="color: var(--warn);">🟡 Medium</td>
-                                    <td>
-                                        <a href="https://cohere.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                        <button class="action-btn check" onclick="markApplied(3)">✓ Applied</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -750,7 +595,165 @@
             </div>
         </div>
         
-        <!-- PAGE 3: Materials -->
+        <!-- PAGE 4: Applied -->
+        <div id="applied" class="page-section">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Applied (<span id="applied-count-header">0</span>)</span>
+                </div>
+                <div class="card-body">
+                    <div class="table-container">
+                        <table id="applied-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Company</th>
+                                    <th>Role</th>
+                                    <th>Date Applied</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="applied-tbody">
+                                <!-- Applied items will appear here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="no-applied" style="text-align: center; padding: 40px; color: var(--muted);">
+                        <div style="font-size: 48px; margin-bottom: 15px;">📋</div>
+                        <div>No applications submitted yet.</div>
+                        <div style="font-size: 12px; margin-top: 10px;">Click "✓ Applied" on the To Apply page to move items here.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PAGE 5: Tasks -->
+        <div id="tasks" class="page-section">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Tasks</span>
+                    <button class="action-btn" onclick="addTask()">+ Add Task</button>
+                </div>
+                <div class="card-body">
+                    <div id="task-list">
+                        <div class="task-item" data-task-id="1">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-text">Submit SupplyHouse application</span>
+                            <span class="task-delete" onclick="deleteTask(1)">✕</span>
+                        </div>
+                        <div class="task-item" data-task-id="2">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-text">Submit Mercury application</span>
+                            <span class="task-delete" onclick="deleteTask(2)">✕</span>
+                        </div>
+                        <div class="task-item" data-task-id="3">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-text">Submit Edged application</span>
+                            <span class="task-delete" onclick="deleteTask(3)">✕</span>
+                        </div>
+                        <div class="task-item" data-task-id="4">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-text">Sign up for Apollo.io (cold emails)</span>
+                            <span class="task-delete" onclick="deleteTask(4)">✕</span>
+                        </div>
+                        <div class="task-item" data-task-id="5">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-text">Send cold emails to Scale AI recruiter</span>
+                            <span class="task-delete" onclick="deleteTask(5)">✕</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PAGE 6: Rules -->
+        <div id="rules" class="page-section">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">📋 Agent Rules & Instructions (EDITABLE)</span>
+                    <button class="save-btn" onclick="saveRules()">Save Changes</button>
+                </div>
+                <div class="card-body">
+                    <textarea class="editable-area" id="rules-content">
+# KIMI CLAW - INTERNHIP AGENT RULES
+# Edit these instructions to change how I work
+
+## ROLE
+You are my dedicated, autonomous internship application agent. Your job is to find and apply to Summer 2026 and Fall 2026 internships that match my profile with minimal input from me.
+
+## PROFILE
+- Name: Anthony Casseus
+- School: University of Central Florida
+- Degree: B.S. Computer Science (Minor: Cyber Operations)
+- GPA: 3.0
+- Graduation: May 2027
+- Location: Orlando, FL
+- Work Auth: U.S. Citizen
+
+## TARGET ROLES
+- Software Engineering Intern
+- AI/ML Engineering Intern
+- Cybersecurity Intern
+- Data Science Intern
+
+## TARGET LOCATIONS
+- Remote (preferred)
+- Hybrid
+- Orlando, FL
+- Willing to relocate
+
+## MUST-HAVE FILTERS
+- Paid internships only
+- Summer 2026 OR Fall 2026
+- Undergraduate level
+- Technical role (SWE, AI/ML, Cyber, Data)
+
+## EXCLUDE
+- Unpaid internships
+- Roles requiring active security clearance
+- Non-technical roles
+- 5+ YOE requirements
+
+## AUTOMATED TASKS
+1. Search daily for new opportunities
+2. Score matches against my profile (80%+ only)
+3. Tailor resume for each role
+4. Generate personalized cover letters
+5. Track all applications
+6. Send daily/weekly reports
+
+## HUMAN-IN-THE-LOOP (Alert me when:)
+- Email verification required
+- 2FA/phone verification needed
+- Assessment/OA invitation received
+- Interview scheduled
+- Offer received
+- Missing info not in materials
+- Deadline under 48 hours
+
+## COLD EMAIL STRATEGY
+- Find recruiter emails via Hunter.io/Apollo
+- Send personalized 5-sentence emails
+- One follow-up after 5 days
+- Track all outreach
+
+## COMMUNICATION
+- Send updates via Telegram
+- Update dashboard in real-time
+- Alert immediately for urgent items
+
+## FILES LOCATION
+- Materials: materials/
+- Cover letters: materials/cover_letters/
+- Tracker: materials/Application_Tracker.md
+- Research: materials/Cold_Email_Research.md
+                    </textarea>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PAGE 7: Materials -->
         <div id="materials" class="page-section">
             <div class="grid">
                 <div class="card">
@@ -763,34 +766,29 @@
                                 <tr>
                                     <th>File</th>
                                     <th>Status</th>
-                                    <th>Last Updated</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Professional_Info.json</td>
                                     <td style="color: var(--accent);">✅ Complete</td>
-                                    <td>2025-02-25</td>
+                                    <td><button class="action-btn" onclick="viewFile('Professional_Info.json')">View</button></td>
                                 </tr>
                                 <tr>
                                     <td>Resume_LaTeX_Template.tex</td>
                                     <td style="color: var(--accent);">✅ Complete</td>
-                                    <td>2025-02-25</td>
+                                    <td><button class="action-btn" onclick="viewFile('Resume_Template')">View</button></td>
                                 </tr>
                                 <tr>
                                     <td>CoverLetter_Template.tex</td>
                                     <td style="color: var(--accent);">✅ Complete</td>
-                                    <td>2025-02-25</td>
+                                    <td><button class="action-btn" onclick="viewFile('CoverLetter_Template')">View</button></td>
                                 </tr>
                                 <tr>
                                     <td>Standard_Answers.txt</td>
                                     <td style="color: var(--accent);">✅ Complete</td>
-                                    <td>2025-02-25</td>
-                                </tr>
-                                <tr>
-                                    <td>SupplyHouse_Resume.tex</td>
-                                    <td style="color: var(--accent);">✅ Ready</td>
-                                    <td>2025-02-25</td>
+                                    <td><button class="action-btn" onclick="viewFile('Standard_Answers')">View</button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -799,185 +797,168 @@
                 
                 <div class="card">
                     <div class="card-header">
-                        <span class="card-title">Profile Summary</span>
+                        <span class="card-title">Tailored Cover Letters</span>
                     </div>
                     <div class="card-body">
-                        <div style="font-family: var(--mono); font-size: 11px; color: var(--accent2); margin-bottom: 10px;">ANTHONY CASSEUS</div>
-                        <div style="font-size: 13px; line-height: 1.8;">
-                            <div><strong>School:</strong> University of Central Florida</div>
-                            <div><strong>Degree:</strong> B.S. Computer Science</div>
-                            <div><strong>Minor:</strong> Cyber Operations</div>
-                            <div><strong>GPA:</strong> 3.0</div>
-                            <div><strong>Graduation:</strong> May 2027</div>
-                            <div><strong>Location:</strong> Orlando, FL</div>
-                            <div><strong>Work Auth:</strong> U.S. Citizen</div>
-                            <div style="margin-top: 10px;"><strong>Email:</strong> anthony.casseus.internships@gmail.com</div>
-                            <div><strong>Phone:</strong> (754) 244-8060</div>
-                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>SupplyHouse</td><td><button class="action-btn resume" onclick="viewCoverLetter('SupplyHouse')">View</button></td></tr>
+                                <tr><td>Mercury</td><td><button class="action-btn resume" onclick="viewCoverLetter('Mercury')">View</button></td></tr>
+                                <tr><td>Edged</td><td><button class="action-btn resume" onclick="viewCoverLetter('Edged')">View</button></td></tr>
+                                <tr><td>Scale AI</td><td><button class="action-btn resume" onclick="viewCoverLetter('ScaleAI')">View</button></td></tr>
+                                <tr><td>DoorDash</td><td><button class="action-btn resume" onclick="viewCoverLetter('DoorDash')">View</button></td></tr>
+                                <tr><td>GuidePoint</td><td><button class="action-btn resume" onclick="viewCoverLetter('GuidePoint')">View</button></td></tr>
+                                <tr><td>Crystal Dynamics</td><td><button class="action-btn resume" onclick="viewCoverLetter('CrystalDynamics')">View</button></td></tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- PAGE 4: Opportunities -->
-        <div id="opportunities" class="page-section">
-            <div class="card">
-                <div class="card-header">
-                    <span class="card-title">New Opportunities</span>
-                </div>
-                <div class="card-body">
-                    <div style="text-align: center; padding: 40px; color: var(--muted);">
-                        <div style="font-size: 48px; margin-bottom: 15px;">🔍</div>
-                        <div style="font-size: 16px; margin-bottom: 10px;">Search Starting...</div>
-                        <div style="font-size: 13px;">Daily scans of LinkedIn, GitHub repos, and company career pages will appear here.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- PAGE 5: Calendar -->
-        <div id="calendar" class="page-section">
-            <div class="card">
-                <div class="card-header">
-                    <span class="card-title">Upcoming Deadlines</span>
-                </div>
-                <div class="card-body">
-                    <div style="text-align: center; padding: 40px; color: var(--muted);">
-                        <div style="font-size: 48px; margin-bottom: 15px;">📅</div>
-                        <div style="font-size: 16px; margin-bottom: 10px;">No Deadlines Yet</div>
-                        <div style="font-size: 13px;">Deadlines will appear here as applications are tracked.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- PAGE 6: Tasks -->
-        <div id="tasks" class="page-section">
-            <div class="card">
-                <div class="card-header">
-                    <span class="card-title">Today's Tasks</span>
-                </div>
-                <div class="card-body">
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <div style="display: flex; align-items: center; gap: 10px; padding: 12px; background: rgba(255, 69, 96, 0.1); border: 1px solid var(--danger); border-radius: 6px;">
-                            <input type="checkbox" style="width: 18px; height: 18px;">
-                            <span style="flex: 1;">Submit SupplyHouse AI Enablement application</span>
-                            <span style="color: var(--danger); font-size: 11px;">URGENT</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 10px; padding: 12px; background: rgba(255, 69, 96, 0.1); border: 1px solid var(--danger); border-radius: 6px;">
-                            <input type="checkbox" style="width: 18px; height: 18px;">
-                            <span style="flex: 1;">Submit Mercury Data Science application</span>
-                            <span style="color: var(--danger); font-size: 11px;">URGENT</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 10px; padding: 12px; background: rgba(255, 69, 96, 0.1); border: 1px solid var(--danger); border-radius: 6px;">
-                            <input type="checkbox" style="width: 18px; height: 18px;">
-                            <span style="flex: 1;">Submit Edged 2026 Summer Intern application</span>
-                            <span style="color: var(--danger); font-size: 11px;">URGENT</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 10px; padding: 12px; background: var(--surface2); border-radius: 6px;">
-                            <input type="checkbox" style="width: 18px; height: 18px;">
-                            <span style="flex: 1;">Begin daily opportunity search</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 10px; padding: 12px; background: var(--surface2); border-radius: 6px;">
-                            <input type="checkbox" style="width: 18px; height: 18px;">
-                            <span style="flex: 1;">Queue GuidePoint and Crystal Dynamics applications</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- PAGE 7: Agent Status -->
-        <div id="agents" class="page-section">
-            <div class="agent-grid">
-                <div class="agent-card">
-                    <div class="agent-name">🤖 KIMI CLAW</div>
-                    <div class="agent-status" style="color: var(--accent);">● ACTIVE</div>
-                    <div class="agent-task">Building dashboard, preparing applications</div>
-                </div>
-                <div class="agent-card">
-                    <div class="agent-name">🔍 OPPORTUNITY FINDER</div>
-                    <div class="agent-status" style="color: var(--warn);">○ STANDBY</div>
-                    <div class="agent-task">Waiting to start daily search</div>
-                </div>
-                <div class="agent-card">
-                    <div class="agent-name">📝 APPLICATION APPLIER</div>
-                    <div class="agent-status" style="color: var(--warn);">○ STANDBY</div>
-                    <div class="agent-task">3 urgent applications queued</div>
-                </div>
-                <div class="agent-card">
-                    <div class="agent-name">📧 COLD EMAIL AGENT</div>
-                    <div class="agent-status" style="color: var(--accent);">● ACTIVE</div>
-                    <div class="agent-task">Hunter.io connected (50 lookups/mo)</div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- PAGE 8: Email -->
-        <div id="email" class="page-section">
-            <div class="card">
-                <div class="card-header">
-                    <span class="card-title">Email Command Center</span>
-                </div>
-                <div class="card-body">
-                    <div style="background: var(--surface2); padding: 15px; border-radius: 6px; margin-bottom: 20px;">
-                        <div style="font-family: var(--mono); font-size: 11px; color: var(--accent); margin-bottom: 5px;">INTERNSHIP EMAIL</div>
-                        <div style="font-size: 14px;">anthony.casseus.internships@gmail.com</div>
-                    </div>
-                    <div style="text-align: center; padding: 40px; color: var(--muted);">
-                        <div style="font-size: 48px; margin-bottom: 15px;">📧</div>
-                        <div style="font-size: 16px; margin-bottom: 10px;">No Emails Yet</div>
-                        <div style="font-size: 13px;">Interview invites, OA links, and responses will appear here.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     
     <script>
         // Navigation
         document.querySelectorAll('.nav-item').forEach(item => {
             item.addEventListener('click', function() {
-                // Update nav
                 document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
                 this.classList.add('active');
-                
-                // Update page
                 const pageId = this.getAttribute('data-page');
                 document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
                 document.getElementById(pageId).classList.add('active');
             });
         });
         
-        // Delete row function
-        function deleteRow(btn) {
-            const row = btn.closest('tr');
-            const company = row.querySelector('td:first-child').textContent;
-            if (confirm(`Delete ${company} from your tracker?`)) {
+        function showPage(pageId) {
+            document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+            document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            document.querySelector(`[data-page="${pageId}"]`).classList.add('active');
+        }
+        
+        // Mark as applied
+        function markApplied(id) {
+            const row = document.querySelector(`#pending-tbody tr[data-id="${id}"]`);
+            if (row) {
+                const company = row.querySelector('td:nth-child(2)').textContent;
+                const role = row.querySelector('td:nth-child(3)').textContent;
+                const tbody = document.getElementById('applied-tbody');
+                const num = tbody.children.length + 1;
+                const date = new Date().toLocaleDateString();
+                
+                const newRow = document.createElement('tr');
+                newRow.innerHTML = `
+                    <td>${num}</td>
+                    <td><strong>${company}</strong></td>
+                    <td>${role}</td>
+                    <td>${date}</td>
+                    <td><span class="badge badge-submitted">Applied</span></td>
+                    <td><button class="action-btn delete" onclick="this.closest('tr').remove(); updateCounts();">✕ Remove</button></td>
+                `;
+                tbody.appendChild(newRow);
                 row.remove();
-                // Save to localStorage
-                saveData();
+                
+                document.getElementById('no-applied').style.display = 'none';
+                updateCounts();
+                addLiveActivity(`Applied to ${company} - moved to Applied section`);
             }
         }
         
-        // Save data to localStorage
-        function saveData() {
-            const rows = document.querySelectorAll('#tracker tbody tr');
-            const data = [];
-            rows.forEach(row => {
-                data.push({
-                    company: row.querySelector('td:nth-child(1)').textContent,
-                    role: row.querySelector('td:nth-child(2)').textContent,
-                    location: row.querySelector('td:nth-child(3)').textContent,
-                    status: row.querySelector('td:nth-child(4)').textContent,
-                    priority: row.querySelector('td:nth-child(5)').textContent
-                });
-            });
-            localStorage.setItem('internshipTracker', JSON.stringify(data));
+        // Update counts
+        function updateCounts() {
+            const pending = document.querySelectorAll('#pending-tbody tr').length;
+            const applied = document.querySelectorAll('#applied-tbody tr').length;
+            document.getElementById('stat-urgent').textContent = pending;
+            document.getElementById('stat-applied').textContent = applied;
+            document.getElementById('pending-count').textContent = pending + ' PENDING';
+            document.getElementById('pending-count-header').textContent = pending;
+            document.getElementById('applied-count-header').textContent = applied;
+            document.getElementById('nav-pending').textContent = pending;
+            document.getElementById('nav-applied').textContent = applied;
         }
         
-        // Auto-refresh every 30 seconds
-        setInterval(function() {
+        // Delete task
+        function deleteTask(id) {
+            const task = document.querySelector(`[data-task-id="${id}"]`);
+            if (task) {
+                task.remove();
+                addLiveActivity('Deleted task');
+            }
+        }
+        
+        // Add task
+        function addTask() {
+            const text = prompt('Enter new task:');
+            if (text) {
+                const list = document.getElementById('task-list');
+                const id = list.children.length + 1;
+                const div = document.createElement('div');
+                div.className = 'task-item';
+                div.setAttribute('data-task-id', id);
+                div.innerHTML = `
+                    <input type="checkbox" class="task-checkbox">
+                    <span class="task-text">${text}</span>
+                    <span class="task-delete" onclick="deleteTask(${id})">✕</span>
+                `;
+                list.appendChild(div);
+                addLiveActivity('Added new task: ' + text);
+            }
+        }
+        
+        // Save rules
+        function saveRules() {
+            const content = document.getElementById('rules-content').value;
+            localStorage.setItem('agentRules', content);
+            addLiveActivity('Saved agent rules changes');
+            alert('Rules saved!');
+        }
+        
+        // Load saved rules
+        function loadRules() {
+            const saved = localStorage.getItem('agentRules');
+            if (saved) {
+                document.getElementById('rules-content').value = saved;
+            }
+        }
+        
+        // Add live activity
+        function addLiveActivity(text) {
+            const feed = document.getElementById('full-live-feed');
+            const item = document.createElement('div');
+            item.className = 'live-item';
+            item.innerHTML = `
+                <span class="live-time">${new Date().toLocaleTimeString()}</span>
+                <span class="live-text">${text}</span>
+            `;
+            feed.insertBefore(item, feed.firstChild);
+        }
+        
+        // View functions
+        function viewResume(company) {
+            alert(`Resume for ${company}:\n\nUse your uploaded PDF: Anthony_Casseus_Resume_FINAL_viual.pdf\n\nCover letter location: materials/cover_letters/${company}_CoverLetter.txt`);
+        }
+        
+        function viewCoverLetter(company) {
+            alert(`Cover letter for ${company}:\n\nLocation: materials/cover_letters/${company}_CoverLetter.txt`);
+        }
+        
+        function viewFile(filename) {
+            alert(`File: ${filename}\n\nLocation: materials/${filename}`);
+        }
+        
+        // Initialize
+        loadRules();
+        updateCounts();
+        
+        // Auto-refresh
+        setInterval(() => {
             document.getElementById('last-updated').textContent = 'Just now';
         }, 30000);
     </script>

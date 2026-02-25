@@ -1,0 +1,102 @@
+{
+  "name": "Anthony Casseus",
+  "email": "anthony.casseus.internships@gmail.com",
+  "phone": "(754) 244-8060",
+  "location": "Orlando, FL",
+  "linkedin": "linkedin.com/in/sergio-casseus-b4b13b249",
+  "github": "github.com/casss20",
+  "school": "University of Central Florida",
+  "degree": "B.S. Computer Science",
+  "minor": "Cyber Operations",
+  "gpa": "3.0",
+  "grad_date": "May 2027",
+  "level": "Junior",
+  "work_auth": "U.S. Citizen",
+  "languages": ["English", "French", "Haitian Creole"],
+  "core_skills": {
+    "languages": ["Python", "TypeScript", "JavaScript", "Java", "C", "SQL", "Bash", "R"],
+    "ai_ml": ["LangChain", "RAG Pipelines", "LLM Agents", "TensorFlow", "PyTorch", "NLP", "Deep Learning", "Embeddings", "Pinecone", "OpenAI API", "DeepSeek API", "Whisper", "OpenCV", "scikit-learn", "Pandas", "NumPy"],
+    "ai_security": ["OWASP LLM Top 10", "Prompt Injection Mitigation", "Garak", "MITRE ATT&CK for LLMs", "PII Detection", "GDPR-aware Prompt Scrubbing"],
+    "cybersecurity": ["Penetration Testing", "Threat Detection", "Packet Sniffing", "Scapy", "Burp Suite", "Nmap", "OWASP ZAP", "Metasploit", "CTFs", "RBAC", "IAM Policies"],
+    "cloud_devops": ["AWS Lambda", "Docker", "Prometheus", "Falco", "CI/CD", "Linux", "REST APIs"],
+    "tools": ["Git", "GitHub", "Jupyter", "Postman", "VS Code", "Mplus", "R Studio"]
+  },
+  "experience": [
+    {
+      "company": "INTREPID Research Program UCF (NIH-Funded)",
+      "title": "Undergraduate Research Assistant",
+      "location": "Orlando, FL",
+      "dates": "August 2023 - March 2025",
+      "highlights": [
+        "Built standardized Polar Verity Sense protocols, cutting setup time 30% and onboarding 40+ senior participants",
+        "Synchronized heart rate, facial expression, and video data across 100+ multi-modal sessions",
+        "Ran statistical modeling in R and Mplus on physiological response data for NIH-funded cyberthreat safety study",
+        "Maintained 100% UCF IRB and NIH protocol compliance with zero data incidents across 40+ participants"
+      ]
+    },
+    {
+      "company": "Health 4 Haitians",
+      "title": "IT & Operations Assistant",
+      "location": "Fort Lauderdale, FL",
+      "dates": "January 2020 - December 2020",
+      "highlights": [
+        "Built Python ETL pipeline automating customer call data filtering, eliminating 100% of daily manual tasks",
+        "Reduced client communication turnaround by 20% by rebuilding email templates and document generation workflows",
+        "Identified and eliminated 3 high-frequency manual bottlenecks using digital tracking systems"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "OWASP RAG Assistant",
+      "github": "github.com/casss20",
+      "description": "RAG-based security compliance tool reducing lookup time from 20+ minutes to under 2 seconds",
+      "stack": ["Python", "LangChain", "Pinecone", "OpenAI API", "RAG"],
+      "metrics": ["50+ documents indexed", "30+ peer validations", "Source-traced retrieval"]
+    },
+    {
+      "name": "Cyber Threat Hunter",
+      "github": "github.com/casss20",
+      "description": "Live AI-powered packet sniffer classifying network traffic across 5+ protocol types in real-time",
+      "stack": ["Python", "Scapy", "scikit-learn", "RandomForest", "Pandas"],
+      "metrics": ["5+ protocol types", "Real-time ML pipeline", "Automated threat intelligence"]
+    },
+    {
+      "name": "AI Career Mentor Agent",
+      "github": "github.com/casss20",
+      "description": "Multi-step LLM agent with skill-gap analysis, role matching, and personalized roadmap generation",
+      "stack": ["TypeScript", "Next.js", "Pinecone", "OpenAI API", "LangChain"],
+      "metrics": ["3+ simultaneous career tracks", "Persistent memory", "15% debugging time reduction"]
+    },
+    {
+      "name": "TATI - AI Cybersecurity Assistant",
+      "description": "AI-powered security assistant with RAG, prompt injection shields, PII scrubbing, and GDPR-aware handling",
+      "stack": ["Python", "Docker", "Prometheus", "spaCy", "OWASP LLM Top 10"],
+      "metrics": ["4+ threat categories", "40% API spend reduction", "p95 latency monitoring"]
+    }
+  ],
+  "extracurriculars": [
+    "Hack UCF - Competed in web exploitation, reverse engineering, and cryptography CTF challenges",
+    "Shell Hack & KnightHacks Hackathons - Shipped 4+ team projects under 24-48 hour deadlines",
+    "Event Organizer, Campus Activity Board - Grew attendance 30% (150 to 200+)",
+    "NSBE, Club Kreyol, Black Student Union (BSU) - Active member"
+  ],
+  "coursework": [
+    "Data Structures & Algorithms",
+    "Machine Learning",
+    "Cryptography",
+    "Computer Architecture",
+    "Cybersecurity",
+    "Distributed Systems"
+  ],
+  "preferred_roles": [
+    "Software Engineering Intern",
+    "AI/ML Engineering Intern",
+    "Cybersecurity Intern",
+    "Data Science Intern",
+    "Product Management Intern"
+  ],
+  "preferred_locations": ["Remote", "Hybrid", "Orlando FL", "Relocation OK"],
+  "target_terms": ["Summer 2026", "Fall 2026"],
+  "compensation_requirement": "Paid internships only"
+}

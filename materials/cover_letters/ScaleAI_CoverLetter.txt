@@ -1,0 +1,25 @@
+Anthony Casseus
+Orlando, FL | (754) 244-8060
+anthony.casseus.internships@gmail.com
+linkedin.com/in/sergio-casseus-b4b13b249 | github.com/casss20
+
+February 25, 2026
+
+Hiring Manager
+Scale AI
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the Machine Learning Research Intern position at Scale AI for Summer 2026. As a Computer Science junior at the University of Central Florida with a minor in Cyber Operations and hands-on experience in ML pipelines, RAG systems, and AI research, I am excited about the opportunity to contribute to Scale AI's mission of accelerating AI development.
+
+What draws me to Scale AI is your central role in powering the most advanced AI systems in the world. Your work on RLHF, data labeling, and AI evaluation aligns directly with my experience building the OWASP RAG Assistant and AI Career Mentor Agent. I am particularly impressed by Scale AI's GenAI platform and would welcome the opportunity to contribute to research that improves AI model performance and safety.
+
+My background has prepared me well for this role. At the NIH-funded INTREPID Research Program, I performed statistical modeling in R and Mplus on physiological response data, contributing to findings in an active cyberthreat safety study. I improved data alignment accuracy by 80% over manual workflows across 100+ multi-modal sessions. I have also built production ML systems including an Audio Sentiment Analyzer (84% accuracy, 200+ samples) and an Emotion Recognition System using CNNs (89% accuracy, 10,000+ images).
+
+Technically, I bring hands-on experience with Python, TensorFlow, PyTorch, scikit-learn, LangChain, and NLP. My projects include real-time ML classification pipelines and RAG systems with vector databases. I am comfortable with data processing, model training, and evaluation workflows.
+
+I would welcome the opportunity to discuss how my skills and enthusiasm can contribute to the research team at Scale AI. Thank you for considering my application. I look forward to hearing from you.
+
+Sincerely,
+
+Anthony Casseus

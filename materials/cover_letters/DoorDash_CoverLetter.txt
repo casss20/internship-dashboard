@@ -1,0 +1,25 @@
+Anthony Casseus
+Orlando, FL | (754) 244-8060
+anthony.casseus.internships@gmail.com
+linkedin.com/in/sergio-casseus-b4b13b249 | github.com/casss20
+
+February 25, 2026
+
+Hiring Manager
+DoorDash
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the Machine Learning Intern position at DoorDash for Summer 2026. As a Computer Science junior at the University of Central Florida with a minor in Cyber Operations and experience building ML pipelines and AI systems, I am excited about the opportunity to contribute to DoorDash's logistics and recommendation systems.
+
+What draws me to DoorDash is your massive scale and the real-world impact of your ML systems on millions of deliveries daily. Your work on demand prediction, delivery time estimation, and recommendation engines aligns directly with my experience building predictive models and real-time classification systems. I am particularly impressed by DoorDash's engineering culture and would welcome the opportunity to learn from your world-class ML team.
+
+My background has prepared me well for this role. At the NIH-funded INTREPID Research Program, I synchronized multi-modal data across 100+ sessions and performed statistical modeling on behavioral constructs. I built the Cyber Threat Hunter, a real-time ML system classifying network traffic across 5+ protocol types using RandomForest, turning raw data into actionable intelligence. These experiences strengthened my skills in feature engineering, model training, and production ML pipelines.
+
+Technically, I bring hands-on experience with Python, TensorFlow, PyTorch, scikit-learn, Pandas, and SQL. My projects include an Audio Sentiment Analyzer with 84% classification accuracy and an Emotion Recognition System using CNNs with 89% validation accuracy. I am comfortable with the full ML lifecycle from data collection to deployment.
+
+I would welcome the opportunity to discuss how my skills and enthusiasm can contribute to the Machine Learning team at DoorDash. Thank you for considering my application. I look forward to hearing from you.
+
+Sincerely,
+
+Anthony Casseus

@@ -1,0 +1,25 @@
+Anthony Casseus
+Orlando, FL | (754) 244-8060
+anthony.casseus.internships@gmail.com
+linkedin.com/in/sergio-casseus-b4b13b249 | github.com/casss20
+
+February 25, 2026
+
+Hiring Manager
+GuidePoint Security
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the GPSU Cybersecurity Intern position at GuidePoint Security. As a Computer Science junior at the University of Central Florida with a minor in Cyber Operations and hands-on experience in penetration testing, threat detection, and AI-powered security tools, I am excited about the opportunity to contribute to GuidePoint's cybersecurity consulting practice.
+
+What draws me to GuidePoint is your reputation as a trusted cybersecurity advisor and your work across diverse security domains. Your focus on practical, actionable security solutions aligns directly with my experience building the OWASP RAG Assistant and Cyber Threat Hunter. I am particularly impressed by GuidePoint's commitment to developing the next generation of cybersecurity professionals and would welcome the opportunity to learn from your expert team.
+
+My background has prepared me well for this role. At the NIH-funded INTREPID Research Program, I maintained 100% UCF IRB and NIH protocol compliance with zero data incidents across 40+ participants, demonstrating my understanding of security and privacy requirements. I built the Cyber Threat Hunter, a live AI-powered packet sniffer classifying network traffic across 5+ protocol types in real-time. I am also an active competitor in Hack UCF CTF challenges covering web exploitation, reverse engineering, and cryptography.
+
+Technically, I bring hands-on experience with Python, Scapy, Burp Suite, Nmap, OWASP ZAP, and Metasploit. My projects include the OWASP RAG Assistant (reducing compliance lookup from 20+ minutes to under 2 seconds) and TATI - an AI Cybersecurity Assistant with prompt injection shields and PII scrubbing. I am comfortable with both offensive and defensive security practices.
+
+I would welcome the opportunity to discuss how my skills and enthusiasm can contribute to the GPSU team at GuidePoint Security. Thank you for considering my application. I look forward to hearing from you.
+
+Sincerely,
+
+Anthony Casseus

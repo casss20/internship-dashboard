@@ -1,0 +1,87 @@
+# Standard Answers for Common Internship Application Questions
+# Anthony Casseus - Summer/Fall 2026 Internship Applications
+
+## Tell me about yourself
+I am a Computer Science junior at the University of Central Florida with a minor in Cyber Operations and a GPA of 3.0. I am an NIH-funded researcher with hands-on experience in biometric data analysis and statistical modeling. I have shipped 10+ projects spanning AI agents, cybersecurity tooling, and NLP pipelines. I am passionate about turning AI and security concepts into working tools -- from RAG assistants to live threat-hunting pipelines. I bring working demos to interviews and thrive in fast-paced, collaborative environments.
+
+## Why do you want to work here?
+I am drawn to [COMPANY] because of [SPECIFIC REASON -- product, mission, technology, culture]. Your work on [SPECIFIC PROJECT/TECHNOLOGY] aligns directly with my experience building [RELEVANT PROJECT]. I am particularly impressed by [SPECIFIC ACHIEVEMENT OR VALUE] and would welcome the opportunity to contribute to such impactful work while growing my skills in [RELEVANT AREA].
+
+## Why should we hire you?
+You should hire me because I bring a unique combination of AI/ML expertise and cybersecurity knowledge, backed by real-world project experience. At the NIH-funded INTREPID Research Program, I built standardized protocols that cut setup time by 30% and maintained 100% compliance across 40+ participants. I have shipped production-ready tools like my OWASP RAG Assistant (reducing compliance lookup from 20+ minutes to under 2 seconds) and Cyber Threat Hunter (real-time packet classification across 5+ protocols). I am a U.S. citizen, available for [Summer/Fall] 2026, and ready to contribute from day one.
+
+## What are your strengths?
+- **Rapid prototyping**: I ship working demos quickly -- my AI Career Mentor Agent went from concept to working prototype in under 2 weeks
+- **Cross-domain expertise**: I bridge AI/ML and cybersecurity, understanding both the technical and security implications of AI systems
+- **Data-driven approach**: My NIH research background trained me to validate everything with data -- I improved data alignment accuracy by 80% over manual workflows
+- **Self-directed learning**: I taught myself LangChain, RAG pipelines, and AI security tooling to build projects that solve real problems
+
+## What are your weaknesses?
+I sometimes dive deep into technical details when presenting my work. I am working on tailoring my communication to the audience -- whether that is a technical deep-dive with engineers or a high-level summary for stakeholders. I have improved by practicing 30-second and 2-minute versions of my project pitches.
+
+## Describe a challenging project and how you handled it
+My OWASP RAG Assistant was challenging because security contexts demand high accuracy with verifiable sources. The problem: LLMs hallucinate, and in security, wrong answers are dangerous. My solution: I implemented source-traced retrieval using Pinecone vector store, ensuring every answer cites its source. I indexed 50+ OWASP documents and validated the system with 30+ peers. The result: compliance lookup time dropped from 20+ minutes to under 2 seconds, with every answer verifiable.
+
+## Where do you see yourself in 5 years?
+In 5 years, I see myself as a senior engineer leading AI/ML or security projects, ideally at the intersection of both. I want to be the person who can architect secure AI systems and mentor junior engineers. I am particularly interested in [COMPANY-SPECIFIC AREA] and hope to grow within an organization that values both technical excellence and ethical AI development.
+
+## What is your expected salary?
+I am primarily focused on finding a role where I can learn and contribute meaningfully. For [LOCATION] internships, I understand the market range is typically [RESEARCH RANGE]. I am open to discussing compensation that reflects the value I will bring and is competitive for the role and location.
+
+## Are you legally authorized to work in the United States?
+Yes, I am a U.S. citizen and fully authorized to work in the United States without sponsorship.
+
+## When can you start?
+I am available to start [DATE] for a [Summer/Fall] 2026 internship. My academic schedule is flexible, and I can accommodate start dates that align with your team's needs.
+
+## Do you have any questions for us?
+- What does success look like in this role after 30/60/90 days?
+- What projects would I be working on, and what is the team composition?
+- How does [COMPANY] approach mentorship for interns?
+- What technologies does the team use day-to-day?
+- Are there opportunities for full-time conversion after the internship?
+
+## Describe your experience with [TECHNOLOGY]
+Customize based on the specific technology:
+
+**Python**: 4+ years of experience. Used for ETL pipelines, ML models (TensorFlow, PyTorch, scikit-learn), web scraping, and backend development. Built production-ready tools including packet sniffers, RAG assistants, and AI agents.
+
+**Machine Learning/AI**: Hands-on experience with LangChain, RAG pipelines, LLM agents, TensorFlow, PyTorch, and NLP. Built and deployed models for emotion recognition (89% accuracy), sentiment analysis (84% accuracy), and real-time network traffic classification.
+
+**Cybersecurity**: Experience with OWASP Top 10, penetration testing, threat detection, packet analysis (Scapy), and security tools (Burp Suite, Nmap, Metasploit). Active participant in CTF competitions and Hack UCF.
+
+**Cloud/DevOps**: Experience with AWS Lambda, Docker, Prometheus, CI/CD pipelines, and Linux administration. Deployed containerized applications with monitoring and auto-scaling.
+
+## Why did you choose Computer Science?
+I chose Computer Science because I am fascinated by the power to build tools that solve real problems. My early experience automating workflows at Health 4 Haitians showed me how code can eliminate tedious manual work and free people to focus on what matters. Since then, I have been driven to create technology that is both powerful and secure -- especially at the intersection of AI and cybersecurity.
+
+## Tell me about a time you worked in a team
+At KnightHacks 2024, my team of 4 had 48 hours to ship a working project. I took the lead on backend architecture and API integration while coordinating with frontend and ML teammates. We faced a critical bug 6 hours before the deadline -- I debugged the issue, implemented a fix, and we placed in the top 20%. The experience taught me the value of clear communication, dividing work by strengths, and staying calm under pressure.
+
+## How do you handle tight deadlines?
+I break the project into milestones, prioritize the core functionality, and ship a working version first. For my AI Career Mentor Agent, I had a 2-week deadline. I scoped the MVP to 3 core features, built a working prototype by day 10, and used the remaining time for polish. I communicate progress daily and raise blockers early.
+
+## What motivates you?
+I am motivated by solving hard problems and seeing my code make a real impact. Whether it is cutting compliance lookup time from 20 minutes to 2 seconds or automating manual data processing, I love building tools that people actually use. I am also motivated by continuous learning -- every project teaches me something new.
+
+## Additional Short Answers
+
+**GPA**: 3.0/4.0
+
+**Graduation Date**: May 2027
+
+**Major**: Computer Science (B.S.)
+
+**Minor**: Cyber Operations
+
+**University**: University of Central Florida
+
+**Relevant Coursework**: Data Structures & Algorithms, Machine Learning, Cryptography, Computer Architecture, Cybersecurity, Distributed Systems
+
+**GitHub**: github.com/casss20
+
+**LinkedIn**: linkedin.com/in/sergio-casseus-b4b13b249
+
+**Languages**: English (fluent), French (fluent), Haitian Creole (fluent)
+
+**Work Authorization**: U.S. Citizen (no sponsorship required)

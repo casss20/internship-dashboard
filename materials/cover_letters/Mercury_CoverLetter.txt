@@ -1,0 +1,25 @@
+Anthony Casseus
+Orlando, FL | (754) 244-8060
+anthony.casseus.internships@gmail.com
+linkedin.com/in/sergio-casseus-b4b13b249 | github.com/casss20
+
+February 25, 2026
+
+Hiring Manager
+Mercury
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the Data Science Intern position at Mercury for Summer 2026. As a Computer Science junior at the University of Central Florida with a minor in Cyber Operations and experience in statistical modeling and ML pipelines, I am excited about the opportunity to contribute to Mercury's data-driven fintech solutions.
+
+What draws me to Mercury is your mission to empower startups with accessible banking and financial tools. Your data science work on risk modeling, fraud detection, and customer analytics aligns directly with my experience building the Cyber Threat Hunter - a real-time ML system that classified network traffic across 5+ protocol types using RandomForest. I am particularly impressed by Mercury's rapid growth and commitment to serving the startup ecosystem, and would welcome the opportunity to contribute to such impactful work.
+
+My background has prepared me well for this role. At the NIH-funded INTREPID Research Program, I synchronized heart rate, facial expression, and video data across 100+ multi-modal sessions and performed statistical modeling in R and Mplus on physiological response data. I improved data alignment accuracy by 80% over manual workflows and contributed to findings in an active cyberthreat safety study. These experiences strengthened my skills in data processing, statistical analysis, and ML pipeline development.
+
+Technically, I bring hands-on experience with Python, R, TensorFlow, PyTorch, scikit-learn, Pandas, and SQL. My projects include an Audio Sentiment Analyzer with 84% classification accuracy across 200+ validated samples and an Emotion Recognition System using CNNs with 89% validation accuracy. I am comfortable with the full data science lifecycle from data collection to model deployment.
+
+I would welcome the opportunity to discuss how my skills and enthusiasm can contribute to the Data Science team at Mercury. Thank you for considering my application. I look forward to hearing from you.
+
+Sincerely,
+
+Anthony Casseus

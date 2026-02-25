@@ -1,0 +1,25 @@
+Anthony Casseus
+Orlando, FL | (754) 244-8060
+anthony.casseus.internships@gmail.com
+linkedin.com/in/sergio-casseus-b4b13b249 | github.com/casss20
+
+February 25, 2026
+
+Hiring Manager
+Crystal Dynamics
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the Cyber Security Intern position at Crystal Dynamics. As a Computer Science junior at the University of Central Florida with a minor in Cyber Operations and a passion for both gaming and security, I am excited about the opportunity to contribute to protecting the systems behind iconic gaming experiences.
+
+What draws me to Crystal Dynamics is your legacy of creating groundbreaking games and your commitment to delivering secure, high-quality experiences to millions of players. Your work on the Tomb Raider franchise and Marvel's Avengers demonstrates the critical importance of robust security in modern gaming. I am particularly impressed by Crystal Dynamics' collaborative culture and would welcome the opportunity to contribute to your security team.
+
+My background has prepared me well for this role. At the NIH-funded INTREPID Research Program, I maintained 100% compliance with UCF IRB and NIH protocols, enforcing anonymization and secure storage methods across all 40+ participants. I built the Cyber Threat Hunter, a live AI-powered packet sniffer for real-time threat detection, and actively compete in CTF challenges covering web exploitation and reverse engineering. These experiences have strengthened my skills in threat detection, secure system design, and incident response.
+
+Technically, I bring hands-on experience with Python, Scapy, penetration testing tools, and AI-powered security systems. My projects include the OWASP RAG Assistant for security compliance and TATI - an AI Cybersecurity Assistant with prompt injection shields. I understand the unique security challenges facing the gaming industry, from protecting player data to preventing cheating and DDoS attacks.
+
+I would welcome the opportunity to discuss how my skills and enthusiasm can contribute to the Cyber Security team at Crystal Dynamics. Thank you for considering my application. I look forward to hearing from you.
+
+Sincerely,
+
+Anthony Casseus

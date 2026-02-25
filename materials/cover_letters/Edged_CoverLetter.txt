@@ -1,0 +1,25 @@
+Anthony Casseus
+Orlando, FL | (754) 244-8060
+anthony.casseus.internships@gmail.com
+linkedin.com/in/sergio-casseus-b4b13b249 | github.com/casss20
+
+February 25, 2026
+
+Hiring Manager
+Edged
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the 2026 Summer Intern position at Edged. As a Computer Science junior at the University of Central Florida with a minor in Cyber Operations and 10+ shipped projects in AI/ML and cybersecurity, I am excited about the opportunity to contribute to Edged's innovative technology solutions.
+
+What draws me to Edged is your focus on cutting-edge technology and commitment to building transformative products. Your work at the intersection of software engineering and emerging technologies aligns directly with my experience building AI agents, RAG systems, and cybersecurity tools. I am particularly impressed by Edged's collaborative culture and would welcome the opportunity to learn and contribute to your engineering team.
+
+My background has prepared me well for this role. At the NIH-funded INTREPID Research Program, I built standardized protocols reducing setup time by 30% and synchronized multi-modal data across 100+ sessions with 80% accuracy improvement. I have also shipped multiple production-ready projects including the OWASP RAG Assistant (reducing compliance lookup from 20+ minutes to under 2 seconds) and the AI Career Mentor Agent (supporting 3+ simultaneous career tracks with persistent memory).
+
+Technically, I bring hands-on experience with Python, TypeScript, JavaScript, LangChain, TensorFlow, PyTorch, AWS Lambda, Docker, and REST APIs. My cybersecurity experience includes OWASP Top 10, penetration testing, and threat detection. I am comfortable working across the full stack and thrive in fast-paced engineering environments.
+
+I would welcome the opportunity to discuss how my skills and enthusiasm can contribute to the engineering team at Edged. Thank you for considering my application. I look forward to hearing from you.
+
+Sincerely,
+
+Anthony Casseus

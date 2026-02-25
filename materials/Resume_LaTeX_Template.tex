@@ -1,0 +1,152 @@
+% LaTeX Resume Template for Anthony Casseus
+% ATS-Optimized, Clean Design, 1 Page
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{parskip}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Colors
+\definecolor{darkblue}{RGB}{0,51,102}
+\definecolor{gray}{RGB}{80,80,80}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    urlcolor=darkblue,
+    citecolor=darkblue
+}
+
+% Section formatting
+\titleformat{\section}
+    {\large\bfseries\color{darkblue}}
+    {}
+    {0em}
+    {}
+    [\vspace{-0.5em}\textcolor{darkblue}{\rule{\linewidth}{1pt}}]
+\titlespacing*{\section}{0pt}{1em}{0.5em}
+
+% List formatting
+\setlist[itemize]{leftmargin=1.5em, itemsep=0.1em, topsep=0.2em}
+
+% Custom commands
+\newcommand{\resumeheader}[5]{
+    \begin{center}
+        {\LARGE\bfseries #1}\\[0.3em]
+        {\small #2 \quad|\quad #3 \quad|\quad #4 \quad|\quad #5}
+    \end{center}
+    \vspace{0.5em}
+}
+
+\newcommand{\experienceentry}[4]{
+    \textbf{#1} \hfill \textit{#2}\\
+    \textit{#3} \hfill \textit{#4}
+}
+
+\newcommand{\projectentry}[3]{
+    \textbf{#1} \hfill \textit{#2}\\
+    \textit{#3}
+}
+
+\begin{document}
+
+% Header - CUSTOMIZE PER APPLICATION
+\resumeheader
+    {Anthony Casseus} % Name
+    {Orlando, FL}
+    {(754) 244-8060}
+    {anthony.casseus.internships@gmail.com}
+    {linkedin.com/in/sergio-casseus-b4b13b249 \quad|\quad github.com/casss20}
+
+% Summary - CUSTOMIZE PER APPLICATION
+\section{Summary}
+UCF Computer Science junior (Minor: Cyber Operations, GPA 3.0) specializing in %ROLE_KEYWORDS%. 
+NIH-funded researcher with 10+ shipped projects in AI agents, cybersecurity tooling, and NLP pipelines. 
+Seeking a %TERM% internship to contribute %CORE_VALUE_PROPOSITION%.
+
+% Education
+\section{Education}
+\experienceentry
+    {University of Central Florida}
+    {Orlando, FL}
+    {B.S. Computer Science, Minor: Cyber Operations}
+    {Expected May 2027}
+\begin{itemize}
+    \item GPA: 3.0 \quad|\quad Coursework: %RELEVANT_COURSEWORK%
+\end{itemize}
+
+\experienceentry
+    {Broward College}
+    {Fort Lauderdale, FL}
+    {A.A. Computer Science}
+    {May 2023}
+
+% Skills - CUSTOMIZE PER APPLICATION (prioritize role-relevant skills)
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{Languages:} %LANGUAGES%
+    \item \textbf{AI/ML:} %AI_ML_SKILLS%
+    \item \textbf{Cybersecurity:} %SECURITY_SKILLS%
+    \item \textbf{Cloud/DevOps:} %CLOUD_SKILLS%
+\end{itemize}
+
+% Experience
+\section{Experience}
+\experienceentry
+    {INTREPID Research Program UCF (NIH-Funded)}
+    {Orlando, FL}
+    {Undergraduate Research Assistant}
+    {Aug 2023 -- Mar 2025}
+\begin{itemize}
+    \item %ROLE_SPECIFIC_BULLET_1%
+    \item Synchronized heart rate, facial expression, and video data across 100+ multi-modal sessions
+    \item Ran statistical modeling in R and Mplus on physiological response data for NIH-funded study
+    \item Maintained 100\% UCF IRB and NIH protocol compliance with zero data incidents
+\end{itemize}
+
+\experienceentry
+    {Health 4 Haitians}
+    {Fort Lauderdale, FL}
+    {IT \& Operations Assistant}
+    {Jan 2020 -- Dec 2020}
+\begin{itemize}
+    \item Built Python ETL pipeline automating customer call data filtering, eliminating 100\% of daily manual tasks
+    \item Reduced client communication turnaround by 20\% by rebuilding email automation workflows
+\end{itemize}
+
+% Projects - CUSTOMIZE PER APPLICATION (most relevant first)
+\section{Projects}
+\projectentry
+    {%PROJECT_1_NAME%}
+    {%PROJECT_1_TECH%}
+    {github.com/casss20}
+\begin{itemize}
+    \item %PROJECT_1_BULLET_1%
+    \item %PROJECT_1_BULLET_2%
+\end{itemize}
+
+\projectentry
+    {%PROJECT_2_NAME%}
+    {%PROJECT_2_TECH%}
+    {github.com/casss20}
+\begin{itemize}
+    \item %PROJECT_2_BULLET_1%
+    \item %PROJECT_2_BULLET_2%
+\end{itemize}
+
+% Extracurriculars
+\section{Extracurriculars}
+\begin{itemize}
+    \item Hack UCF -- Competed in web exploitation, reverse engineering, and cryptography CTF challenges
+    \item Shell Hack \& KnightHacks -- Shipped 4+ team projects under 24-48 hour deadlines
+    \item NSBE, Club Kreyol, Black Student Union -- Active member
+\end{itemize}
+
+\end{document}

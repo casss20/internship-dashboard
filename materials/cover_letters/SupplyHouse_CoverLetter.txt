@@ -1,0 +1,25 @@
+Anthony Casseus
+Orlando, FL | (754) 244-8060
+anthony.casseus.internships@gmail.com
+linkedin.com/in/sergio-casseus-b4b13b249 | github.com/casss20
+
+February 25, 2026
+
+Hiring Manager
+SupplyHouse
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the AI Enablement Intern position at SupplyHouse for Summer 2026. As a Computer Science junior at the University of Central Florida with a minor in Cyber Operations and hands-on experience building AI agents and RAG systems, I am excited about the opportunity to contribute to SupplyHouse's AI initiatives.
+
+What draws me to SupplyHouse is your focus on practical AI implementation that drives real business value. Your work on streamlining operations through intelligent automation aligns directly with my experience building the OWASP RAG Assistant, which reduced security compliance lookup time from 20+ minutes to under 2 seconds. I am particularly impressed by SupplyHouse's commitment to innovation in the HVAC/plumbing supply industry and would welcome the opportunity to contribute to such impactful work while growing my skills in production AI systems.
+
+My background has prepared me well for this role. At the NIH-funded INTREPID Research Program, I built standardized biometric protocols that cut setup time by 30% and maintained 100% compliance across 40+ participants. I also developed the AI Career Mentor Agent, a multi-step LLM system with skill-gap analysis and personalized roadmap generation supporting 3+ simultaneous career tracks. These experiences have strengthened my skills in LangChain, RAG architecture, prompt engineering, and system design - all central to AI enablement.
+
+Technically, I bring hands-on experience with Python, TypeScript, LangChain, OpenAI API, Pinecone, and AWS Lambda. My projects include TATI - an AI Cybersecurity Assistant with prompt injection shields and PII scrubbing that reduced projected API spend by 40% via semantic caching. I am comfortable building production-ready AI systems and thrive in fast-paced, collaborative environments.
+
+I would welcome the opportunity to discuss how my skills and enthusiasm can contribute to the AI team at SupplyHouse. Thank you for considering my application. I look forward to hearing from you.
+
+Sincerely,
+
+Anthony Casseus

@@ -260,6 +260,43 @@
             background: var(--surface2);
         }
         
+        /* Action Buttons */
+        .action-btn {
+            font-family: var(--mono);
+            font-size: 10px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            background: var(--surface2);
+            color: var(--text);
+            cursor: pointer;
+            margin-right: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .action-btn:hover {
+            background: var(--border);
+        }
+        
+        .action-btn.apply {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        .action-btn.apply:hover {
+            background: rgba(0, 229, 160, 0.1);
+        }
+        
+        .action-btn.delete {
+            border-color: var(--danger);
+            color: var(--danger);
+        }
+        
+        .action-btn.delete:hover {
+            background: rgba(255, 69, 96, 0.1);
+        }
+        
         .badge {
             font-family: var(--mono);
             font-size: 10px;
@@ -537,89 +574,174 @@
                                     <th>Location</th>
                                     <th>Status</th>
                                     <th>Priority</th>
-                                    <th>Date Added</th>
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr data-id="1">
                                     <td><strong>SupplyHouse</strong></td>
                                     <td>AI Enablement</td>
                                     <td>Remote</td>
                                     <td><span class="badge badge-ready">Ready to Submit</span></td>
                                     <td style="color: var(--danger);">🔴 Urgent</td>
-                                    <td>2025-02-25</td>
+                                    <td>
+                                        <a href="https://www.supplyhouse.com/careers" target="_blank" class="action-btn apply">Apply →</a>
+                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                    </td>
                                 </tr>
-                                <tr>
+                                <tr data-id="2">
                                     <td><strong>Mercury</strong></td>
                                     <td>Data Science</td>
                                     <td>Remote (US)</td>
                                     <td><span class="badge badge-ready">Ready to Submit</span></td>
                                     <td style="color: var(--danger);">🔴 Urgent</td>
-                                    <td>2025-02-25</td>
+                                    <td>
+                                        <a href="https://mercury.com/careers" target="_blank" class="action-btn apply">Apply →</a>
+                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                    </td>
                                 </tr>
-                                <tr>
+                                <tr data-id="3">
                                     <td><strong>Edged</strong></td>
                                     <td>2026 Summer Intern</td>
                                     <td>Remote (US)</td>
                                     <td><span class="badge badge-ready">Ready to Submit</span></td>
                                     <td style="color: var(--danger);">🔴 Urgent</td>
-                                    <td>2025-02-25</td>
+                                    <td>
+                                        <a href="#" target="_blank" class="action-btn apply">Apply →</a>
+                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>Edged</td>
-                                    <td>2026 Summer (Role 2)</td>
-                                    <td>Remote</td>
-                                    <td><span class="badge">Not Started</span></td>
-                                    <td style="color: var(--warn);">🟡 Medium</td>
-                                    <td>2025-02-25</td>
+                                <tr data-id="4">
+                                    <td><strong>Scale AI</strong></td>
+                                    <td>ML Research Intern</td>
+                                    <td>SF/Remote</td>
+                                    <td><span class="badge badge-ready">Ready to Submit</span></td>
+                                    <td style="color: var(--accent);">🟢 High</td>
+                                    <td>
+                                        <a href="https://scale.com/careers" target="_blank" class="action-btn apply">Apply →</a>
+                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>Wealth.com</td>
-                                    <td>Applied Science</td>
-                                    <td>Remote</td>
-                                    <td><span class="badge">Not Started</span></td>
-                                    <td style="color: var(--warn);">🟡 Medium</td>
-                                    <td>2025-02-25</td>
+                                <tr data-id="5">
+                                    <td><strong>DoorDash</strong></td>
+                                    <td>Machine Learning Intern</td>
+                                    <td>SF/NY/Seattle</td>
+                                    <td><span class="badge badge-ready">Ready to Submit</span></td>
+                                    <td style="color: var(--accent);">🟢 High</td>
+                                    <td>
+                                        <a href="https://careers.doordash.com" target="_blank" class="action-btn apply">Apply →</a>
+                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>Simular</td>
-                                    <td>Software Engineering</td>
-                                    <td>Remote</td>
-                                    <td><span class="badge">Not Started</span></td>
-                                    <td style="color: var(--warn);">🟡 Medium</td>
-                                    <td>2025-02-25</td>
-                                </tr>
-                                <tr>
-                                    <td>GuidePoint</td>
+                                <tr data-id="6">
+                                    <td><strong>GuidePoint</strong></td>
                                     <td>GPSU Cybersecurity</td>
                                     <td>Remote (US)</td>
-                                    <td><span class="badge">Not Started</span></td>
+                                    <td><span class="badge badge-ready">Ready to Submit</span></td>
                                     <td style="color: var(--accent);">🟢 High</td>
-                                    <td>2025-02-25</td>
+                                    <td>
+                                        <a href="https://www.guidepointsecurity.com/careers" target="_blank" class="action-btn apply">Apply →</a>
+                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>Crystal Dynamics</td>
+                                <tr data-id="7">
+                                    <td><strong>Crystal Dynamics</strong></td>
                                     <td>Cyber Security</td>
                                     <td>Hybrid</td>
+                                    <td><span class="badge badge-ready">Ready to Submit</span></td>
+                                    <td style="color: var(--accent);">🟢 High</td>
+                                    <td>
+                                        <a href="https://crystaldynamics.com/careers" target="_blank" class="action-btn apply">Apply →</a>
+                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                    </td>
+                                </tr>
+                                <tr data-id="8">
+                                    <td><strong>CrowdStrike</strong></td>
+                                    <td>IT Service Desk Launch Intern</td>
+                                    <td>Austin, TX</td>
                                     <td><span class="badge">Not Started</span></td>
                                     <td style="color: var(--accent);">🟢 High</td>
-                                    <td>2025-02-25</td>
+                                    <td>
+                                        <a href="https://www.crowdstrike.com/careers" target="_blank" class="action-btn apply">Apply →</a>
+                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>Cresta</td>
-                                    <td>Forward Deployed</td>
-                                    <td>Remote (US)</td>
+                                <tr data-id="9">
+                                    <td><strong>Atlassian</strong></td>
+                                    <td>Security Engineer Intern</td>
+                                    <td>Seattle/Remote</td>
+                                    <td><span class="badge">Not Started</span></td>
+                                    <td style="color: var(--accent);">🟢 High</td>
+                                    <td>
+                                        <a href="https://www.atlassian.com/company/careers" target="_blank" class="action-btn apply">Apply →</a>
+                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                    </td>
+                                </tr>
+                                <tr data-id="10">
+                                    <td><strong>CISA</strong></td>
+                                    <td>Cyber/IT Interns</td>
+                                    <td>Various</td>
                                     <td><span class="badge">Not Started</span></td>
                                     <td style="color: var(--warn);">🟡 Medium</td>
-                                    <td>2025-02-25</td>
+                                    <td>
+                                        <a href="https://www.cisa.gov/careers" target="_blank" class="action-btn apply">Apply →</a>
+                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>Cohere</td>
+                                <tr data-id="11">
+                                    <td><strong>Dex (YC)</strong></td>
+                                    <td>AI/ML Engineer Intern</td>
+                                    <td>San Francisco</td>
+                                    <td><span class="badge">Not Started</span></td>
+                                    <td style="color: var(--accent);">🟢 High</td>
+                                    <td>
+                                        <a href="https://www.ycombinator.com/companies/joindex" target="_blank" class="action-btn apply">Apply →</a>
+                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                    </td>
+                                </tr>
+                                <tr data-id="12">
+                                    <td><strong>Mesh (YC)</strong></td>
+                                    <td>AI Engineer Intern</td>
+                                    <td>San Francisco</td>
+                                    <td><span class="badge">Not Started</span></td>
+                                    <td style="color: var(--accent);">🟢 High</td>
+                                    <td>
+                                        <a href="https://www.ycombinator.com/companies/mesh-2" target="_blank" class="action-btn apply">Apply →</a>
+                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                    </td>
+                                </tr>
+                                <tr data-id="13">
+                                    <td><strong>14 AI (YC)</strong></td>
+                                    <td>Full-Stack Engineering Intern</td>
+                                    <td>Remote</td>
+                                    <td><span class="badge">Not Started</span></td>
+                                    <td style="color: var(--accent);">🟢 High</td>
+                                    <td>
+                                        <a href="https://www.ycombinator.com/companies/14-ai" target="_blank" class="action-btn apply">Apply →</a>
+                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                    </td>
+                                </tr>
+                                <tr data-id="14">
+                                    <td><strong>Bloom (YC)</strong></td>
+                                    <td>AI/Full-Stack Intern</td>
+                                    <td>Zurich</td>
+                                    <td><span class="badge">Not Started</span></td>
+                                    <td style="color: var(--warn);">🟡 Medium</td>
+                                    <td>
+                                        <a href="https://www.ycombinator.com/companies/bloom-4" target="_blank" class="action-btn apply">Apply →</a>
+                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                    </td>
+                                </tr>
+                                <tr data-id="15">
+                                    <td><strong>Cohere</strong></td>
                                     <td>Software Engineering</td>
                                     <td>Remote</td>
                                     <td><span class="badge">Not Started</span></td>
                                     <td style="color: var(--warn);">🟡 Medium</td>
-                                    <td>2025-02-25</td>
+                                    <td>
+                                        <a href="https://cohere.com/careers" target="_blank" class="action-btn apply">Apply →</a>
+                                        <button class="action-btn delete" onclick="deleteRow(this)">✕</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -826,6 +948,33 @@
                 document.getElementById(pageId).classList.add('active');
             });
         });
+        
+        // Delete row function
+        function deleteRow(btn) {
+            const row = btn.closest('tr');
+            const company = row.querySelector('td:first-child').textContent;
+            if (confirm(`Delete ${company} from your tracker?`)) {
+                row.remove();
+                // Save to localStorage
+                saveData();
+            }
+        }
+        
+        // Save data to localStorage
+        function saveData() {
+            const rows = document.querySelectorAll('#tracker tbody tr');
+            const data = [];
+            rows.forEach(row => {
+                data.push({
+                    company: row.querySelector('td:nth-child(1)').textContent,
+                    role: row.querySelector('td:nth-child(2)').textContent,
+                    location: row.querySelector('td:nth-child(3)').textContent,
+                    status: row.querySelector('td:nth-child(4)').textContent,
+                    priority: row.querySelector('td:nth-child(5)').textContent
+                });
+            });
+            localStorage.setItem('internshipTracker', JSON.stringify(data));
+        }
         
         // Auto-refresh every 30 seconds
         setInterval(function() {

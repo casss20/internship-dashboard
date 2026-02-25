@@ -1,0 +1,54 @@
+{
+    "files": [
+        {
+            "name": "Professional_Info.json",
+            "status": "Complete",
+            "path": "materials/Professional_Info.json"
+        },
+        {
+            "name": "Resume_LaTeX_Template.tex",
+            "status": "Complete",
+            "path": "materials/Resume_Template"
+        },
+        {
+            "name": "CoverLetter_Template.tex",
+            "status": "Complete",
+            "path": "materials/CoverLetter_Template"
+        },
+        {
+            "name": "Standard_Answers.txt",
+            "status": "Complete",
+            "path": "materials/Standard_Answers"
+        }
+    ],
+    "coverLetters": [
+        {
+            "company": "SupplyHouse",
+            "key": "SupplyHouse"
+        },
+        {
+            "company": "Mercury",
+            "key": "Mercury"
+        },
+        {
+            "company": "Edged",
+            "key": "Edged"
+        },
+        {
+            "company": "Scale AI",
+            "key": "ScaleAI"
+        },
+        {
+            "company": "DoorDash",
+            "key": "DoorDash"
+        },
+        {
+            "company": "GuidePoint",
+            "key": "GuidePoint"
+        },
+        {
+            "company": "Crystal Dynamics",
+            "key": "CrystalDynamics"
+        }
+    ]
+}

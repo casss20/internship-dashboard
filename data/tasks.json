@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "text": "Submit SupplyHouse application",
+        "done": false
+    },
+    {
+        "id": 2,
+        "text": "Submit Mercury application",
+        "done": false
+    },
+    {
+        "id": 3,
+        "text": "Submit Edged application",
+        "done": false
+    },
+    {
+        "id": 4,
+        "text": "Sign up for Apollo.io (cold emails)",
+        "done": false
+    },
+    {
+        "id": 5,
+        "text": "Send cold emails to Scale AI recruiter",
+        "done": false
+    }
+]

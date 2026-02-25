@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Jonathan Taylor",
+        "company": "Scale AI",
+        "email": "jonathan@scale.com",
+        "status": "Not Sent",
+        "followUp": null
+    },
+    {
+        "id": 2,
+        "name": "Taylor Pierotti",
+        "company": "GuidePoint",
+        "email": "taylor@guidepointsecurity.com",
+        "status": "Not Sent",
+        "followUp": null
+    }
+]

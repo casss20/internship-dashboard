@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <meta name="theme-color" content="#00e5a0">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap');
-        
+
         :root {
             --bg: #0a0c10;
             --surface: #111318;
@@ -23,9 +24,13 @@
             --mono: 'Space Mono', monospace;
             --sans: 'DM Sans', sans-serif;
         }
-        
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             background: var(--bg);
             color: var(--text);
@@ -33,7 +38,7 @@
             font-size: 14px;
             line-height: 1.6;
         }
-        
+
         /* Header */
         .header {
             background: var(--surface);
@@ -45,26 +50,26 @@
             flex-wrap: wrap;
             gap: 15px;
         }
-        
+
         .header-left h1 {
             font-family: var(--mono);
             font-size: 20px;
             font-weight: 700;
             color: var(--accent);
         }
-        
+
         .header-left .subtitle {
             color: var(--muted);
             font-size: 12px;
             margin-top: 4px;
         }
-        
+
         .status-pills {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
         }
-        
+
         .pill {
             font-family: var(--mono);
             font-size: 10px;
@@ -73,13 +78,13 @@
             border: 1px solid var(--border);
             color: var(--muted);
         }
-        
+
         .pill.active {
             border-color: var(--accent);
             color: var(--accent);
             background: rgba(0, 229, 160, 0.1);
         }
-        
+
         /* Navigation */
         .nav {
             background: var(--surface2);
@@ -89,7 +94,7 @@
             gap: 0;
             overflow-x: auto;
         }
-        
+
         .nav-item {
             padding: 12px 20px;
             font-family: var(--mono);
@@ -102,23 +107,31 @@
             transition: all 0.2s;
             white-space: nowrap;
         }
-        
-        .nav-item:hover { color: var(--text); }
+
+        .nav-item:hover {
+            color: var(--text);
+        }
+
         .nav-item.active {
             color: var(--accent);
             border-bottom-color: var(--accent);
         }
-        
+
         /* Main Content */
         .main {
             padding: 30px;
             max-width: 1400px;
             margin: 0 auto;
         }
-        
-        .page-section { display: none; }
-        .page-section.active { display: block; }
-        
+
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
         /* Cards */
         .grid {
             display: grid;
@@ -126,14 +139,14 @@
             gap: 20px;
             margin-bottom: 30px;
         }
-        
+
         .card {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 8px;
             overflow: hidden;
         }
-        
+
         .card-header {
             background: var(--surface2);
             padding: 12px 16px;
@@ -142,7 +155,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .card-title {
             font-family: var(--mono);
             font-size: 11px;
@@ -150,9 +163,11 @@
             text-transform: uppercase;
             color: var(--accent);
         }
-        
-        .card-body { padding: 16px; }
-        
+
+        .card-body {
+            padding: 16px;
+        }
+
         /* Live Feed */
         .live-feed {
             background: var(--surface);
@@ -162,7 +177,7 @@
             max-height: 400px;
             overflow-y: auto;
         }
-        
+
         .live-item {
             display: flex;
             gap: 12px;
@@ -170,31 +185,49 @@
             border-bottom: 1px solid var(--border);
             font-size: 13px;
         }
-        
-        .live-item:last-child { border-bottom: none; }
-        
+
+        .live-item:last-child {
+            border-bottom: none;
+        }
+
         .live-time {
             font-family: var(--mono);
             font-size: 10px;
             color: var(--muted);
             min-width: 60px;
         }
-        
-        .live-text { color: var(--text); }
-        .live-text .highlight { color: var(--accent); }
-        .live-text .working { color: var(--accent2); }
-        .live-text .completed { color: var(--accent); }
-        .live-text .alert { color: var(--danger); }
-        
+
+        .live-text {
+            color: var(--text);
+        }
+
+        .live-text .highlight {
+            color: var(--accent);
+        }
+
+        .live-text .working {
+            color: var(--accent2);
+        }
+
+        .live-text .completed {
+            color: var(--accent);
+        }
+
+        .live-text .alert {
+            color: var(--danger);
+        }
+
         /* Tables */
-        .table-container { overflow-x: auto; }
-        
+        .table-container {
+            overflow-x: auto;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             font-size: 13px;
         }
-        
+
         th {
             font-family: var(--mono);
             font-size: 10px;
@@ -206,15 +239,17 @@
             border-bottom: 1px solid var(--border);
             background: var(--surface2);
         }
-        
+
         td {
             padding: 12px;
             border-bottom: 1px solid var(--border);
             color: var(--text);
         }
-        
-        tr:hover td { background: var(--surface2); }
-        
+
+        tr:hover td {
+            background: var(--surface2);
+        }
+
         /* Action Buttons */
         .action-btn {
             font-family: var(--mono);
@@ -229,37 +264,47 @@
             text-decoration: none;
             display: inline-block;
         }
-        
-        .action-btn:hover { background: var(--border); }
-        
+
+        .action-btn:hover {
+            background: var(--border);
+        }
+
         .action-btn.apply {
             border-color: var(--accent);
             color: var(--accent);
         }
-        
-        .action-btn.apply:hover { background: rgba(0, 229, 160, 0.1); }
-        
+
+        .action-btn.apply:hover {
+            background: rgba(0, 229, 160, 0.1);
+        }
+
         .action-btn.delete {
             border-color: var(--danger);
             color: var(--danger);
         }
-        
-        .action-btn.delete:hover { background: rgba(255, 69, 96, 0.1); }
-        
+
+        .action-btn.delete:hover {
+            background: rgba(255, 69, 96, 0.1);
+        }
+
         .action-btn.check {
             border-color: var(--accent);
             color: var(--accent);
         }
-        
-        .action-btn.check:hover { background: rgba(0, 229, 160, 0.2); }
-        
+
+        .action-btn.check:hover {
+            background: rgba(0, 229, 160, 0.2);
+        }
+
         .action-btn.resume {
             border-color: var(--accent2);
             color: var(--accent2);
         }
-        
-        .action-btn.resume:hover { background: rgba(0, 119, 255, 0.1); }
-        
+
+        .action-btn.resume:hover {
+            background: rgba(0, 119, 255, 0.1);
+        }
+
         /* Badges */
         .badge {
             font-family: var(--mono);
@@ -268,31 +313,31 @@
             border-radius: 4px;
             display: inline-block;
         }
-        
+
         .badge-urgent {
             background: rgba(255, 69, 96, 0.2);
             color: var(--danger);
             border: 1px solid var(--danger);
         }
-        
+
         .badge-ready {
             background: rgba(245, 166, 35, 0.2);
             color: var(--warn);
             border: 1px solid var(--warn);
         }
-        
+
         .badge-submitted {
             background: rgba(0, 229, 160, 0.2);
             color: var(--accent);
             border: 1px solid var(--accent);
         }
-        
+
         .badge-completed {
             background: rgba(0, 119, 255, 0.2);
             color: var(--accent2);
             border: 1px solid var(--accent2);
         }
-        
+
         /* Editable textarea */
         .editable-area {
             width: 100%;
@@ -307,7 +352,7 @@
             line-height: 1.8;
             resize: vertical;
         }
-        
+
         .save-btn {
             margin-top: 10px;
             padding: 8px 16px;
@@ -319,9 +364,11 @@
             font-size: 11px;
             cursor: pointer;
         }
-        
-        .save-btn:hover { opacity: 0.9; }
-        
+
+        .save-btn:hover {
+            opacity: 0.9;
+        }
+
         /* Task items */
         .task-item {
             display: flex;
@@ -332,73 +379,90 @@
             border-radius: 6px;
             margin-bottom: 10px;
         }
-        
+
         .task-checkbox {
             width: 18px;
             height: 18px;
             cursor: pointer;
         }
-        
+
         .task-text {
             flex: 1;
         }
-        
+
         .task-delete {
             color: var(--danger);
             cursor: pointer;
             font-size: 16px;
         }
-        
+
         /* Stats */
         .stat-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
         }
-        
+
         .stat-item {
             text-align: center;
             padding: 15px;
             background: var(--surface2);
             border-radius: 6px;
         }
-        
+
         .stat-value {
             font-family: var(--mono);
             font-size: 28px;
             font-weight: 700;
             color: var(--accent);
         }
-        
-        .stat-value.warn { color: var(--warn); }
-        .stat-value.danger { color: var(--danger); }
-        
+
+        .stat-value.warn {
+            color: var(--warn);
+        }
+
+        .stat-value.danger {
+            color: var(--danger);
+        }
+
         .stat-label {
             font-size: 11px;
             color: var(--muted);
             margin-top: 4px;
         }
-        
+
         /* Scrollbar */
         ::-webkit-scrollbar {
             width: 6px;
             height: 6px;
         }
-        
-        ::-webkit-scrollbar-track { background: var(--bg); }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+
         ::-webkit-scrollbar-thumb {
             background: var(--border);
             border-radius: 3px;
         }
-        
+
         /* Responsive */
         @media (max-width: 768px) {
-            .header { padding: 15px 20px; }
-            .main { padding: 20px; }
-            .grid { grid-template-columns: 1fr; }
+            .header {
+                padding: 15px 20px;
+            }
+
+            .main {
+                padding: 20px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <div class="header">
@@ -409,24 +473,24 @@
         <div class="status-pills">
             <span class="pill active">● AGENT ACTIVE</span>
             <span class="pill active">● LIVE FEED</span>
-            <span class="pill" id="pending-count">40 PENDING</span>
+            <span class="pill" id="pending-count">0 PENDING</span>
         </div>
     </div>
-    
+
     <!-- Navigation -->
     <div class="nav">
         <div class="nav-item active" data-page="dashboard">Command Center</div>
         <div class="nav-item" data-page="livefeed">Live Feed</div>
-        <div class="nav-item" data-page="pending">To Apply (<span id="nav-pending">40</span>)</div>
+        <div class="nav-item" data-page="pending">To Apply (<span id="nav-pending">0</span>)</div>
         <div class="nav-item" data-page="applied">Applied (<span id="nav-applied">0</span>)</div>
         <div class="nav-item" data-page="tasks">Tasks</div>
         <div class="nav-item" data-page="rules">Rules</div>
         <div class="nav-item" data-page="materials">Materials</div>
     </div>
-    
+
     <!-- Main Content -->
     <div class="main">
-        
+
         <!-- PAGE 1: Command Center -->
         <div id="dashboard" class="page-section active">
             <div class="grid">
@@ -438,7 +502,7 @@
                     <div class="card-body">
                         <div class="stat-grid">
                             <div class="stat-item">
-                                <div class="stat-value danger" id="stat-urgent">40</div>
+                                <div class="stat-value danger" id="stat-urgent">0</div>
                                 <div class="stat-label">To Apply</div>
                             </div>
                             <div class="stat-item">
@@ -450,26 +514,24 @@
                                 <div class="stat-label">Interviews</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-value" id="stat-total">40</div>
+                                <div class="stat-value" id="stat-total">0</div>
                                 <div class="stat-label">Total Tracked</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Today's Priority -->
                 <div class="card">
                     <div class="card-header">
                         <span class="card-title">Today's Priority</span>
                     </div>
                     <div class="card-body">
-                        <div style="background: rgba(255, 69, 96, 0.1); border: 1px solid var(--danger); border-radius: 6px; padding: 15px; margin-bottom: 15px;">
-                            <div style="font-weight: 600; color: var(--danger); margin-bottom: 8px;">🔴 Apply to These NOW</div>
-                            <ul style="margin: 0; padding-left: 20px; color: var(--text);">
-                                <li>SupplyHouse - AI Enablement</li>
-                                <li>Mercury - Data Science</li>
-                                <li>Edged - 2026 Summer Intern</li>
-                            </ul>
+                        <div
+                            style="background: rgba(255, 69, 96, 0.1); border: 1px solid var(--danger); border-radius: 6px; padding: 15px; margin-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--danger); margin-bottom: 8px;">🔴 Apply to These
+                                NOW</div>
+                            <ul id="priority-list" style="margin: 0; padding-left: 20px; color: var(--text);"></ul>
                         </div>
                         <div style="font-size: 12px; color: var(--muted);">
                             Last updated: <span id="last-updated">Just now</span>
@@ -477,28 +539,20 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Live Activity Preview -->
             <div class="card">
                 <div class="card-header">
                     <span class="card-title">Recent Activity</span>
-                    <a href="#" onclick="showPage('livefeed')" style="font-size: 11px; color: var(--accent);">View Full Feed →</a>
+                    <a href="#" onclick="showPage('livefeed')" style="font-size: 11px; color: var(--accent);">View Full
+                        Feed →</a>
                 </div>
                 <div class="card-body">
-                    <div id="recent-activity">
-                        <div class="live-item">
-                            <span class="live-time">Now</span>
-                            <span class="live-text"><span class="completed">Dashboard v2.0 deployed</span> with new features</span>
-                        </div>
-                        <div class="live-item">
-                            <span class="live-time">Now</span>
-                            <span class="live-text">Created <span class="highlight">7 cover letters</span> for top companies</span>
-                        </div>
-                    </div>
+                    <div id="recent-activity"></div>
                 </div>
             </div>
         </div>
-        
+
         <!-- PAGE 2: Live Feed -->
         <div id="livefeed" class="page-section">
             <div class="card">
@@ -507,41 +561,16 @@
                     <span style="font-size: 11px; color: var(--muted);">Auto-refreshes every 30 seconds</span>
                 </div>
                 <div class="card-body">
-                    <div class="live-feed" id="full-live-feed">
-                        <div class="live-item">
-                            <span class="live-time">Now</span>
-                            <span class="live-text"><span class="completed">✓ Dashboard v2.0 deployed</span> with delete buttons, apply links, and live feed</span>
-                        </div>
-                        <div class="live-item">
-                            <span class="live-time">Now</span>
-                            <span class="live-text"><span class="working">→ Working on:</span> Creating Rules page for fundamental instructions</span>
-                        </div>
-                        <div class="live-item">
-                            <span class="live-time">Earlier</span>
-                            <span class="live-text">Created <span class="highlight">7 tailored cover letters</span> (SupplyHouse, Mercury, Edged, Scale AI, DoorDash, GuidePoint, Crystal Dynamics)</span>
-                        </div>
-                        <div class="live-item">
-                            <span class="live-time">Earlier</span>
-                            <span class="live-text">Found <span class="highlight">15 internship opportunities</span> including YC startups, CrowdStrike, Atlassian</span>
-                        </div>
-                        <div class="live-item">
-                            <span class="live-time">Earlier</span>
-                            <span class="live-text">Configured <span class="highlight">Hunter.io API</span> for cold email research</span>
-                        </div>
-                        <div class="live-item">
-                            <span class="live-time">Earlier</span>
-                            <span class="live-text"><span class="completed">✓ Materials created:</span> Professional_Info.json, Resume Template, Standard_Answers.txt</span>
-                        </div>
-                    </div>
+                    <div class="live-feed" id="full-live-feed"></div>
                 </div>
             </div>
         </div>
-        
+
         <!-- PAGE 3: To Apply -->
         <div id="pending" class="page-section">
             <div class="card">
                 <div class="card-header">
-                    <span class="card-title">To Apply (<span id="pending-count-header">40</span>)</span>
+                    <span class="card-title">To Apply (<span id="pending-count-header">0</span>)</span>
                 </div>
                 <div class="card-body">
                     <div class="table-container">
@@ -557,433 +586,14 @@
                                 </tr>
                             </thead>
                             <tbody id="pending-tbody">
-                                <!-- HIGH PRIORITY -->
-                                <tr data-id="1">
-                                    <td>1</td>
-                                    <td><strong>SupplyHouse</strong></td>
-                                    <td>AI Enablement</td>
-                                    <td>Remote</td>
-                                    <td><button class="action-btn resume" onclick="viewResume('SupplyHouse')">View Resume</button></td>
-                                    <td>
-                                        <a href="https://www.supplyhouse.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(1)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="2">
-                                    <td>2</td>
-                                    <td><strong>Mercury</strong></td>
-                                    <td>Data Science</td>
-                                    <td>Remote (US)</td>
-                                    <td><button class="action-btn resume" onclick="viewResume('Mercury')">View Resume</button></td>
-                                    <td>
-                                        <a href="https://mercury.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(2)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="3">
-                                    <td>3</td>
-                                    <td><strong>Edged</strong></td>
-                                    <td>2026 Summer Intern</td>
-                                    <td>Remote (US)</td>
-                                    <td><button class="action-btn resume" onclick="viewResume('Edged')">View Resume</button></td>
-                                    <td>
-                                        <a href="#" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(3)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="6">
-                                    <td>6</td>
-                                    <td><strong>GuidePoint</strong></td>
-                                    <td>GPSU Cybersecurity</td>
-                                    <td>Remote</td>
-                                    <td><button class="action-btn resume" onclick="viewResume('GuidePoint')">View Resume</button></td>
-                                    <td>
-                                        <a href="https://www.guidepointsecurity.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(6)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="7">
-                                    <td>7</td>
-                                    <td><strong>Crystal Dynamics</strong></td>
-                                    <td>Cyber Security</td>
-                                    <td>Hybrid</td>
-                                    <td><button class="action-btn resume" onclick="viewResume('CrystalDynamics')">View Resume</button></td>
-                                    <td>
-                                        <a href="https://crystaldynamics.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(7)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <!-- NEW HIGH PRIORITY -->
-                                <tr data-id="16">
-                                    <td>16</td>
-                                    <td><strong>🔥 Intel</strong></td>
-                                    <td>Graduate Software Engineering Intern</td>
-                                    <td>Oregon</td>
-                                    <td><span class="badge badge-ready">88%</span></td>
-                                    <td>
-                                        <a href="https://jobs.intel.com" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(16)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="17">
-                                    <td>17</td>
-                                    <td><strong>🔥 Walmart</strong></td>
-                                    <td>Software Engineering II Intern</td>
-                                    <td>Sunnyvale, CA</td>
-                                    <td><span class="badge badge-ready">87%</span></td>
-                                    <td>
-                                        <a href="https://careers.walmart.com" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(17)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="18">
-                                    <td>18</td>
-                                    <td><strong>🔥 T-Mobile</strong></td>
-                                    <td>AI Engineering Intern</td>
-                                    <td>Washington</td>
-                                    <td><span class="badge badge-ready">86%</span></td>
-                                    <td>
-                                        <a href="https://careers.t-mobile.com" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(18)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="19">
-                                    <td>19</td>
-                                    <td><strong>🔥 Zoox</strong></td>
-                                    <td>AI Applications Development Intern</td>
-                                    <td>Foster City, CA</td>
-                                    <td><span class="badge badge-ready">89%</span></td>
-                                    <td>
-                                        <a href="https://zoox.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(19)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="20">
-                                    <td>20</td>
-                                    <td><strong>🔥 Toyota Research</strong></td>
-                                    <td>Human-Centered AI Intern</td>
-                                    <td>Los Altos, CA</td>
-                                    <td><span class="badge badge-ready">88%</span></td>
-                                    <td>
-                                        <a href="https://tri.global/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(20)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="21">
-                                    <td>21</td>
-                                    <td><strong>🔥 Visa</strong></td>
-                                    <td>Cybersecurity Applied Scientist Intern</td>
-                                    <td>Ashburn, VA</td>
-                                    <td><span class="badge badge-ready">90%</span></td>
-                                    <td>
-                                        <a href="https://usa.visa.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(21)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="22">
-                                    <td>22</td>
-                                    <td><strong>🔥 Samsung SDS</strong></td>
-                                    <td>AI Platform Lab Research Intern</td>
-                                    <td>Mountain View, CA</td>
-                                    <td><span class="badge badge-ready">87%</span></td>
-                                    <td>
-                                        <a href="https://www.samsungsds.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(22)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="23">
-                                    <td>23</td>
-                                    <td><strong>🔥 Northrop Grumman</strong></td>
-                                    <td>AI Engineer Intern</td>
-                                    <td>Remote</td>
-                                    <td><span class="badge badge-ready">85%</span></td>
-                                    <td>
-                                        <a href="https://www.northropgrumman.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(23)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="24">
-                                    <td>24</td>
-                                    <td><strong>🔥 insitro</strong></td>
-                                    <td>Machine Learning Intern</td>
-                                    <td>South SF</td>
-                                    <td><span class="badge badge-ready">88%</span></td>
-                                    <td>
-                                        <a href="https://www.insitro.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(24)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="25">
-                                    <td>25</td>
-                                    <td><strong>Sigma Computing</strong></td>
-                                    <td>Software Engineering Intern</td>
-                                    <td>San Francisco, CA</td>
-                                    <td><span class="badge badge-ready">85%</span></td>
-                                    <td>
-                                        <a href="https://www.sigmacomputing.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(25)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="26">
-                                    <td>26</td>
-                                    <td><strong>Applied Materials</strong></td>
-                                    <td>Software Engineer Intern</td>
-                                    <td>Santa Clara, CA</td>
-                                    <td><span class="badge badge-ready">84%</span></td>
-                                    <td>
-                                        <a href="https://www.appliedmaterials.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(26)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="27">
-                                    <td>27</td>
-                                    <td><strong>Okta</strong></td>
-                                    <td>Data Analyst Intern</td>
-                                    <td>San Francisco, CA</td>
-                                    <td><span class="badge badge-ready">83%</span></td>
-                                    <td>
-                                        <a href="https://www.okta.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(27)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="28">
-                                    <td>28</td>
-                                    <td><strong>Scopely</strong></td>
-                                    <td>Software Engineering Intern</td>
-                                    <td>Bellevue, WA / San Francisco, CA</td>
-                                    <td><span class="badge badge-ready">84%</span></td>
-                                    <td>
-                                        <a href="https://www.scopely.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(28)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="4">
-                                    <td>4</td>
-                                    <td><strong>Scale AI</strong></td>
-                                    <td>ML Research Intern</td>
-                                    <td>SF/Remote</td>
-                                    <td><span class="badge badge-ready">88%</span></td>
-                                    <td>
-                                        <a href="https://scale.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(4)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="5">
-                                    <td>5</td>
-                                    <td><strong>DoorDash</strong></td>
-                                    <td>Machine Learning Intern</td>
-                                    <td>SF/NY/Seattle</td>
-                                    <td><span class="badge badge-ready">85%</span></td>
-                                    <td>
-                                        <a href="https://careers.doordash.com" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(5)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="8">
-                                    <td>8</td>
-                                    <td><strong>CrowdStrike</strong></td>
-                                    <td>IT Service Desk Launch Intern</td>
-                                    <td>Austin, TX</td>
-                                    <td><span class="badge badge-ready">83%</span></td>
-                                    <td>
-                                        <a href="https://www.crowdstrike.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(8)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="9">
-                                    <td>9</td>
-                                    <td><strong>Atlassian</strong></td>
-                                    <td>Security Engineer Intern</td>
-                                    <td>Seattle/Remote</td>
-                                    <td><span class="badge badge-ready">85%</span></td>
-                                    <td>
-                                        <a href="https://www.atlassian.com/company/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(9)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="29">
-                                    <td>29</td>
-                                    <td><strong>Raytheon</strong></td>
-                                    <td>Software Engineering Intern</td>
-                                    <td>Various</td>
-                                    <td><span class="badge badge-ready">82%</span></td>
-                                    <td>
-                                        <a href="https://careers.raytheon.com" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(29)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="30">
-                                    <td>30</td>
-                                    <td><strong>Motorola Solutions</strong></td>
-                                    <td>Software Test Engineer Intern</td>
-                                    <td>California</td>
-                                    <td><span class="badge badge-ready">80%</span></td>
-                                    <td>
-                                        <a href="https://www.motorolasolutions.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(30)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="31">
-                                    <td>31</td>
-                                    <td><strong>GE HealthCare</strong></td>
-                                    <td>Software Engineering Intern</td>
-                                    <td>Ohio</td>
-                                    <td><span class="badge badge-ready">79%</span></td>
-                                    <td>
-                                        <a href="https://www.gehealthcare.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(31)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="32">
-                                    <td>32</td>
-                                    <td><strong>Micron Technology</strong></td>
-                                    <td>SSD Firmware Intern</td>
-                                    <td>San Jose, CA</td>
-                                    <td><span class="badge badge-ready">81%</span></td>
-                                    <td>
-                                        <a href="https://www.micron.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(32)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="33">
-                                    <td>33</td>
-                                    <td><strong>Roku</strong></td>
-                                    <td>Software Engineer Intern</td>
-                                    <td>UK / Remote</td>
-                                    <td><span class="badge badge-ready">78%</span></td>
-                                    <td>
-                                        <a href="https://www.roku.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(33)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="34">
-                                    <td>34</td>
-                                    <td><strong>Credit Acceptance</strong></td>
-                                    <td>Software Engineer Intern</td>
-                                    <td>Remote</td>
-                                    <td><span class="badge badge-ready">77%</span></td>
-                                    <td>
-                                        <a href="https://www.creditacceptance.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(34)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="35">
-                                    <td>35</td>
-                                    <td><strong>Roadie</strong></td>
-                                    <td>Software Engineer Intern</td>
-                                    <td>Remote</td>
-                                    <td><span class="badge badge-ready">76%</span></td>
-                                    <td>
-                                        <a href="https://www.roadie.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(35)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="36">
-                                    <td>36</td>
-                                    <td><strong>PTC</strong></td>
-                                    <td>Software Engineering Intern</td>
-                                    <td>Boston, MA</td>
-                                    <td><span class="badge badge-ready">75%</span></td>
-                                    <td>
-                                        <a href="https://www.ptc.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(36)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="37">
-                                    <td>37</td>
-                                    <td><strong>KLA</strong></td>
-                                    <td>Research Scientist Intern</td>
-                                    <td>Ann Arbor, MI</td>
-                                    <td><span class="badge badge-ready">80%</span></td>
-                                    <td>
-                                        <a href="https://www.kla.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(37)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="38">
-                                    <td>38</td>
-                                    <td><strong>Johnson & Johnson</strong></td>
-                                    <td>Clinical Data Analytics & AI Intern</td>
-                                    <td>Cincinnati, OH</td>
-                                    <td><span class="badge badge-ready">79%</span></td>
-                                    <td>
-                                        <a href="https://www.jnj.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(38)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="10">
-                                    <td>10</td>
-                                    <td><strong>Dex (YC)</strong></td>
-                                    <td>AI/ML Engineer Intern</td>
-                                    <td>San Francisco</td>
-                                    <td><span class="badge badge-ready">86%</span></td>
-                                    <td>
-                                        <a href="https://www.ycombinator.com/companies/joindex" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(10)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="11">
-                                    <td>11</td>
-                                    <td><strong>Mesh (YC)</strong></td>
-                                    <td>AI Engineer Intern</td>
-                                    <td>San Francisco</td>
-                                    <td><span class="badge badge-ready">84%</span></td>
-                                    <td>
-                                        <a href="https://www.ycombinator.com/companies/mesh-2" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(11)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="12">
-                                    <td>12</td>
-                                    <td><strong>14 AI (YC)</strong></td>
-                                    <td>Full-Stack Engineering Intern</td>
-                                    <td>Remote</td>
-                                    <td><span class="badge badge-ready">82%</span></td>
-                                    <td>
-                                        <a href="https://www.ycombinator.com/companies/14-ai" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(12)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="13">
-                                    <td>13</td>
-                                    <td><strong>Bloom (YC)</strong></td>
-                                    <td>AI/Full-Stack Intern</td>
-                                    <td>Zurich</td>
-                                    <td><span class="badge badge-ready">78%</span></td>
-                                    <td>
-                                        <a href="https://www.ycombinator.com/companies/bloom-4" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(13)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="14">
-                                    <td>14</td>
-                                    <td><strong>Cohere</strong></td>
-                                    <td>Software Engineering</td>
-                                    <td>Remote</td>
-                                    <td><span class="badge badge-ready">80%</span></td>
-                                    <td>
-                                        <a href="https://cohere.com/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(14)">✓ Applied</button>
-                                    </td>
-                                </tr>
-                                <tr data-id="15">
-                                    <td>15</td>
-                                    <td><strong>CISA</strong></td>
-                                    <td>Cyber/IT Interns</td>
-                                    <td>Various</td>
-                                    <td><span class="badge badge-ready">80%</span></td>
-                                    <td>
-                                        <a href="https://www.cisa.gov/careers" target="_blank" class="action-btn apply">Apply →</a>
-                                        <button class="action-btn check" onclick="markApplied(15)">✓ Applied</button>
-                                    </td>
-                                </tr>
+                                <!-- Dynamically populated from data/tracker.json -->
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- PAGE 4: Applied -->
         <div id="applied" class="page-section">
             <div class="card">
@@ -1004,19 +614,20 @@
                                 </tr>
                             </thead>
                             <tbody id="applied-tbody">
-                                <!-- Applied items will appear here -->
+                                <!-- Dynamically populated -->
                             </tbody>
                         </table>
                     </div>
                     <div id="no-applied" style="text-align: center; padding: 40px; color: var(--muted);">
                         <div style="font-size: 48px; margin-bottom: 15px;">📋</div>
                         <div>No applications submitted yet.</div>
-                        <div style="font-size: 12px; margin-top: 10px;">Click "✓ Applied" on the To Apply page to move items here.</div>
+                        <div style="font-size: 12px; margin-top: 10px;">Click "✓ Applied" on the To Apply page to move
+                            items here.</div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- PAGE 5: Tasks -->
         <div id="tasks" class="page-section">
             <div class="card">
@@ -1026,36 +637,12 @@
                 </div>
                 <div class="card-body">
                     <div id="task-list">
-                        <div class="task-item" data-task-id="1">
-                            <input type="checkbox" class="task-checkbox">
-                            <span class="task-text">Submit SupplyHouse application</span>
-                            <span class="task-delete" onclick="deleteTask(1)">✕</span>
-                        </div>
-                        <div class="task-item" data-task-id="2">
-                            <input type="checkbox" class="task-checkbox">
-                            <span class="task-text">Submit Mercury application</span>
-                            <span class="task-delete" onclick="deleteTask(2)">✕</span>
-                        </div>
-                        <div class="task-item" data-task-id="3">
-                            <input type="checkbox" class="task-checkbox">
-                            <span class="task-text">Submit Edged application</span>
-                            <span class="task-delete" onclick="deleteTask(3)">✕</span>
-                        </div>
-                        <div class="task-item" data-task-id="4">
-                            <input type="checkbox" class="task-checkbox">
-                            <span class="task-text">Sign up for Apollo.io (cold emails)</span>
-                            <span class="task-delete" onclick="deleteTask(4)">✕</span>
-                        </div>
-                        <div class="task-item" data-task-id="5">
-                            <input type="checkbox" class="task-checkbox">
-                            <span class="task-text">Send cold emails to Scale AI recruiter</span>
-                            <span class="task-delete" onclick="deleteTask(5)">✕</span>
-                        </div>
+                        <!-- Dynamically populated from data/tasks.json -->
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- PAGE 6: Networking -->
         <div id="networking" class="page-section">
             <div class="card">
@@ -1078,37 +665,14 @@
                                 </tr>
                             </thead>
                             <tbody id="network-tbody">
-                                <tr data-network-id="1">
-                                    <td>1</td>
-                                    <td>Jonathan Taylor</td>
-                                    <td>Scale AI</td>
-                                    <td>jonathan@scale.com</td>
-                                    <td><span class="badge badge-ready">Not Sent</span></td>
-                                    <td>-</td>
-                                    <td>
-                                        <button class="action-btn apply" onclick="sendEmail(1)">Send Email</button>
-                                        <button class="action-btn delete" onclick="deleteContact(1)">✕</button>
-                                    </td>
-                                </tr>
-                                <tr data-network-id="2">
-                                    <td>2</td>
-                                    <td>Taylor Pierotti</td>
-                                    <td>GuidePoint</td>
-                                    <td>taylor@guidepointsecurity.com</td>
-                                    <td><span class="badge badge-ready">Not Sent</span></td>
-                                    <td>-</td>
-                                    <td>
-                                        <button class="action-btn apply" onclick="sendEmail(2)">Send Email</button>
-                                        <button class="action-btn delete" onclick="deleteContact(2)">✕</button>
-                                    </td>
-                                </tr>
+                                <!-- Dynamically populated from data/contacts.json -->
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- PAGE 7: Map -->
         <div id="map" class="page-section">
             <div class="card">
@@ -1116,7 +680,8 @@
                     <span class="card-title">🗺️ Job Locations</span>
                 </div>
                 <div class="card-body">
-                    <div id="map-container" style="height: 500px; border-radius: 6px; background: var(--surface2); display: flex; align-items: center; justify-content: center;">
+                    <div id="map-container"
+                        style="height: 500px; border-radius: 6px; background: var(--surface2); display: flex; align-items: center; justify-content: center;">
                         <div style="text-align: center; color: var(--muted);">
                             <div style="font-size: 48px; margin-bottom: 15px;">🗺️</div>
                             <div>Map View Coming Soon</div>
@@ -1126,7 +691,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- PAGE 8: Rules -->
         <div id="rules" class="page-section">
             <div class="card">
@@ -1203,17 +768,19 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
 - Update dashboard in real-time
 - Alert immediately for urgent items
 
-## FILES LOCATION
-- Materials: materials/
+## DATA FILES
+- Tracker: data/tracker.json (add new companies here)
+- Feed: data/feed.json (add activity logs here)
+- Tasks: data/tasks.json (add tasks here)
+- Contacts: data/contacts.json (add contacts here)
+- Materials: data/materials.json (add materials here)
 - Cover letters: materials/cover_letters/
-- Tracker: materials/Application_Tracker.md
-- Research: materials/Cold_Email_Research.md
                     </textarea>
                 </div>
             </div>
         </div>
-        
-        <!-- PAGE 7: Materials -->
+
+        <!-- PAGE 9: Materials -->
         <div id="materials" class="page-section">
             <div class="grid">
                 <div class="card">
@@ -1229,32 +796,13 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Professional_Info.json</td>
-                                    <td style="color: var(--accent);">✅ Complete</td>
-                                    <td><button class="action-btn" onclick="viewFile('Professional_Info.json')">View</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Resume_LaTeX_Template.tex</td>
-                                    <td style="color: var(--accent);">✅ Complete</td>
-                                    <td><button class="action-btn" onclick="viewFile('Resume_Template')">View</button></td>
-                                </tr>
-                                <tr>
-                                    <td>CoverLetter_Template.tex</td>
-                                    <td style="color: var(--accent);">✅ Complete</td>
-                                    <td><button class="action-btn" onclick="viewFile('CoverLetter_Template')">View</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Standard_Answers.txt</td>
-                                    <td style="color: var(--accent);">✅ Complete</td>
-                                    <td><button class="action-btn" onclick="viewFile('Standard_Answers')">View</button></td>
-                                </tr>
+                            <tbody id="materials-tbody">
+                                <!-- Dynamically populated from data/materials.json -->
                             </tbody>
                         </table>
                     </div>
                 </div>
-                
+
                 <div class="card">
                     <div class="card-header">
                         <span class="card-title">Tailored Cover Letters</span>
@@ -1267,27 +815,254 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr><td>SupplyHouse</td><td><button class="action-btn resume" onclick="viewCoverLetter('SupplyHouse')">View</button></td></tr>
-                                <tr><td>Mercury</td><td><button class="action-btn resume" onclick="viewCoverLetter('Mercury')">View</button></td></tr>
-                                <tr><td>Edged</td><td><button class="action-btn resume" onclick="viewCoverLetter('Edged')">View</button></td></tr>
-                                <tr><td>Scale AI</td><td><button class="action-btn resume" onclick="viewCoverLetter('ScaleAI')">View</button></td></tr>
-                                <tr><td>DoorDash</td><td><button class="action-btn resume" onclick="viewCoverLetter('DoorDash')">View</button></td></tr>
-                                <tr><td>GuidePoint</td><td><button class="action-btn resume" onclick="viewCoverLetter('GuidePoint')">View</button></td></tr>
-                                <tr><td>Crystal Dynamics</td><td><button class="action-btn resume" onclick="viewCoverLetter('CrystalDynamics')">View</button></td></tr>
+                            <tbody id="coverletters-tbody">
+                                <!-- Dynamically populated from data/materials.json -->
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </div>
-    
+
     <script>
-        // Navigation
+        // ============================================================
+        // DATA LAYER — All data loaded from JSON files
+        // localStorage is used to persist user changes (mark applied, etc.)
+        // Agents only need to edit the JSON files in data/ to update content.
+        // ============================================================
+
+        let trackerData = [];
+        let feedData = [];
+        let tasksData = [];
+        let contactsData = [];
+        let materialsData = { files: [], coverLetters: [] };
+
+        // Load all data and render
+        async function initDashboard() {
+            try {
+                const [trackerRes, feedRes, tasksRes, contactsRes, materialsRes] = await Promise.all([
+                    fetch('data/tracker.json'),
+                    fetch('data/feed.json'),
+                    fetch('data/tasks.json'),
+                    fetch('data/contacts.json'),
+                    fetch('data/materials.json')
+                ]);
+
+                trackerData = await trackerRes.json();
+                feedData = await feedRes.json();
+                tasksData = await tasksRes.json();
+                contactsData = await contactsRes.json();
+                materialsData = await materialsRes.json();
+
+                // Apply localStorage overrides (user actions like marking applied)
+                applyLocalOverrides();
+
+                // Render everything
+                renderPendingTable();
+                renderAppliedTable();
+                renderFeed();
+                renderTasks();
+                renderContacts();
+                renderMaterials();
+                renderPriorityList();
+                updateCounts();
+
+            } catch (err) {
+                console.error('Failed to load data:', err);
+            }
+        }
+
+        // ============================================================
+        // LOCAL STORAGE OVERRIDES
+        // ============================================================
+
+        function applyLocalOverrides() {
+            // Applied overrides: list of IDs the user marked as applied
+            const appliedIds = JSON.parse(localStorage.getItem('appliedIds') || '[]');
+            const appliedDates = JSON.parse(localStorage.getItem('appliedDates') || '{}');
+            appliedIds.forEach(id => {
+                const item = trackerData.find(t => t.id === id);
+                if (item) {
+                    item.status = 'applied';
+                    item.dateApplied = appliedDates[id] || new Date().toLocaleDateString();
+                }
+            });
+
+            // Task overrides
+            const savedTasks = localStorage.getItem('tasksOverride');
+            if (savedTasks) {
+                tasksData = JSON.parse(savedTasks);
+            }
+
+            // Contact overrides
+            const savedContacts = localStorage.getItem('contactsOverride');
+            if (savedContacts) {
+                contactsData = JSON.parse(savedContacts);
+            }
+        }
+
+        function saveAppliedState() {
+            const appliedIds = trackerData.filter(t => t.status === 'applied').map(t => t.id);
+            const appliedDates = {};
+            trackerData.filter(t => t.status === 'applied').forEach(t => {
+                appliedDates[t.id] = t.dateApplied;
+            });
+            localStorage.setItem('appliedIds', JSON.stringify(appliedIds));
+            localStorage.setItem('appliedDates', JSON.stringify(appliedDates));
+        }
+
+        function saveTasksState() {
+            localStorage.setItem('tasksOverride', JSON.stringify(tasksData));
+        }
+
+        function saveContactsState() {
+            localStorage.setItem('contactsOverride', JSON.stringify(contactsData));
+        }
+
+        // ============================================================
+        // RENDER FUNCTIONS
+        // ============================================================
+
+        function renderPendingTable() {
+            const tbody = document.getElementById('pending-tbody');
+            const pending = trackerData.filter(t => t.status === 'pending');
+            let num = 0;
+            tbody.innerHTML = pending.map(item => {
+                num++;
+                const emoji = item.priority === 'high' && item.matchScore ? '🔥 ' : '';
+                const scoreCell = item.matchScore
+                    ? `<span class="badge badge-ready">${item.matchScore}%</span>`
+                    : `<button class="action-btn resume" onclick="viewResume('${item.company}')">View Resume</button>`;
+                return `
+                <tr data-id="${item.id}">
+                    <td>${num}</td>
+                    <td><strong>${emoji}${item.company}</strong></td>
+                    <td>${item.role}</td>
+                    <td>${item.location}</td>
+                    <td>${scoreCell}</td>
+                    <td>
+                        <a href="${item.applyUrl}" target="_blank" class="action-btn apply">Apply →</a>
+                        <button class="action-btn check" onclick="markApplied(${item.id})">✓ Applied</button>
+                    </td>
+                </tr>`;
+            }).join('');
+        }
+
+        function renderAppliedTable() {
+            const tbody = document.getElementById('applied-tbody');
+            const applied = trackerData.filter(t => t.status === 'applied');
+            let num = 0;
+            tbody.innerHTML = applied.map(item => {
+                num++;
+                return `
+                <tr>
+                    <td>${num}</td>
+                    <td><strong>${item.company}</strong></td>
+                    <td>${item.role}</td>
+                    <td>${item.dateApplied || '-'}</td>
+                    <td><span class="badge badge-submitted">Applied</span></td>
+                    <td><button class="action-btn delete" onclick="unmarkApplied(${item.id})">✕ Undo</button></td>
+                </tr>`;
+            }).join('');
+
+            document.getElementById('no-applied').style.display = applied.length > 0 ? 'none' : 'block';
+        }
+
+        function renderFeed() {
+            const fullFeed = document.getElementById('full-live-feed');
+            const recentActivity = document.getElementById('recent-activity');
+
+            const feedHtml = feedData.map(entry => {
+                let cls = '';
+                if (entry.type === 'completed') cls = 'completed';
+                else if (entry.type === 'working') cls = 'working';
+                else if (entry.type === 'highlight') cls = 'highlight';
+                else if (entry.type === 'alert') cls = 'alert';
+
+                const prefix = entry.type === 'completed' ? '✓ ' : entry.type === 'working' ? '→ ' : '';
+                return `
+                <div class="live-item">
+                    <span class="live-time">${entry.time}</span>
+                    <span class="live-text"><span class="${cls}">${prefix}${entry.text}</span></span>
+                </div>`;
+            }).join('');
+
+            fullFeed.innerHTML = feedHtml;
+
+            // Show first 2 in the command center preview
+            const previewHtml = feedData.slice(0, 2).map(entry => {
+                let cls = entry.type === 'completed' ? 'completed' : entry.type === 'highlight' ? 'highlight' : '';
+                return `
+                <div class="live-item">
+                    <span class="live-time">${entry.time}</span>
+                    <span class="live-text"><span class="${cls}">${entry.text}</span></span>
+                </div>`;
+            }).join('');
+            recentActivity.innerHTML = previewHtml;
+        }
+
+        function renderTasks() {
+            const list = document.getElementById('task-list');
+            list.innerHTML = tasksData.map(task => `
+                <div class="task-item" data-task-id="${task.id}">
+                    <input type="checkbox" class="task-checkbox" ${task.done ? 'checked' : ''} onchange="toggleTask(${task.id})">
+                    <span class="task-text" style="${task.done ? 'text-decoration: line-through; opacity: 0.5;' : ''}">${task.text}</span>
+                    <span class="task-delete" onclick="deleteTask(${task.id})">✕</span>
+                </div>
+            `).join('');
+        }
+
+        function renderContacts() {
+            const tbody = document.getElementById('network-tbody');
+            tbody.innerHTML = contactsData.map((c, i) => `
+                <tr data-network-id="${c.id}">
+                    <td>${i + 1}</td>
+                    <td>${c.name}</td>
+                    <td>${c.company}</td>
+                    <td>${c.email}</td>
+                    <td><span class="badge ${c.status === 'Sent' ? 'badge-submitted' : 'badge-ready'}">${c.status}</span></td>
+                    <td>${c.followUp || '-'}</td>
+                    <td>
+                        <button class="action-btn apply" onclick="sendEmail(${c.id})">Send Email</button>
+                        <button class="action-btn delete" onclick="deleteContact(${c.id})">✕</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function renderMaterials() {
+            const mtbody = document.getElementById('materials-tbody');
+            mtbody.innerHTML = materialsData.files.map(f => `
+                <tr>
+                    <td>${f.name}</td>
+                    <td style="color: var(--accent);">✅ ${f.status}</td>
+                    <td><button class="action-btn" onclick="viewFile('${f.path}')">${f.status === 'Complete' ? 'View' : 'Edit'}</button></td>
+                </tr>
+            `).join('');
+
+            const clbody = document.getElementById('coverletters-tbody');
+            clbody.innerHTML = materialsData.coverLetters.map(cl => `
+                <tr>
+                    <td>${cl.company}</td>
+                    <td><button class="action-btn resume" onclick="viewCoverLetter('${cl.key}')">View</button></td>
+                </tr>
+            `).join('');
+        }
+
+        function renderPriorityList() {
+            const list = document.getElementById('priority-list');
+            const highPriority = trackerData.filter(t => t.status === 'pending' && t.priority === 'high').slice(0, 3);
+            list.innerHTML = highPriority.map(t => `<li>${t.company} - ${t.role}</li>`).join('');
+        }
+
+        // ============================================================
+        // NAVIGATION
+        // ============================================================
+
         document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', function() {
+            item.addEventListener('click', function () {
                 document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
                 this.classList.add('active');
                 const pageId = this.getAttribute('data-page');
@@ -1295,213 +1070,198 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
                 document.getElementById(pageId).classList.add('active');
             });
         });
-        
+
         function showPage(pageId) {
             document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
             document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
             document.querySelector(`[data-page="${pageId}"]`).classList.add('active');
         }
-        
-        // Mark as applied
+
+        // ============================================================
+        // ACTIONS
+        // ============================================================
+
         function markApplied(id) {
-            const row = document.querySelector(`#pending-tbody tr[data-id="${id}"]`);
-            if (row) {
-                const company = row.querySelector('td:nth-child(2)').textContent;
-                const role = row.querySelector('td:nth-child(3)').textContent;
-                const tbody = document.getElementById('applied-tbody');
-                const num = tbody.children.length + 1;
-                const date = new Date().toLocaleDateString();
-                
-                const newRow = document.createElement('tr');
-                newRow.innerHTML = `
-                    <td>${num}</td>
-                    <td><strong>${company}</strong></td>
-                    <td>${role}</td>
-                    <td>${date}</td>
-                    <td><span class="badge badge-submitted">Applied</span></td>
-                    <td><button class="action-btn delete" onclick="this.closest('tr').remove(); updateCounts();">✕ Remove</button></td>
-                `;
-                tbody.appendChild(newRow);
-                row.remove();
-                
-                document.getElementById('no-applied').style.display = 'none';
+            const item = trackerData.find(t => t.id === id);
+            if (item) {
+                item.status = 'applied';
+                item.dateApplied = new Date().toLocaleDateString();
+                saveAppliedState();
+                renderPendingTable();
+                renderAppliedTable();
+                renderPriorityList();
                 updateCounts();
-                addLiveActivity(`Applied to ${company} - moved to Applied section`);
+                addLiveActivity(`Applied to ${item.company} - moved to Applied section`);
             }
         }
-        
-        // Update counts
+
+        function unmarkApplied(id) {
+            const item = trackerData.find(t => t.id === id);
+            if (item) {
+                item.status = 'pending';
+                item.dateApplied = null;
+                saveAppliedState();
+                renderPendingTable();
+                renderAppliedTable();
+                renderPriorityList();
+                updateCounts();
+                addLiveActivity(`Moved ${item.company} back to pending`);
+            }
+        }
+
         function updateCounts() {
-            const pending = document.querySelectorAll('#pending-tbody tr').length;
-            const applied = document.querySelectorAll('#applied-tbody tr').length;
+            const pending = trackerData.filter(t => t.status === 'pending').length;
+            const applied = trackerData.filter(t => t.status === 'applied').length;
+            const total = trackerData.length;
             document.getElementById('stat-urgent').textContent = pending;
             document.getElementById('stat-applied').textContent = applied;
+            document.getElementById('stat-total').textContent = total;
             document.getElementById('pending-count').textContent = pending + ' PENDING';
             document.getElementById('pending-count-header').textContent = pending;
             document.getElementById('applied-count-header').textContent = applied;
             document.getElementById('nav-pending').textContent = pending;
             document.getElementById('nav-applied').textContent = applied;
         }
-        
-        // Delete task
-        function deleteTask(id) {
-            const task = document.querySelector(`[data-task-id="${id}"]`);
+
+        // Tasks
+        function toggleTask(id) {
+            const task = tasksData.find(t => t.id === id);
             if (task) {
-                task.remove();
-                addLiveActivity('Deleted task');
+                task.done = !task.done;
+                saveTasksState();
+                renderTasks();
             }
         }
-        
-        // Add task
+
+        function deleteTask(id) {
+            tasksData = tasksData.filter(t => t.id !== id);
+            saveTasksState();
+            renderTasks();
+            addLiveActivity('Deleted task');
+        }
+
         function addTask() {
             const text = prompt('Enter new task:');
             if (text) {
-                const list = document.getElementById('task-list');
-                const id = list.children.length + 1;
-                const div = document.createElement('div');
-                div.className = 'task-item';
-                div.setAttribute('data-task-id', id);
-                div.innerHTML = `
-                    <input type="checkbox" class="task-checkbox">
-                    <span class="task-text">${text}</span>
-                    <span class="task-delete" onclick="deleteTask(${id})">✕</span>
-                `;
-                list.appendChild(div);
+                const maxId = tasksData.length > 0 ? Math.max(...tasksData.map(t => t.id)) : 0;
+                tasksData.push({ id: maxId + 1, text, done: false });
+                saveTasksState();
+                renderTasks();
                 addLiveActivity('Added new task: ' + text);
             }
         }
-        
-        // Save rules
+
+        // Rules
         function saveRules() {
             const content = document.getElementById('rules-content').value;
             localStorage.setItem('agentRules', content);
             addLiveActivity('Saved agent rules changes');
             alert('Rules saved!');
         }
-        
-        // Load saved rules
+
         function loadRules() {
             const saved = localStorage.getItem('agentRules');
             if (saved) {
                 document.getElementById('rules-content').value = saved;
             }
         }
-        
-        // Add live activity
+
+        // Live activity
         function addLiveActivity(text) {
-            const feed = document.getElementById('full-live-feed');
-            const item = document.createElement('div');
-            item.className = 'live-item';
-            item.innerHTML = `
-                <span class="live-time">${new Date().toLocaleTimeString()}</span>
-                <span class="live-text">${text}</span>
-            `;
-            feed.insertBefore(item, feed.firstChild);
+            const entry = { time: new Date().toLocaleTimeString(), text, type: 'completed' };
+            feedData.unshift(entry);
+            renderFeed();
         }
-        
+
         // View functions
         function viewResume(company) {
             alert(`Resume for ${company}:\n\nUse your uploaded PDF: Anthony_Casseus_Resume_FINAL_viual.pdf\n\nCover letter location: materials/cover_letters/${company}_CoverLetter.txt`);
         }
-        
+
         function viewCoverLetter(company) {
             alert(`Cover letter for ${company}:\n\nLocation: materials/cover_letters/${company}_CoverLetter.txt`);
         }
-        
+
         function viewFile(filename) {
             alert(`File: ${filename}\n\nLocation: materials/${filename}`);
         }
-        
-        // Add contact
+
+        // Contacts
         function addContact() {
             const name = prompt('Recruiter name:');
             const company = prompt('Company:');
             const email = prompt('Email:');
             if (name && company && email) {
-                const tbody = document.getElementById('network-tbody');
-                const id = tbody.children.length + 1;
-                const row = document.createElement('tr');
-                row.setAttribute('data-network-id', id);
-                row.innerHTML = `
-                    <td>${id}</td>
-                    <td>${name}</td>
-                    <td>${company}</td>
-                    <td>${email}</td>
-                    <td><span class="badge badge-ready">Not Sent</span></td>
-                    <td>-</td>
-                    <td>
-                        <button class="action-btn apply" onclick="sendEmail(${id})">Send Email</button>
-                        <button class="action-btn delete" onclick="deleteContact(${id})">✕</button>
-                    </td>
-                `;
-                tbody.appendChild(row);
+                const maxId = contactsData.length > 0 ? Math.max(...contactsData.map(c => c.id)) : 0;
+                contactsData.push({ id: maxId + 1, name, company, email, status: 'Not Sent', followUp: null });
+                saveContactsState();
+                renderContacts();
                 addLiveActivity(`Added recruiter contact: ${name} at ${company}`);
             }
         }
-        
-        // Delete contact
+
         function deleteContact(id) {
-            const row = document.querySelector(`[data-network-id="${id}"]`);
-            if (row && confirm('Delete this contact?')) {
-                row.remove();
+            if (confirm('Delete this contact?')) {
+                contactsData = contactsData.filter(c => c.id !== id);
+                saveContactsState();
+                renderContacts();
                 addLiveActivity('Deleted recruiter contact');
             }
         }
-        
-        // Send email (placeholder)
+
         function sendEmail(id) {
-            const row = document.querySelector(`[data-network-id="${id}"]`);
-            if (row) {
-                const email = row.querySelector('td:nth-child(4)').textContent;
-                const company = row.querySelector('td:nth-child(3)').textContent;
-                alert(`Open your email client and send to: ${email}\n\nCover letter location: materials/cover_letters/${company}_CoverLetter.txt`);
-                row.querySelector('.badge').textContent = 'Sent';
-                row.querySelector('.badge').className = 'badge badge-submitted';
-                addLiveActivity(`Marked email as sent to ${company}`);
+            const contact = contactsData.find(c => c.id === id);
+            if (contact) {
+                alert(`Open your email client and send to: ${contact.email}\n\nCover letter location: materials/cover_letters/${contact.company}_CoverLetter.txt`);
+                contact.status = 'Sent';
+                saveContactsState();
+                renderContacts();
+                addLiveActivity(`Marked email as sent to ${contact.company}`);
             }
         }
-        
-        // Reminders / Notifications
+
+        // Notifications
         function checkDeadlines() {
-            const rows = document.querySelectorAll('#pending-tbody tr');
-            rows.forEach(row => {
-                const company = row.querySelector('td:nth-child(2)').textContent;
-                // Check if urgent (you can add deadline data to rows)
-                if (row.querySelector('.badge-urgent')) {
-                    if (Notification.permission === 'granted') {
-                        new Notification('URGENT: Application due soon', {
-                            body: `${company} - Apply now!`,
-                            icon: '/icon-192.png'
-                        });
-                    }
-                }
-            });
+            const pending = trackerData.filter(t => t.status === 'pending' && t.priority === 'high');
+            if (pending.length > 0 && Notification.permission === 'granted') {
+                new Notification('URGENT: Applications pending', {
+                    body: `${pending.length} high-priority applications waiting!`,
+                    icon: '/icon-192.png'
+                });
+            }
         }
-        
-        // Request notification permission
+
         if ('Notification' in window) {
             Notification.requestPermission();
         }
-        
-        // Check deadlines every minute
+
         setInterval(checkDeadlines, 60000);
-        
-        // Export tracker function
+
+        // Export tracker
         function exportTracker() {
-            // In real implementation, this would download the Excel file
-            alert('📥 Downloading Anthony_Internship_Tracker_2026.xlsx\n\nFile includes:\n- 15 companies from seed list\n- All 21 columns (Date, Company, Role, URL, Status, etc.)\n- Summary tab with metrics\n- Color-coded by status\n\nLocation: /workspace/Anthony_Internship_Tracker_2026.xlsx');
-            addLiveActivity('Excel tracker exported');
+            const dataStr = JSON.stringify(trackerData, null, 2);
+            const blob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'tracker_export.json';
+            a.click();
+            URL.revokeObjectURL(url);
+            addLiveActivity('Tracker data exported as JSON');
         }
-        
-        // Initialize
+
+        // ============================================================
+        // INITIALIZE
+        // ============================================================
         loadRules();
-        updateCounts();
-        
-        // Auto-refresh
+        initDashboard();
+
+        // Auto-refresh timestamp
         setInterval(() => {
             document.getElementById('last-updated').textContent = 'Just now';
         }, 30000);
     </script>
 </body>
+
 </html>

@@ -1142,74 +1142,811 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
 
     <script>
         // ============================================================
-        // DATA LAYER — All data loaded from JSON files
-        // localStorage is used to persist user changes (mark applied, etc.)
-        // Agents only need to edit the JSON files in data/ to update content.
+        // DATA LAYER — Embedded data for reliability
         // ============================================================
 
-        let trackerData = [];
-        let feedData = [];
-        let tasksData = [];
-        let contactsData = [];
-        let materialsData = { files: [], coverLetters: [] };
+        let trackerData = [
+  {
+    "id": 100,
+    "company": "🌴 LOCKHEED MARTIN",
+    "role": "Software Engineering Intern",
+    "location": "Orlando, FL",
+    "applyUrl": "https://www.lockheedmartin.com/careers",
+    "matchScore": 90,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 101,
+    "company": "🌴 L3HARRIS",
+    "role": "Software Engineering Intern",
+    "location": "Melbourne, FL (45 min from UCF)",
+    "applyUrl": "https://careers.l3harris.com",
+    "matchScore": 88,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 102,
+    "company": "🌴 SIEMENS",
+    "role": "R&D Software Engineering Intern",
+    "location": "Orlando, FL",
+    "applyUrl": "https://jobs.siemens.com",
+    "matchScore": 87,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 103,
+    "company": "🌴 DISNEY",
+    "role": "Software Engineering Intern",
+    "location": "Orlando, FL - $42/hr",
+    "applyUrl": "https://jobs.disneycareers.com",
+    "matchScore": 89,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 104,
+    "company": "🌴 ORLANDO UTILITIES",
+    "role": "Programming & Automation Intern",
+    "location": "Orlando, FL - Hybrid",
+    "applyUrl": "https://ouc.com/careers",
+    "matchScore": 85,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 105,
+    "company": "🌴 BOEING",
+    "role": "Engineering Intern",
+    "location": "Titusville, FL - Hybrid",
+    "applyUrl": "https://boeing.com/careers",
+    "matchScore": 86,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 106,
+    "company": "🌴 STRYKER",
+    "role": "Software Engineering Intern",
+    "location": "Fort Lauderdale, FL",
+    "applyUrl": "https://careers.stryker.com",
+    "matchScore": 84,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 1,
+    "company": "SupplyHouse",
+    "role": "AI Enablement",
+    "location": "Remote",
+    "applyUrl": "https://www.supplyhouse.com/careers",
+    "matchScore": null,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 2,
+    "company": "Mercury",
+    "role": "Data Science",
+    "location": "Remote (US)",
+    "applyUrl": "https://mercury.com/careers",
+    "matchScore": null,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 3,
+    "company": "Edged",
+    "role": "2026 Summer Intern",
+    "location": "Remote (US)",
+    "applyUrl": "#",
+    "matchScore": null,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 6,
+    "company": "GuidePoint",
+    "role": "GPSU Cybersecurity",
+    "location": "Remote",
+    "applyUrl": "https://www.guidepointsecurity.com/careers",
+    "matchScore": null,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 7,
+    "company": "Crystal Dynamics",
+    "role": "Cyber Security",
+    "location": "Hybrid",
+    "applyUrl": "https://crystaldynamics.com/careers",
+    "matchScore": null,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 16,
+    "company": "Intel",
+    "role": "Graduate Software Engineering Intern",
+    "location": "Oregon",
+    "applyUrl": "https://jobs.intel.com",
+    "matchScore": 88,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 17,
+    "company": "Walmart",
+    "role": "Software Engineering II Intern",
+    "location": "Sunnyvale, CA",
+    "applyUrl": "https://careers.walmart.com",
+    "matchScore": 87,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 18,
+    "company": "T-Mobile",
+    "role": "AI Engineering Intern",
+    "location": "Washington",
+    "applyUrl": "https://careers.t-mobile.com",
+    "matchScore": 86,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 19,
+    "company": "Zoox",
+    "role": "AI Applications Development Intern",
+    "location": "Foster City, CA",
+    "applyUrl": "https://zoox.com/careers",
+    "matchScore": 89,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 20,
+    "company": "Toyota Research",
+    "role": "Human-Centered AI Intern",
+    "location": "Los Altos, CA",
+    "applyUrl": "https://tri.global/careers",
+    "matchScore": 88,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 21,
+    "company": "Visa",
+    "role": "Cybersecurity Applied Scientist Intern",
+    "location": "Ashburn, VA",
+    "applyUrl": "https://usa.visa.com/careers",
+    "matchScore": 90,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 22,
+    "company": "Samsung SDS",
+    "role": "AI Platform Lab Research Intern",
+    "location": "Mountain View, CA",
+    "applyUrl": "https://www.samsungsds.com/careers",
+    "matchScore": 87,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 23,
+    "company": "Northrop Grumman",
+    "role": "AI Engineer Intern",
+    "location": "Remote",
+    "applyUrl": "https://www.northropgrumman.com/careers",
+    "matchScore": 85,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 24,
+    "company": "insitro",
+    "role": "Machine Learning Intern",
+    "location": "South SF",
+    "applyUrl": "https://www.insitro.com/careers",
+    "matchScore": 88,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 25,
+    "company": "Sigma Computing",
+    "role": "Software Engineering Intern",
+    "location": "San Francisco, CA",
+    "applyUrl": "https://www.sigmacomputing.com/careers",
+    "matchScore": 85,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 26,
+    "company": "Applied Materials",
+    "role": "Software Engineer Intern",
+    "location": "Santa Clara, CA",
+    "applyUrl": "https://www.appliedmaterials.com/careers",
+    "matchScore": 84,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 27,
+    "company": "Okta",
+    "role": "Data Analyst Intern",
+    "location": "San Francisco, CA",
+    "applyUrl": "https://www.okta.com/careers",
+    "matchScore": 83,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 28,
+    "company": "Scopely",
+    "role": "Software Engineering Intern",
+    "location": "Bellevue, WA / San Francisco, CA",
+    "applyUrl": "https://www.scopely.com/careers",
+    "matchScore": 84,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 4,
+    "company": "Scale AI",
+    "role": "ML Research Intern",
+    "location": "SF/Remote",
+    "applyUrl": "https://scale.com/careers",
+    "matchScore": 88,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 5,
+    "company": "DoorDash",
+    "role": "Machine Learning Intern",
+    "location": "SF/NY/Seattle",
+    "applyUrl": "https://careers.doordash.com",
+    "matchScore": 85,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 8,
+    "company": "CrowdStrike",
+    "role": "IT Service Desk Launch Intern",
+    "location": "Austin, TX",
+    "applyUrl": "https://www.crowdstrike.com/careers",
+    "matchScore": 83,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 9,
+    "company": "Atlassian",
+    "role": "Security Engineer Intern",
+    "location": "Seattle/Remote",
+    "applyUrl": "https://www.atlassian.com/company/careers",
+    "matchScore": 85,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 29,
+    "company": "Raytheon",
+    "role": "Software Engineering Intern",
+    "location": "Various",
+    "applyUrl": "https://careers.raytheon.com",
+    "matchScore": 82,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 30,
+    "company": "Motorola Solutions",
+    "role": "Software Test Engineer Intern",
+    "location": "California",
+    "applyUrl": "https://www.motorolasolutions.com/careers",
+    "matchScore": 80,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 31,
+    "company": "GE HealthCare",
+    "role": "Software Engineering Intern",
+    "location": "Ohio",
+    "applyUrl": "https://www.gehealthcare.com/careers",
+    "matchScore": 79,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 32,
+    "company": "Micron Technology",
+    "role": "SSD Firmware Intern",
+    "location": "San Jose, CA",
+    "applyUrl": "https://www.micron.com/careers",
+    "matchScore": 81,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 33,
+    "company": "Roku",
+    "role": "Software Engineer Intern",
+    "location": "UK / Remote",
+    "applyUrl": "https://www.roku.com/careers",
+    "matchScore": 78,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 34,
+    "company": "Credit Acceptance",
+    "role": "Software Engineer Intern",
+    "location": "Remote",
+    "applyUrl": "https://www.creditacceptance.com/careers",
+    "matchScore": 77,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 35,
+    "company": "Roadie",
+    "role": "Software Engineer Intern",
+    "location": "Remote",
+    "applyUrl": "https://www.roadie.com/careers",
+    "matchScore": 76,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 36,
+    "company": "PTC",
+    "role": "Software Engineering Intern",
+    "location": "Boston, MA",
+    "applyUrl": "https://www.ptc.com/careers",
+    "matchScore": 75,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 37,
+    "company": "KLA",
+    "role": "Research Scientist Intern",
+    "location": "Ann Arbor, MI",
+    "applyUrl": "https://www.kla.com/careers",
+    "matchScore": 80,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 38,
+    "company": "Johnson & Johnson",
+    "role": "Clinical Data Analytics & AI Intern",
+    "location": "Cincinnati, OH",
+    "applyUrl": "https://www.jnj.com/careers",
+    "matchScore": 79,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 10,
+    "company": "Dex (YC)",
+    "role": "AI/ML Engineer Intern",
+    "location": "San Francisco",
+    "applyUrl": "https://www.ycombinator.com/companies/joindex",
+    "matchScore": 86,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 11,
+    "company": "Mesh (YC)",
+    "role": "AI Engineer Intern",
+    "location": "San Francisco",
+    "applyUrl": "https://www.ycombinator.com/companies/mesh-2",
+    "matchScore": 84,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 12,
+    "company": "14 AI (YC)",
+    "role": "Full-Stack Engineering Intern",
+    "location": "Remote",
+    "applyUrl": "https://www.ycombinator.com/companies/14-ai",
+    "matchScore": 82,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 13,
+    "company": "Bloom (YC)",
+    "role": "AI/Full-Stack Intern",
+    "location": "Zurich",
+    "applyUrl": "https://www.ycombinator.com/companies/bloom-4",
+    "matchScore": 78,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 14,
+    "company": "Cohere",
+    "role": "Software Engineering",
+    "location": "Remote",
+    "applyUrl": "https://cohere.com/careers",
+    "matchScore": 80,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 15,
+    "company": "CISA",
+    "role": "Cyber/IT Interns",
+    "location": "Various",
+    "applyUrl": "https://www.cisa.gov/careers",
+    "matchScore": 80,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 39,
+    "company": "General Dynamics",
+    "role": "AI/ML Software Engineer Intern",
+    "location": "Manassas, VA",
+    "applyUrl": "https://gdmissionsystems.com/careers",
+    "matchScore": 87,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 40,
+    "company": "PrizePicks",
+    "role": "Software Engineering Intern",
+    "location": "Atlanta, GA",
+    "applyUrl": "https://prizepicks.com/careers",
+    "matchScore": 84,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 41,
+    "company": "Ursa Space",
+    "role": "AI Software Engineer Intern",
+    "location": "Ithaca, NY",
+    "applyUrl": "https://ursaspace.com/careers",
+    "matchScore": 86,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 42,
+    "company": "CACI",
+    "role": "Software Development Intern",
+    "location": "Ashburn, VA",
+    "applyUrl": "https://caci.com/careers",
+    "matchScore": 83,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 43,
+    "company": "IXL Learning",
+    "role": "Software Engineer Intern",
+    "location": "Raleigh, NC / San Mateo, CA",
+    "applyUrl": "https://ixl.com/careers",
+    "matchScore": 82,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 44,
+    "company": "Relativity",
+    "role": "Software Engineering Intern",
+    "location": "Chicago, IL",
+    "applyUrl": "https://relativity.com/careers",
+    "matchScore": 81,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 45,
+    "company": "F5",
+    "role": "Software Development Engineer Intern",
+    "location": "San Jose, CA",
+    "applyUrl": "https://f5.com/careers",
+    "matchScore": 84,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 46,
+    "company": "Bosch",
+    "role": "Software Engineering Intern",
+    "location": "Plymouth, MI",
+    "applyUrl": "https://bosch.com/careers",
+    "matchScore": 80,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 47,
+    "company": "Belk",
+    "role": "Retail Systems Software Engineer Intern",
+    "location": "Charlotte, NC",
+    "applyUrl": "https://belk.com/careers",
+    "matchScore": 78,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 48,
+    "company": "Dorsia",
+    "role": "Software Engineering Intern",
+    "location": "New York City, NY",
+    "applyUrl": "https://dorsia.com/careers",
+    "matchScore": 82,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 49,
+    "company": "ezCater",
+    "role": "Data Engineer Intern",
+    "location": "Remote",
+    "applyUrl": "https://ezcater.com/careers",
+    "matchScore": 85,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 50,
+    "company": "HP",
+    "role": "Software Developer Internship",
+    "location": "Houston, TX",
+    "applyUrl": "https://hp.com/careers",
+    "matchScore": 81,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  }
+];
+        let feedData = [
+    {
+        "time": "Just now",
+        "text": "🌴 PRIORITIZED ORLANDO/FLORIDA! Added 7 local opportunities: Lockheed Martin, L3Harris, Siemens, Disney, OUC, Boeing, Stryker - all near UCF!",
+        "type": "highlight"
+    },
+    {
+        "time": "Just now",
+        "text": "🔥 FOUND 15 NEW INTERNSHIPS! Added to tracker: General Dynamics AI/ML, PrizePicks, Ursa Space, CACI, F5, ezCater, and more!",
+        "type": "highlight"
+    },
+    {
+        "time": "Just now",
+        "text": "🔴 LIVE DEMO: Adding real-time activity to dashboard feed",
+        "type": "working"
+    },
+    {
+        "time": "Just now",
+        "text": "Connected dashboard to GitHub - auto-deploy enabled",
+        "type": "completed"
+    },
+    {
+        "time": "Now",
+        "text": "Dashboard v2.0 deployed with delete buttons, apply links, and live feed",
+        "type": "completed"
+    },
+    {
+        "time": "Now",
+        "text": "Working on: Creating Rules page for fundamental instructions",
+        "type": "working"
+    },
+    {
+        "time": "Earlier",
+        "text": "Created 7 tailored cover letters (SupplyHouse, Mercury, Edged, Scale AI, DoorDash, GuidePoint, Crystal Dynamics)",
+        "type": "highlight"
+    },
+    {
+        "time": "Earlier",
+        "text": "Found 15 internship opportunities including YC startups, CrowdStrike, Atlassian",
+        "type": "highlight"
+    },
+    {
+        "time": "Earlier",
+        "text": "Configured Hunter.io API for cold email research",
+        "type": "highlight"
+    },
+    {
+        "time": "Earlier",
+        "text": "Materials created: Professional_Info.json, Resume Template, Standard_Answers.txt",
+        "type": "completed"
+    }
+];
+        let tasksData = [
+    {
+        "id": 1,
+        "text": "Submit SupplyHouse application",
+        "done": false
+    },
+    {
+        "id": 2,
+        "text": "Submit Mercury application",
+        "done": false
+    },
+    {
+        "id": 3,
+        "text": "Submit Edged application",
+        "done": false
+    },
+    {
+        "id": 4,
+        "text": "Sign up for Apollo.io (cold emails)",
+        "done": false
+    },
+    {
+        "id": 5,
+        "text": "Send cold emails to Scale AI recruiter",
+        "done": false
+    }
+];
+        let contactsData = [
+    {
+        "id": 1,
+        "name": "Jonathan Taylor",
+        "company": "Scale AI",
+        "email": "jonathan@scale.com",
+        "status": "Not Sent",
+        "role": "ML Research Intern",
+        "emailSentDate": null,
+        "followUpDate": null,
+        "notes": "Technical Recruiter"
+    },
+    {
+        "id": 2,
+        "name": "Taylor Pierotti",
+        "company": "GuidePoint",
+        "email": "taylor@guidepointsecurity.com",
+        "status": "Not Sent",
+        "role": "GPSU Cybersecurity",
+        "emailSentDate": null,
+        "followUpDate": null,
+        "notes": "GPSU Internship Recruiter"
+    }
+];
+        let materialsData = {
+    "files": [
+        {
+            "name": "Professional_Info.json",
+            "status": "✅ Complete"
+        },
+        {
+            "name": "Resume_LaTeX_Template.tex",
+            "status": "✅ Complete"
+        },
+        {
+            "name": "CoverLetter_Template.tex",
+            "status": "✅ Complete"
+        },
+        {
+            "name": "Standard_Answers.txt",
+            "status": "✅ Complete"
+        }
+    ],
+    "coverLetters": [
+        {
+            "company": "SupplyHouse",
+            "status": "✅ Ready"
+        },
+        {
+            "company": "Mercury",
+            "status": "✅ Ready"
+        },
+        {
+            "company": "Edged",
+            "status": "✅ Ready"
+        },
+        {
+            "company": "Scale AI",
+            "status": "✅ Ready"
+        },
+        {
+            "company": "DoorDash",
+            "status": "✅ Ready"
+        },
+        {
+            "company": "GuidePoint",
+            "status": "✅ Ready"
+        },
+        {
+            "company": "Crystal Dynamics",
+            "status": "✅ Ready"
+        }
+    ]
+};
 
         // Load all data and render
-        async function initDashboard() {
-            try {
-                console.log('Loading data...');
+        function initDashboard() {
+            console.log('Dashboard initializing with embedded data...');
+            console.log('Tracker count:', trackerData.length);
+            
+            // Apply localStorage overrides (user actions like marking applied)
+            applyLocalOverrides();
 
-                const [trackerRes, feedRes, tasksRes, contactsRes, materialsRes] = await Promise.all([
-                    fetch('data/tracker.json'),
-                    fetch('data/feed.json'),
-                    fetch('data/tasks.json'),
-                    fetch('data/contacts.json'),
-                    fetch('data/materials.json')
-                ]);
+            // Render everything
+            renderPendingTable();
+            renderAppliedTable();
+            renderFeed();
+            renderTasks();
+            renderContacts();
+            renderMaterials();
+            renderPriorityList();
+            updateCounts();
 
-                console.log('Responses received:', { trackerRes, feedRes, tasksRes, contactsRes, materialsRes });
-
-                if (!trackerRes.ok) throw new Error(`tracker.json failed: ${trackerRes.status}`);
-                if (!feedRes.ok) throw new Error(`feed.json failed: ${feedRes.status}`);
-                if (!tasksRes.ok) throw new Error(`tasks.json failed: ${tasksRes.status}`);
-                if (!contactsRes.ok) throw new Error(`contacts.json failed: ${contactsRes.status}`);
-                if (!materialsRes.ok) throw new Error(`materials.json failed: ${materialsRes.status}`);
-
-                trackerData = await trackerRes.json();
-                feedData = await feedRes.json();
-                tasksData = await tasksRes.json();
-                contactsData = await contactsRes.json();
-                materialsData = await materialsRes.json();
-
-                console.log('Data loaded:', { trackerData, feedData, tasksData, contactsData, materialsData });
-                console.log('Tracker count:', trackerData.length);
-
-                // Apply localStorage overrides (user actions like marking applied)
-                applyLocalOverrides();
-
-                // Render everything
-                renderPendingTable();
-                renderAppliedTable();
-                renderFeed();
-                renderTasks();
-                renderContacts();
-                renderMaterials();
-                renderPriorityList();
-                updateCounts();
-
-                console.log('Dashboard rendered successfully!');
-
-                // Fallback: re-render priority list after delay to ensure it shows
-                setTimeout(() => {
-                    if (trackerData.length > 0) {
-                        renderPriorityList();
-                        console.log('Priority list re-rendered after delay');
-                    }
-                }, 500);
-
-            } catch (err) {
-                console.error('Failed to load data:', err);
-                document.body.innerHTML = '<div style="padding: 50px; text-align: center; color: red;"><h2>Error Loading Dashboard</h2><p>' + err.message + '</p><p>Check browser console for details.</p></div>';
-            }
+            console.log('Dashboard rendered successfully!');
         }
 
         // ============================================================

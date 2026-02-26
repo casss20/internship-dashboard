@@ -1429,6 +1429,16 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
 
         function renderPriorityList() {
             const list = document.getElementById('priority-list');
+            
+            // Debug: Show trackerData state
+            console.log('renderPriorityList called, trackerData:', trackerData);
+            console.log('trackerData.length:', trackerData.length);
+            
+            if (!trackerData || trackerData.length === 0) {
+                list.innerHTML = '<li>Loading opportunities...</li>';
+                return;
+            }
+            
             const highPriority = trackerData.filter(t => t.status === 'pending' && t.priority === 'high');
             const normalPriority = trackerData.filter(t => t.status === 'pending' && t.priority === 'normal').slice(0, 7);
 

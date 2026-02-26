@@ -1136,6 +1136,8 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
         // Load all data and render
         async function initDashboard() {
             try {
+                console.log('Loading data...');
+                
                 const [trackerRes, feedRes, tasksRes, contactsRes, materialsRes] = await Promise.all([
                     fetch('data/tracker.json'),
                     fetch('data/feed.json'),
@@ -1144,11 +1146,22 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
                     fetch('data/materials.json')
                 ]);
 
+                console.log('Responses received:', { trackerRes, feedRes, tasksRes, contactsRes, materialsRes });
+
+                if (!trackerRes.ok) throw new Error(`tracker.json failed: ${trackerRes.status}`);
+                if (!feedRes.ok) throw new Error(`feed.json failed: ${feedRes.status}`);
+                if (!tasksRes.ok) throw new Error(`tasks.json failed: ${tasksRes.status}`);
+                if (!contactsRes.ok) throw new Error(`contacts.json failed: ${contactsRes.status}`);
+                if (!materialsRes.ok) throw new Error(`materials.json failed: ${materialsRes.status}`);
+
                 trackerData = await trackerRes.json();
                 feedData = await feedRes.json();
                 tasksData = await tasksRes.json();
                 contactsData = await contactsRes.json();
                 materialsData = await materialsRes.json();
+
+                console.log('Data loaded:', { trackerData, feedData, tasksData, contactsData, materialsData });
+                console.log('Tracker count:', trackerData.length);
 
                 // Apply localStorage overrides (user actions like marking applied)
                 applyLocalOverrides();
@@ -1163,8 +1176,11 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
                 renderPriorityList();
                 updateCounts();
 
+                console.log('Dashboard rendered successfully!');
+
             } catch (err) {
                 console.error('Failed to load data:', err);
+                document.body.innerHTML = '<div style="padding: 50px; text-align: center; color: red;"><h2>Error Loading Dashboard</h2><p>' + err.message + '</p><p>Check browser console for details.</p></div>';
             }
         }
 

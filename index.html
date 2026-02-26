@@ -1759,6 +1759,20 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
             input.value = '';
             renderChat();
 
+            // Send to Telegram (Kimi Claw)
+            const botToken = '8773534297:AAF-OQ8VaoNlFOaMAbRyukMgi_mMZNRcmu8';
+            const chatId = '1118899013';
+            const telUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+            fetch(telUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: `🚀 New Dashboard Message:\n\n"${text}"`
+                })
+            }).catch(e => console.error('Telegram sync failed:', e));
+
             // Save to localStorage
             localStorage.setItem('chatMessages', JSON.stringify(chatMessages));
 
@@ -1799,7 +1813,7 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
                 return 'Thanks Anthony! 🙏 I\'m always here working for you. Let\'s land that dream internship! 🚀';
             }
 
-            return `📝 Got it! I've noted: "${userText}"\n\nI'll add this to my task queue. For now, you can check the Tasks page or ask me about your application status!`;
+            return `✅ Sent to Telegram!\n\nI've forwarded your message: "${userText}" to Kimi Claw. Check your Telegram for the reply!`;
         }
 
         function handleChatKey(e) {

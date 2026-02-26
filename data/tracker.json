@@ -416,5 +416,137 @@
     "status": "pending",
     "priority": "normal",
     "dateApplied": null
+  },
+  {
+    "id": 39,
+    "company": "🔥 NEW: General Dynamics",
+    "role": "AI/ML Software Engineer Intern",
+    "location": "Manassas, VA",
+    "applyUrl": "https://gdmissionsystems.com/careers",
+    "matchScore": 87,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 40,
+    "company": "🔥 NEW: PrizePicks",
+    "role": "Software Engineering Intern",
+    "location": "Atlanta, GA",
+    "applyUrl": "https://prizepicks.com/careers",
+    "matchScore": 84,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 41,
+    "company": "🔥 NEW: Ursa Space",
+    "role": "AI Software Engineer Intern",
+    "location": "Ithaca, NY",
+    "applyUrl": "https://ursaspace.com/careers",
+    "matchScore": 86,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 42,
+    "company": "🔥 NEW: CACI",
+    "role": "Software Development Intern",
+    "location": "Ashburn, VA",
+    "applyUrl": "https://caci.com/careers",
+    "matchScore": 83,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 43,
+    "company": "🔥 NEW: IXL Learning",
+    "role": "Software Engineer Intern",
+    "location": "Raleigh, NC / San Mateo, CA",
+    "applyUrl": "https://ixl.com/careers",
+    "matchScore": 82,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 44,
+    "company": "🔥 NEW: Relativity",
+    "role": "Software Engineering Intern",
+    "location": "Chicago, IL",
+    "applyUrl": "https://relativity.com/careers",
+    "matchScore": 81,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 45,
+    "company": "🔥 NEW: F5",
+    "role": "Software Development Engineer Intern",
+    "location": "San Jose, CA",
+    "applyUrl": "https://f5.com/careers",
+    "matchScore": 84,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 46,
+    "company": "🔥 NEW: Bosch",
+    "role": "Software Engineering Intern",
+    "location": "Plymouth, MI",
+    "applyUrl": "https://bosch.com/careers",
+    "matchScore": 80,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 47,
+    "company": "🔥 NEW: Belk",
+    "role": "Retail Systems Software Engineer Intern",
+    "location": "Charlotte, NC",
+    "applyUrl": "https://belk.com/careers",
+    "matchScore": 78,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 48,
+    "company": "🔥 NEW: Dorsia",
+    "role": "Software Engineering Intern",
+    "location": "New York City, NY",
+    "applyUrl": "https://dorsia.com/careers",
+    "matchScore": 82,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
+    "id": 49,
+    "company": "🔥 NEW: ezCater",
+    "role": "Data Engineer Intern",
+    "location": "Remote",
+    "applyUrl": "https://ezcater.com/careers",
+    "matchScore": 85,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 50,
+    "company": "🔥 NEW: HP",
+    "role": "Software Developer Internship",
+    "location": "Houston, TX",
+    "applyUrl": "https://hp.com/careers",
+    "matchScore": 81,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
   }
 ]

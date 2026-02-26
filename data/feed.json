@@ -1,6 +1,11 @@
 [
     {
         "time": "Just now",
+        "text": "🔥 FOUND 15 NEW INTERNSHIPS! Added to tracker: General Dynamics AI/ML, PrizePicks, Ursa Space, CACI, F5, ezCater, and more!",
+        "type": "highlight"
+    },
+    {
+        "time": "Just now",
         "text": "🔴 LIVE DEMO: Adding real-time activity to dashboard feed",
         "type": "working"
     },

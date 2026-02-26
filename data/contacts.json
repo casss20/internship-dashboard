@@ -5,7 +5,12 @@
         "company": "Scale AI",
         "email": "jonathan@scale.com",
         "status": "Not Sent",
-        "followUp": null
+        "followUp": null,
+        "internshipId": 4,
+        "role": "ML Research Intern",
+        "emailSentDate": null,
+        "followUpDate": null,
+        "notes": ""
     },
     {
         "id": 2,
@@ -13,6 +18,11 @@
         "company": "GuidePoint",
         "email": "taylor@guidepointsecurity.com",
         "status": "Not Sent",
-        "followUp": null
+        "followUp": null,
+        "internshipId": 6,
+        "role": "GPSU Cybersecurity",
+        "emailSentDate": null,
+        "followUpDate": null,
+        "notes": ""
     }
 ]

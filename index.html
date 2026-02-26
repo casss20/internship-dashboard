@@ -484,6 +484,7 @@
         <div class="nav-item" data-page="pending">To Apply (<span id="nav-pending">0</span>)</div>
         <div class="nav-item" data-page="applied">Applied (<span id="nav-applied">0</span>)</div>
         <div class="nav-item" data-page="tasks">Tasks</div>
+        <div class="nav-item" data-page="coldemails">Cold Emails (<span id="nav-outreach">0</span>)</div>
         <div class="nav-item" data-page="rules">Rules</div>
         <div class="nav-item" data-page="materials">Materials</div>
     </div>
@@ -643,12 +644,84 @@
             </div>
         </div>
 
-        <!-- PAGE 6: Networking -->
-        <div id="networking" class="page-section">
+        <!-- PAGE 6: Cold Email Strategy -->
+        <div id="coldemails" class="page-section">
+            <!-- Strategy Overview -->
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">📧 Cold Email Strategy</span>
+                    </div>
+                    <div class="card-body">
+                        <div
+                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+                            <div
+                                style="background: rgba(0, 229, 160, 0.08); border: 1px solid var(--accent); border-radius: 6px; padding: 12px;">
+                                <div
+                                    style="font-weight: 600; color: var(--accent); margin-bottom: 6px; font-size: 12px;">
+                                    🔍 FIND CONTACTS</div>
+                                <div style="font-size: 12px; color: var(--text);">Use Hunter.io / Apollo to find
+                                    recruiter emails for target companies</div>
+                            </div>
+                            <div
+                                style="background: rgba(0, 119, 255, 0.08); border: 1px solid var(--accent2); border-radius: 6px; padding: 12px;">
+                                <div
+                                    style="font-weight: 600; color: var(--accent2); margin-bottom: 6px; font-size: 12px;">
+                                    ✉️ PERSONALIZED EMAIL</div>
+                                <div style="font-size: 12px; color: var(--text);">Send 5-sentence personalized emails
+                                    expressing interest in specific roles</div>
+                            </div>
+                            <div
+                                style="background: rgba(245, 166, 35, 0.08); border: 1px solid var(--warn); border-radius: 6px; padding: 12px;">
+                                <div style="font-weight: 600; color: var(--warn); margin-bottom: 6px; font-size: 12px;">
+                                    🔄 FOLLOW UP</div>
+                                <div style="font-size: 12px; color: var(--text);">One follow-up after 5 business days if
+                                    no response</div>
+                            </div>
+                            <div
+                                style="background: rgba(255, 69, 96, 0.08); border: 1px solid var(--danger); border-radius: 6px; padding: 12px;">
+                                <div
+                                    style="font-weight: 600; color: var(--danger); margin-bottom: 6px; font-size: 12px;">
+                                    📊 TRACK ALL</div>
+                                <div style="font-size: 12px; color: var(--text);">Track every outreach below — name,
+                                    email, company, affiliated internship</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">📊 Outreach Stats</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="stat-grid">
+                            <div class="stat-item">
+                                <div class="stat-value" id="stat-total-contacts">0</div>
+                                <div class="stat-label">Total Contacts</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value warn" id="stat-not-sent">0</div>
+                                <div class="stat-label">Not Sent</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="stat-emails-sent">0</div>
+                                <div class="stat-label">Emails Sent</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value danger" id="stat-needs-followup">0</div>
+                                <div class="stat-label">Need Follow-up</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outreach Tracker Table -->
             <div class="card">
                 <div class="card-header">
-                    <span class="card-title">🤝 Networking Outreach</span>
-                    <button class="action-btn" onclick="addContact()">+ Add Contact</button>
+                    <span class="card-title">🤝 Outreach Tracker</span>
+                    <button class="action-btn" onclick="addContact()">+ Add Recruiter</button>
                 </div>
                 <div class="card-body">
                     <div class="table-container">
@@ -657,10 +730,13 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Recruiter</th>
-                                    <th>Company</th>
                                     <th>Email</th>
+                                    <th>Company</th>
+                                    <th>Affiliated Internship</th>
                                     <th>Status</th>
+                                    <th>Sent Date</th>
                                     <th>Follow-up</th>
+                                    <th>Notes</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -668,6 +744,13 @@
                                 <!-- Dynamically populated from data/contacts.json -->
                             </tbody>
                         </table>
+                    </div>
+                    <div id="no-contacts"
+                        style="text-align: center; padding: 40px; color: var(--muted); display: none;">
+                        <div style="font-size: 48px; margin-bottom: 15px;">📧</div>
+                        <div>No recruiter contacts yet.</div>
+                        <div style="font-size: 12px; margin-top: 10px;">Click "+ Add Recruiter" to start tracking cold
+                            email outreach.</div>
                     </div>
                 </div>
             </div>
@@ -1016,20 +1099,44 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
 
         function renderContacts() {
             const tbody = document.getElementById('network-tbody');
-            tbody.innerHTML = contactsData.map((c, i) => `
+            tbody.innerHTML = contactsData.map((c, i) => {
+                const statusBadge = c.status === 'Sent' ? 'badge-submitted'
+                    : c.status === 'Replied' ? 'badge-completed'
+                        : c.status === 'Follow-up Sent' ? 'badge-ready'
+                            : 'badge-urgent';
+                return `
                 <tr data-network-id="${c.id}">
                     <td>${i + 1}</td>
-                    <td>${c.name}</td>
-                    <td>${c.company}</td>
+                    <td><strong>${c.name}</strong></td>
                     <td>${c.email}</td>
-                    <td><span class="badge ${c.status === 'Sent' ? 'badge-submitted' : 'badge-ready'}">${c.status}</span></td>
-                    <td>${c.followUp || '-'}</td>
+                    <td>${c.company}</td>
+                    <td>${c.role || '-'}</td>
+                    <td><span class="badge ${statusBadge}">${c.status}</span></td>
+                    <td>${c.emailSentDate || '-'}</td>
+                    <td>${c.followUpDate || '-'}</td>
+                    <td style="max-width: 150px; font-size: 11px; color: var(--muted);">${c.notes || '-'}</td>
                     <td>
-                        <button class="action-btn apply" onclick="sendEmail(${c.id})">Send Email</button>
+                        <button class="action-btn apply" onclick="sendEmail(${c.id})">✉️ Send</button>
+                        <button class="action-btn" onclick="markFollowUp(${c.id})">🔄 Follow-up</button>
                         <button class="action-btn delete" onclick="deleteContact(${c.id})">✕</button>
                     </td>
-                </tr>
-            `).join('');
+                </tr>`;
+            }).join('');
+
+            // Toggle empty state
+            const noContacts = document.getElementById('no-contacts');
+            if (noContacts) noContacts.style.display = contactsData.length > 0 ? 'none' : 'block';
+
+            // Update outreach stats
+            const total = contactsData.length;
+            const sent = contactsData.filter(c => c.status === 'Sent' || c.status === 'Follow-up Sent' || c.status === 'Replied').length;
+            const notSent = contactsData.filter(c => c.status === 'Not Sent').length;
+            const needsFollowup = contactsData.filter(c => c.status === 'Sent').length;
+            document.getElementById('stat-total-contacts').textContent = total;
+            document.getElementById('stat-emails-sent').textContent = sent;
+            document.getElementById('stat-not-sent').textContent = notSent;
+            document.getElementById('stat-needs-followup').textContent = needsFollowup;
+            document.getElementById('nav-outreach').textContent = total;
         }
 
         function renderMaterials() {
@@ -1208,14 +1315,41 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
         // Contacts
         function addContact() {
             const name = prompt('Recruiter name:');
-            const company = prompt('Company:');
-            const email = prompt('Email:');
-            if (name && company && email) {
-                const maxId = contactsData.length > 0 ? Math.max(...contactsData.map(c => c.id)) : 0;
-                contactsData.push({ id: maxId + 1, name, company, email, status: 'Not Sent', followUp: null });
+            if (!name) return;
+            const company = prompt('Company they work for:');
+            if (!company) return;
+            const email = prompt('Email address:');
+            if (!email) return;
+            const role = prompt('Affiliated internship role (e.g. "SWE Intern", "AI Engineer Intern"):') || '';
+            const notes = prompt('Notes (optional):') || '';
+
+            const maxId = contactsData.length > 0 ? Math.max(...contactsData.map(c => c.id)) : 0;
+            contactsData.push({
+                id: maxId + 1,
+                name,
+                company,
+                email,
+                status: 'Not Sent',
+                followUp: null,
+                internshipId: null,
+                role,
+                emailSentDate: null,
+                followUpDate: null,
+                notes
+            });
+            saveContactsState();
+            renderContacts();
+            addLiveActivity(`Added recruiter: ${name} at ${company} for ${role || 'general outreach'}`);
+        }
+
+        function markFollowUp(id) {
+            const contact = contactsData.find(c => c.id === id);
+            if (contact) {
+                contact.status = 'Follow-up Sent';
+                contact.followUpDate = new Date().toLocaleDateString();
                 saveContactsState();
                 renderContacts();
-                addLiveActivity(`Added recruiter contact: ${name} at ${company}`);
+                addLiveActivity(`Sent follow-up to ${contact.name} at ${contact.company}`);
             }
         }
 
@@ -1233,9 +1367,10 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
             if (contact) {
                 alert(`Open your email client and send to: ${contact.email}\n\nCover letter location: materials/cover_letters/${contact.company}_CoverLetter.txt`);
                 contact.status = 'Sent';
+                contact.emailSentDate = new Date().toLocaleDateString();
                 saveContactsState();
                 renderContacts();
-                addLiveActivity(`Marked email as sent to ${contact.company}`);
+                addLiveActivity(`Marked email as sent to ${contact.name} at ${contact.company}`);
             }
         }
 

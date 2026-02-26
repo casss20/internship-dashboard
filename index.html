@@ -1198,6 +1198,14 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
 
                 console.log('Dashboard rendered successfully!');
 
+                // Fallback: re-render priority list after delay to ensure it shows
+                setTimeout(() => {
+                    if (trackerData.length > 0) {
+                        renderPriorityList();
+                        console.log('Priority list re-rendered after delay');
+                    }
+                }, 500);
+
             } catch (err) {
                 console.error('Failed to load data:', err);
                 document.body.innerHTML = '<div style="padding: 50px; text-align: center; color: red;"><h2>Error Loading Dashboard</h2><p>' + err.message + '</p><p>Check browser console for details.</p></div>';
@@ -1297,6 +1305,7 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
                     <td>
                         <a href="${item.applyUrl}" target="_blank" class="action-btn apply">Apply →</a>
                         <button class="action-btn check" onclick="markApplied(${item.id})">✓ Applied</button>
+                        <button class="action-btn delete" onclick="deleteOpportunity(${item.id})">🗑️ Delete</button>
                     </td>
                 </tr>`;
             }).join('');
@@ -1511,6 +1520,19 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
                 renderPriorityList();
                 updateCounts();
                 addLiveActivity(`Moved ${item.company} back to pending`);
+            }
+        }
+
+        function deleteOpportunity(id) {
+            const item = trackerData.find(t => t.id === id);
+            if (item && confirm(`Delete ${item.company} - ${item.role}?`)) {
+                item.status = 'deleted';
+                saveAppliedState();
+                renderPendingTable();
+                renderAppliedTable();
+                renderPriorityList();
+                updateCounts();
+                addLiveActivity(`Deleted ${item.company} from tracker`);
             }
         }
 

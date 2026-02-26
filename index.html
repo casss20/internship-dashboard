@@ -1184,17 +1184,39 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
                 }
             });
 
-            // Task overrides
+            // Task overrides — only apply if they have actual data
             const savedTasks = localStorage.getItem('tasksOverride');
             if (savedTasks) {
-                tasksData = JSON.parse(savedTasks);
+                try {
+                    const parsed = JSON.parse(savedTasks);
+                    if (Array.isArray(parsed) && parsed.length > 0) {
+                        tasksData = parsed;
+                    }
+                } catch (e) { /* ignore corrupt data */ }
             }
 
-            // Contact overrides
+            // Contact overrides — only apply if they have actual data
             const savedContacts = localStorage.getItem('contactsOverride');
             if (savedContacts) {
-                contactsData = JSON.parse(savedContacts);
+                try {
+                    const parsed = JSON.parse(savedContacts);
+                    if (Array.isArray(parsed) && parsed.length > 0) {
+                        contactsData = parsed;
+                    }
+                } catch (e) { /* ignore corrupt data */ }
             }
+        }
+
+        // Reset all localStorage overrides — use when data appears missing
+        function resetAllData() {
+            localStorage.removeItem('appliedIds');
+            localStorage.removeItem('appliedDates');
+            localStorage.removeItem('tasksOverride');
+            localStorage.removeItem('contactsOverride');
+            localStorage.removeItem('chatMessages');
+            localStorage.removeItem('agentRules');
+            alert('All local data cleared! Page will reload to show fresh JSON data.');
+            location.reload();
         }
 
         function saveAppliedState() {

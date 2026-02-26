@@ -25,6 +25,214 @@
             --sans: 'DM Sans', sans-serif;
         }
 
+        [data-theme="light"] {
+            --bg: #f0f2f5;
+            --surface: #ffffff;
+            --surface2: #f5f6f8;
+            --border: #e0e3e8;
+            --text: #1a1d24;
+            --muted: #6b7280;
+        }
+
+        /* Theme toggle */
+        .theme-toggle {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 6px 14px;
+            color: var(--text);
+            cursor: pointer;
+            font-family: var(--sans);
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent);
+            background: var(--border);
+        }
+
+        /* Chat Bubble */
+        .chat-fab {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 229, 160, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .chat-fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 28px rgba(0, 229, 160, 0.45);
+        }
+
+        .chat-fab.open {
+            transform: rotate(45deg);
+        }
+
+        .chat-panel {
+            position: fixed;
+            bottom: 92px;
+            right: 24px;
+            width: 360px;
+            max-height: 500px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1000;
+            animation: chatSlideUp 0.3s ease;
+        }
+
+        .chat-panel.show {
+            display: flex;
+        }
+
+        @keyframes chatSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            color: #fff;
+            padding: 14px 18px;
+            font-family: var(--mono);
+            font-size: 13px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .chat-header .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #0f0;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 14px;
+            overflow-y: auto;
+            max-height: 340px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .chat-msg {
+            max-width: 85%;
+            padding: 10px 14px;
+            border-radius: 14px;
+            font-size: 13px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .chat-msg.user {
+            align-self: flex-end;
+            background: linear-gradient(135deg, var(--accent2), var(--accent));
+            color: #fff;
+            border-bottom-right-radius: 4px;
+        }
+
+        .chat-msg.bot {
+            align-self: flex-start;
+            background: var(--surface2);
+            color: var(--text);
+            border-bottom-left-radius: 4px;
+        }
+
+        .chat-msg .msg-time {
+            display: block;
+            font-size: 10px;
+            opacity: 0.6;
+            margin-top: 4px;
+        }
+
+        .chat-input-area {
+            display: flex;
+            border-top: 1px solid var(--border);
+            padding: 10px;
+            gap: 8px;
+            background: var(--surface);
+        }
+
+        .chat-input {
+            flex: 1;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 8px 16px;
+            color: var(--text);
+            font-family: var(--sans);
+            font-size: 13px;
+            outline: none;
+        }
+
+        .chat-input:focus {
+            border-color: var(--accent);
+        }
+
+        .chat-send {
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s;
+        }
+
+        .chat-send:hover {
+            transform: scale(1.1);
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -471,6 +679,9 @@
             <div class="subtitle">Anthony Casseus · UCF CS '27 · Summer/Fall 2026</div>
         </div>
         <div class="status-pills">
+            <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">
+                <span id="theme-icon">☀️</span> Light
+            </button>
             <span class="pill active">● AGENT ACTIVE</span>
             <span class="pill active">● LIVE FEED</span>
             <span class="pill" id="pending-count">0 PENDING</span>
@@ -1162,23 +1373,23 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
             const list = document.getElementById('priority-list');
             const highPriority = trackerData.filter(t => t.status === 'pending' && t.priority === 'high');
             const normalPriority = trackerData.filter(t => t.status === 'pending' && t.priority === 'normal').slice(0, 7);
-            
+
             let html = '';
-            
+
             if (highPriority.length > 0) {
                 html += '<div style="font-weight: 600; color: var(--danger); margin-bottom: 8px;">🔴 High Priority (Cover Letters Ready)</div><ul style="margin: 0 0 15px 0; padding-left: 20px; color: var(--text);">';
                 html += highPriority.map(t => `<li>${t.company} - ${t.role}</li>`).join('');
                 html += '</ul>';
             }
-            
+
             if (normalPriority.length > 0) {
                 html += '<div style="font-weight: 600; color: var(--warn); margin-bottom: 8px;">🟡 More Opportunities</div><ul style="margin: 0; padding-left: 20px; color: var(--text); font-size: 12px;">';
                 html += normalPriority.map(t => `<li>${t.company} - ${t.role} (${t.matchScore || '--'}%)</li>`).join('');
                 html += '</ul>';
             }
-            
+
             html += '<div style="margin-top: 15px; font-size: 12px;"><a href="#" onclick="showPage(\'pending\')" style="color: var(--accent);">→ View all 40 opportunities</a></div>';
-            
+
             list.innerHTML = html;
         }
 
@@ -1405,9 +1616,144 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
         }
 
         // ============================================================
+        // THEME TOGGLE
+        // ============================================================
+        function toggleTheme() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateThemeButton(next);
+        }
+
+        function updateThemeButton(theme) {
+            const icon = document.getElementById('theme-icon');
+            const btn = document.getElementById('theme-toggle');
+            if (theme === 'light') {
+                icon.textContent = '🌙';
+                btn.innerHTML = '<span id="theme-icon">🌙</span> Dark';
+            } else {
+                icon.textContent = '☀️';
+                btn.innerHTML = '<span id="theme-icon">☀️</span> Light';
+            }
+        }
+
+        function loadTheme() {
+            const saved = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', saved);
+            updateThemeButton(saved);
+        }
+
+        // ============================================================
+        // CHAT BUBBLE
+        // ============================================================
+        let chatMessages = [];
+
+        function toggleChat() {
+            const panel = document.getElementById('chat-panel');
+            const fab = document.getElementById('chat-fab');
+            panel.classList.toggle('show');
+            fab.classList.toggle('open');
+            if (panel.classList.contains('show')) {
+                document.getElementById('chat-input').focus();
+                scrollChat();
+            }
+        }
+
+        function loadChat() {
+            const saved = localStorage.getItem('chatMessages');
+            if (saved) {
+                chatMessages = JSON.parse(saved);
+            } else {
+                chatMessages = [
+                    { role: 'bot', text: 'Hey Anthony! 👋 I\'m Kimi Claw, your internship agent. Ask me anything about your applications, or give me a task!', time: new Date().toLocaleTimeString() }
+                ];
+            }
+            renderChat();
+        }
+
+        function renderChat() {
+            const container = document.getElementById('chat-messages');
+            container.innerHTML = chatMessages.map(msg => `
+                <div class="chat-msg ${msg.role}">
+                    ${msg.text}
+                    <span class="msg-time">${msg.time}</span>
+                </div>
+            `).join('');
+            scrollChat();
+        }
+
+        function scrollChat() {
+            const container = document.getElementById('chat-messages');
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function sendChatMessage() {
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if (!text) return;
+
+            const now = new Date().toLocaleTimeString();
+
+            // Add user message
+            chatMessages.push({ role: 'user', text, time: now });
+            input.value = '';
+            renderChat();
+
+            // Save to localStorage
+            localStorage.setItem('chatMessages', JSON.stringify(chatMessages));
+
+            // Generate quick auto-response based on keywords
+            setTimeout(() => {
+                const reply = generateBotReply(text);
+                chatMessages.push({ role: 'bot', text: reply, time: new Date().toLocaleTimeString() });
+                localStorage.setItem('chatMessages', JSON.stringify(chatMessages));
+                renderChat();
+            }, 800);
+        }
+
+        function generateBotReply(userText) {
+            const lower = userText.toLowerCase();
+            const pending = trackerData.filter(t => t.status === 'pending').length;
+            const applied = trackerData.filter(t => t.status === 'applied').length;
+
+            if (lower.includes('status') || lower.includes('how many') || lower.includes('update')) {
+                return `📊 Here's your current status:\n• ${pending} applications to submit\n• ${applied} already applied\n• ${trackerData.length} total tracked\n\nKeep pushing! 💪`;
+            }
+            if (lower.includes('priority') || lower.includes('urgent') || lower.includes('next')) {
+                const top3 = trackerData.filter(t => t.status === 'pending' && t.priority === 'high').slice(0, 3);
+                if (top3.length > 0) {
+                    const list = top3.map(t => `• ${t.company} — ${t.role}`).join('\n');
+                    return `🔴 Top priority applications:\n${list}\n\nShould I prep materials for any of these?`;
+                }
+                return 'No high-priority applications pending right now! You\'re on top of things. 🎯';
+            }
+            if (lower.includes('cold email') || lower.includes('outreach') || lower.includes('recruiter')) {
+                const contacts = contactsData.length;
+                const notSent = contactsData.filter(c => c.status === 'Not Sent').length;
+                return `📧 Cold email status:\n• ${contacts} recruiters tracked\n• ${notSent} emails not sent yet\n\nWant me to draft an email for a specific company?`;
+            }
+            if (lower.includes('help') || lower.includes('what can you do')) {
+                return '🤖 I can help with:\n• Application status updates\n• Priority recommendations\n• Cold email tracking\n• Task management\n• Resume & cover letter prep\n\nJust ask!';
+            }
+            if (lower.includes('thank') || lower.includes('good job') || lower.includes('great')) {
+                return 'Thanks Anthony! 🙏 I\'m always here working for you. Let\'s land that dream internship! 🚀';
+            }
+
+            return `📝 Got it! I've noted: "${userText}"\n\nI'll add this to my task queue. For now, you can check the Tasks page or ask me about your application status!`;
+        }
+
+        function handleChatKey(e) {
+            if (e.key === 'Enter') sendChatMessage();
+        }
+
+        // ============================================================
         // INITIALIZE
         // ============================================================
+        loadTheme();
         loadRules();
+        loadChat();
         initDashboard();
 
         // Auto-refresh timestamp
@@ -1415,6 +1761,26 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
             document.getElementById('last-updated').textContent = 'Just now';
         }, 30000);
     </script>
+
+    <!-- Chat Bubble -->
+    <button class="chat-fab" id="chat-fab" onclick="toggleChat()" title="Chat with Kimi Claw">
+        💬
+    </button>
+
+    <div class="chat-panel" id="chat-panel">
+        <div class="chat-header">
+            <div class="status-dot"></div>
+            KIMI CLAW · Online
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Populated dynamically -->
+        </div>
+        <div class="chat-input-area">
+            <input class="chat-input" id="chat-input" type="text" placeholder="Ask Kimi Claw anything..."
+                onkeydown="handleChatKey(event)">
+            <button class="chat-send" onclick="sendChatMessage()">➤</button>
+        </div>
+    </div>
 </body>
 
 </html>

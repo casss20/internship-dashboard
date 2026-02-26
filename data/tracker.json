@@ -1,5 +1,82 @@
 [
   {
+    "id": 100,
+    "company": "🌴 LOCKHEED MARTIN",
+    "role": "Software Engineering Intern",
+    "location": "Orlando, FL",
+    "applyUrl": "https://www.lockheedmartin.com/careers",
+    "matchScore": 90,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 101,
+    "company": "🌴 L3HARRIS",
+    "role": "Software Engineering Intern",
+    "location": "Melbourne, FL (45 min from UCF)",
+    "applyUrl": "https://careers.l3harris.com",
+    "matchScore": 88,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 102,
+    "company": "🌴 SIEMENS",
+    "role": "R&D Software Engineering Intern",
+    "location": "Orlando, FL",
+    "applyUrl": "https://jobs.siemens.com",
+    "matchScore": 87,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 103,
+    "company": "🌴 DISNEY",
+    "role": "Software Engineering Intern",
+    "location": "Orlando, FL - $42/hr",
+    "applyUrl": "https://jobs.disneycareers.com",
+    "matchScore": 89,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 104,
+    "company": "🌴 ORLANDO UTILITIES COMMISSION",
+    "role": "Programming & Automation Intern",
+    "location": "Orlando, FL - Hybrid",
+    "applyUrl": "https://ouc.com/careers",
+    "matchScore": 85,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 105,
+    "company": "🌴 BOEING",
+    "role": "Engineering Intern",
+    "location": "Titusville, FL - Hybrid",
+    "applyUrl": "https://boeing.com/careers",
+    "matchScore": 86,
+    "status": "pending",
+    "priority": "high",
+    "dateApplied": null
+  },
+  {
+    "id": 106,
+    "company": "🌴 STRYKER",
+    "role": "Software Engineering Intern",
+    "location": "Fort Lauderdale, FL",
+    "applyUrl": "https://careers.stryker.com",
+    "matchScore": 84,
+    "status": "pending",
+    "priority": "normal",
+    "dateApplied": null
+  },
+  {
     "id": 1,
     "company": "SupplyHouse",
     "role": "AI Enablement",
@@ -419,7 +496,7 @@
   },
   {
     "id": 39,
-    "company": "🔥 NEW: General Dynamics",
+    "company": "General Dynamics",
     "role": "AI/ML Software Engineer Intern",
     "location": "Manassas, VA",
     "applyUrl": "https://gdmissionsystems.com/careers",
@@ -430,7 +507,7 @@
   },
   {
     "id": 40,
-    "company": "🔥 NEW: PrizePicks",
+    "company": "PrizePicks",
     "role": "Software Engineering Intern",
     "location": "Atlanta, GA",
     "applyUrl": "https://prizepicks.com/careers",
@@ -441,7 +518,7 @@
   },
   {
     "id": 41,
-    "company": "🔥 NEW: Ursa Space",
+    "company": "Ursa Space",
     "role": "AI Software Engineer Intern",
     "location": "Ithaca, NY",
     "applyUrl": "https://ursaspace.com/careers",
@@ -452,7 +529,7 @@
   },
   {
     "id": 42,
-    "company": "🔥 NEW: CACI",
+    "company": "CACI",
     "role": "Software Development Intern",
     "location": "Ashburn, VA",
     "applyUrl": "https://caci.com/careers",
@@ -463,7 +540,7 @@
   },
   {
     "id": 43,
-    "company": "🔥 NEW: IXL Learning",
+    "company": "IXL Learning",
     "role": "Software Engineer Intern",
     "location": "Raleigh, NC / San Mateo, CA",
     "applyUrl": "https://ixl.com/careers",
@@ -474,7 +551,7 @@
   },
   {
     "id": 44,
-    "company": "🔥 NEW: Relativity",
+    "company": "Relativity",
     "role": "Software Engineering Intern",
     "location": "Chicago, IL",
     "applyUrl": "https://relativity.com/careers",
@@ -485,7 +562,7 @@
   },
   {
     "id": 45,
-    "company": "🔥 NEW: F5",
+    "company": "F5",
     "role": "Software Development Engineer Intern",
     "location": "San Jose, CA",
     "applyUrl": "https://f5.com/careers",
@@ -496,7 +573,7 @@
   },
   {
     "id": 46,
-    "company": "🔥 NEW: Bosch",
+    "company": "Bosch",
     "role": "Software Engineering Intern",
     "location": "Plymouth, MI",
     "applyUrl": "https://bosch.com/careers",
@@ -507,7 +584,7 @@
   },
   {
     "id": 47,
-    "company": "🔥 NEW: Belk",
+    "company": "Belk",
     "role": "Retail Systems Software Engineer Intern",
     "location": "Charlotte, NC",
     "applyUrl": "https://belk.com/careers",
@@ -518,7 +595,7 @@
   },
   {
     "id": 48,
-    "company": "🔥 NEW: Dorsia",
+    "company": "Dorsia",
     "role": "Software Engineering Intern",
     "location": "New York City, NY",
     "applyUrl": "https://dorsia.com/careers",
@@ -529,7 +606,7 @@
   },
   {
     "id": 49,
-    "company": "🔥 NEW: ezCater",
+    "company": "ezCater",
     "role": "Data Engineer Intern",
     "location": "Remote",
     "applyUrl": "https://ezcater.com/careers",
@@ -540,7 +617,7 @@
   },
   {
     "id": 50,
-    "company": "🔥 NEW: HP",
+    "company": "HP",
     "role": "Software Developer Internship",
     "location": "Houston, TX",
     "applyUrl": "https://hp.com/careers",

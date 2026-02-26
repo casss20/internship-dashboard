@@ -1789,15 +1789,22 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
         // ============================================================
         // INITIALIZE
         // ============================================================
-        loadTheme();
-        loadRules();
-        loadChat();
-        initDashboard();
+        // Must wait for DOM to be fully parsed because the chat bubble
+        // HTML is defined AFTER this script block. Without this,
+        // loadChat() crashes trying to access #chat-messages, which
+        // prevents initDashboard() from ever running — causing the
+        // empty dashboard bug.
+        document.addEventListener('DOMContentLoaded', function () {
+            loadTheme();
+            loadRules();
+            loadChat();
+            initDashboard();
 
-        // Auto-refresh timestamp
-        setInterval(() => {
-            document.getElementById('last-updated').textContent = 'Just now';
-        }, 30000);
+            // Auto-refresh timestamp
+            setInterval(() => {
+                document.getElementById('last-updated').textContent = 'Just now';
+            }, 30000);
+        });
     </script>
 
     <!-- Chat Bubble -->

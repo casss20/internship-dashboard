@@ -3,7 +3,8 @@
 Live dashboard for tracking Summer/Fall 2026 internship applications.
 
 ## 🚀 Live URL
-**https://dashboard-mhl6wuep9-casss20s-projects.vercel.app**
+
+https://internship-dashboard-ten.vercel.app/
 
 ## 📁 Files in this Repo
 
@@ -54,6 +55,6 @@ vercel --prod
 
 ---
 
-**Created by:** Kimi Claw  
+**Created by:** Anthony casseus
 **For:** Anthony Casseus  
 **Date:** February 25, 2026

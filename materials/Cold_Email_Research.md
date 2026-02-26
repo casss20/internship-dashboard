@@ -41,40 +41,167 @@
 
 ---
 
-## DoorDash
-**Position:** Machine Learning Intern
-**Priority:** 🔥 HIGH
+## Lockheed Martin (Orlando, FL)
+**Position:** Software Engineering Intern
+**Priority:** 🔥🔥 HIGH - Orlando Local!
 
-**Recruiters to Find:**
-- Search: "University Recruiter" OR "Technical Recruiter" DoorDash site:linkedin.com
+**Recruiters Found:**
+- Search: "Lockheed Martin University Recruiter Orlando" site:linkedin.com
+- Daven Hill - Software Engineer Intern @ Lockheed Martin (UCF Alumni!) | linkedin.com/in/davenhill3
+- Jason Yau - Software Engineer @ Lockheed Martin (UCF Student!) | linkedin.com/in/jasonpyau
 
-**Company Domain:** doordash.com
+**Email Patterns to Try:**
+- firstname.lastname@lmco.com
+- firstname@lmco.com
 
-**Email Patterns:**
-- firstname@doordash.com
-- firstname.lastname@doordash.com
+**Company Domain:** lmco.com / lockheedmartin.com
 
----
+**Cold Email Subject:** UCF CS Junior - Software Engineering Intern Interest (Orlando Local)
 
-## CrowdStrike
-**Position:** IT Service Desk Launch Intern
-**Priority:** 🔥 HIGH
-
-**Recruiters to Find:**
-- Search: "University Recruiter" CrowdStrike site:linkedin.com
-
-**Company Domain:** crowdstrike.com
+**Why This is Gold:**
+- Daven Hill and Jason Yau are UCF alumni/students at Lockheed Martin
+- Perfect for referral request!
+- Orlando location = no relocation needed
 
 ---
 
-## Atlassian
-**Position:** Security Engineer Intern
-**Priority:** 🔥 HIGH
+## Northrop Grumman (Melbourne, FL)
+**Position:** 2026 Software Engineer Technical Intern
+**Priority:** 🔥🔥 HIGH - Melbourne Local (45 min from UCF)!
 
-**Recruiters to Find:**
-- Search: "University Recruiter" Atlassian site:linkedin.com
+**Recruiters Found:**
+- Annabelle Allen - Talent Advisor @ Northrop Grumman | linkedin.com/in/annabellelallen
 
-**Company Domain:** atlassian.com
+**Email Patterns to Try:**
+- firstname.lastname@ngc.com
+- firstname@ngc.com
+
+**Company Domain:** ngc.com / northropgrumman.com
+
+**Cold Email Subject:** UCF CS Junior - Software Engineering Intern Interest (Melbourne/Orlando Area)
+
+---
+
+## L3Harris (Melbourne, FL)
+**Position:** Software Engineering Internship
+**Priority:** 🔥🔥 HIGH - Melbourne Local!
+
+**Recruiters Found:**
+- Barbara Brewster - L3Harris (UCF connection!) | linkedin.com/in/barbarabrewster21
+- Christopher King - Manager, Recruiting Support Operations | linkedin.com/in/clking823
+- Roy Knowles - L3Harris | linkedin.com/in/roy-knowles-4807813a
+
+**Email Patterns to Try:**
+- firstname.lastname@l3harris.com
+- firstname@l3harris.com
+
+**Company Domain:** l3harris.com
+
+**Cold Email Subject:** UCF CS Junior - Software Engineering Intern Interest
+
+**Why This is Gold:**
+- Barbara Brewster has UCF connection
+- L3Harris actively recruits from UCF
+- Melbourne is only 45 minutes from Orlando
+
+---
+
+## Amazon
+**Position:** Software Development Engineer Internship - Summer 2026
+**Priority:** 🔥🔥 HIGH - 95% Match!
+
+**Recruiters Found:**
+- Deepika Munde - Amazon University Talent Acquisition | linkedin.com/in/deepika-munde-6b5889257
+- Search: "Amazon University Recruiter" site:linkedin.com
+
+**Email Patterns to Try:**
+- firstname.lastname@amazon.com
+- firstname@amazon.com
+
+**Company Domain:** amazon.com
+
+**Cold Email Subject:** UCF CS Junior - SDE Summer 2026 Internship Application Follow-up
+
+**Application Link:** https://amazon.jobs/en/jobs/3116030/software-development-engineer-internship-summer-2026-us
+
+---
+
+## NVIDIA
+**Position:** 2026 Internships - Software Engineering
+**Priority:** 🔥🔥 HIGH - 95% Match!
+
+**Recruiters Found:**
+- NVIDIA University Recruiting Team
+- Check: nvidia.com/en-us/about-nvidia/careers/university-recruiting/
+
+**Email Patterns to Try:**
+- firstname.lastname@nvidia.com
+- firstname@nvidia.com
+- university@nvidia.com
+
+**Company Domain:** nvidia.com
+
+**Cold Email Subject:** UCF CS Junior - Software Engineering Internship 2026 Interest
+
+---
+
+## Microsoft
+**Position:** Explore Microsoft Program / Global University Internships
+**Priority:** 🔥🔥 HIGH - Diversity Program!
+
+**Recruiters Found:**
+- Search: "Microsoft University Recruiting" site:linkedin.com
+- Check: careers.microsoft.com/students
+
+**Email Patterns to Try:**
+- firstname.lastname@microsoft.com
+- firstname@microsoft.com
+- university@microsoft.com
+
+**Company Domain:** microsoft.com
+
+**Cold Email Subject:** UCF CS Junior + NSBE Member - Explore Microsoft Program Interest
+
+**Why This is Gold:**
+- Microsoft Explore is specifically for underrepresented groups
+- Your NSBE + BSU membership is a perfect fit
+- They actively recruit from UCF
+
+---
+
+## Meta
+**Position:** University Internships (SWE, AI/ML)
+**Priority:** 🔥🔥 HIGH
+
+**Recruiters Found:**
+- Search: "Meta University Recruiting" site:linkedin.com
+
+**Email Patterns to Try:**
+- firstname.lastname@meta.com
+- firstname@meta.com
+- university@meta.com
+
+**Company Domain:** meta.com
+
+**Cold Email Subject:** UCF CS Junior - Software Engineering Internship 2026
+
+---
+
+## OpenAI
+**Position:** Software Engineer Internship/Co-op (Fall 2026)
+**Priority:** 🔥🔥 HIGH - AI/ML Focus!
+
+**Recruiters Found:**
+- Search: "OpenAI recruiting" site:linkedin.com
+
+**Email Patterns to Try:**
+- firstname.lastname@openai.com
+- firstname@openai.com
+- careers@openai.com
+
+**Company Domain:** openai.com
+
+**Cold Email Subject:** UCF CS Junior + AI/ML Experience - Fall 2026 Internship Interest
 
 ---
 
@@ -123,6 +250,67 @@ For each recruiter:
 5. [ ] Search for Atlassian recruiters
 6. [ ] Send cold emails to top 5 recruiters
 7. [ ] Send LinkedIn connection requests
+
+---
+
+## 🌴 ORLANDO/FLORIDA PRIORITY ACTIONS
+
+### Lockheed Martin (Orlando)
+- [ ] Connect with Daven Hill (UCF Alumni) on LinkedIn
+- [ ] Connect with Jason Yau (UCF Student) on LinkedIn
+- [ ] Use Hunter.io to find recruiter emails @lmco.com
+
+### L3Harris (Melbourne - 45 min)
+- [ ] Connect with Barbara Brewster (UCF connection) on LinkedIn
+- [ ] Use Hunter.io to find recruiter emails @l3harris.com
+
+### Northrop Grumman (Melbourne - 45 min)
+- [ ] Connect with Annabelle Allen on LinkedIn
+- [ ] Use Hunter.io to find recruiter emails @ngc.com
+
+---
+
+## 🔥 BIG TECH APPLICATIONS
+
+### Amazon
+- [ ] Apply to SDE Internship: amazon.jobs/en/jobs/3116030
+- [ ] Follow up with recruiter Deepika Munde
+
+### NVIDIA
+- [ ] Apply to Software Engineering Internship
+- [ ] Check university recruiting page
+
+### Microsoft
+- [ ] Apply to Explore Program (diversity program!)
+- [ ] Highlight NSBE + BSU membership
+
+---
+
+## Cold Email Template (Orlando/Florida Local)
+
+**Subject:** UCF CS Junior - Software Engineering Intern Interest (Orlando Local)
+
+Hi [Name],
+
+I'm a Computer Science junior at the University of Central Florida with a minor in Cyber Operations, and I'm very interested in the Software Engineering Intern position at [Company].
+
+**Why I'm a strong fit:**
+- [Specific skill from job description]
+- [Relevant project experience]
+- [UCF coursework relevant to role]
+
+**Why [Company]:**
+- [Specific reason - product, mission, technology]
+- Orlando local (no relocation needed!)
+
+I've attached my resume and would love the opportunity to discuss how I can contribute to your team.
+
+Best regards,
+Anthony Casseus
+anthony.casseus.internships@gmail.com
+(754) 244-8060
+
+---
 
 ## API Usage
 

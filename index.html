@@ -1120,6 +1120,26 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
 
     </div>
 
+    <!-- Chat Bubble (must be before <script> so elements exist when JS runs) -->
+    <button class="chat-fab" id="chat-fab" onclick="toggleChat()" title="Chat with Kimi Claw">
+        💬
+    </button>
+
+    <div class="chat-panel" id="chat-panel">
+        <div class="chat-header">
+            <div class="status-dot"></div>
+            KIMI CLAW · Online
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Populated dynamically -->
+        </div>
+        <div class="chat-input-area">
+            <input class="chat-input" id="chat-input" type="text" placeholder="Ask Kimi Claw anything..."
+                onkeydown="handleChatKey(event)">
+            <button class="chat-send" onclick="sendChatMessage()">➤</button>
+        </div>
+    </div>
+
     <script>
         // ============================================================
         // DATA LAYER — All data loaded from JSON files
@@ -1787,44 +1807,18 @@ You are my dedicated, autonomous internship application agent. Your job is to fi
         }
 
         // ============================================================
-        // INITIALIZE
+        // INITIALIZE — chat HTML is above so all elements exist
         // ============================================================
-        // IMPORTANT: Chat bubble HTML (#chat-messages, #chat-panel etc.)
-        // is defined AFTER this </script> tag. loadChat() calls renderChat()
-    // which needs #chat-messages. Without DOMContentLoaded, it crashes
-    // and initDashboard() never runs = empty dashboard.
-    document.addEventListener('DOMContentLoaded', function() {
-    loadTheme();
-    loadRules();
-    loadChat();
-    initDashboard();
+        loadTheme();
+        loadRules();
+        loadChat();
+        initDashboard();
 
-    // Auto-refresh timestamp
-    setInterval(() => {
-    document.getElementById('last-updated').textContent = 'Just now';
-    }, 30000);
-    });
+        // Auto-refresh timestamp
+        setInterval(() => {
+            document.getElementById('last-updated').textContent = 'Just now';
+        }, 30000);
     </script>
-
-    <!-- Chat Bubble -->
-    <button class="chat-fab" id="chat-fab" onclick="toggleChat()" title="Chat with Kimi Claw">
-        💬
-    </button>
-
-    <div class="chat-panel" id="chat-panel">
-        <div class="chat-header">
-            <div class="status-dot"></div>
-            KIMI CLAW · Online
-        </div>
-        <div class="chat-messages" id="chat-messages">
-            <!-- Populated dynamically -->
-        </div>
-        <div class="chat-input-area">
-            <input class="chat-input" id="chat-input" type="text" placeholder="Ask Kimi Claw anything..."
-                onkeydown="handleChatKey(event)">
-            <button class="chat-send" onclick="sendChatMessage()">➤</button>
-        </div>
-    </div>
 </body>
 
 </html>

@@ -1,5 +1,15 @@
 [
     {
+        "time": "Just now",
+        "text": "🔴 LIVE DEMO: Adding real-time activity to dashboard feed",
+        "type": "working"
+    },
+    {
+        "time": "Just now",
+        "text": "Connected dashboard to GitHub - auto-deploy enabled",
+        "type": "completed"
+    },
+    {
         "time": "Now",
         "text": "Dashboard v2.0 deployed with delete buttons, apply links, and live feed",
         "type": "completed"
